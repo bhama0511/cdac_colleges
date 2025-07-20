@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare CDAC Institutes - PrepWizard</title>
+    <meta name="description" content="Compare different CDAC institutes side by side to make an informed decision about which one is best for your career goals.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .comparison-table th {
+            position: sticky;
+            top: 70px;
+            background-color: #f9fafb;
+            z-index: 10;
+        }
+        
+        .comparison-table th:first-child {
+            left: 0;
+            z-index: 20;
+        }
+        
+        .comparison-table td:first-child {
+            position: sticky;
+            left: 0;
+            background-color: #f9fafb;
+            z-index: 10;
+            font-weight: 500;
+        }
+        
+        .highlight {
+            background-color: #eff6ff;
+        }
+        
+        .select-institute {
+            transition: all 0.3s ease;
+        }
+        
+        .select-institute:focus {
+            border-color: #4f46e5;
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <span class="text-indigo-600 font-bold text-2xl">Prep</span>
+                <span class="text-gray-700 font-bold text-2xl">Wizard</span>
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-700 hover:text-indigo-600 font-medium">Home</a>
+                <a href="institutes.html" class="text-gray-700 hover:text-indigo-600 font-medium">Institutes</a>
+                <a href="#" class="text-indigo-600 font-medium">Compare</a>
+                <a href="faqs.html" class="text-gray-700 hover:text-indigo-600 font-medium">FAQs</a>
+                <a href="blog.html" class="text-gray-700 hover:text-indigo-600 font-medium">Blog</a>
+                <a href="contact.html" class="text-gray-700 hover:text-indigo-600 font-medium">Contact</a>
+            </nav>
+            <button class="md:hidden text-gray-700 focus:outline-none" id="mobile-menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="md:hidden hidden bg-white w-full absolute shadow-md" id="mobile-menu">
+            <div class="px-4 py-3 space-y-3">
+                <a href="index.html" class="block text-gray-700 hover:text-indigo-600 font-medium">Home</a>
+                <a href="institutes.html" class="block text-gray-700 hover:text-indigo-600 font-medium">Institutes</a>
+                <a href="#" class="block text-indigo-600 font-medium">Compare</a>
+                <a href="faqs.html" class="block text-gray-700 hover:text-indigo-600 font-medium">FAQs</a>
+                <a href="blog.html" class="block text-gray-700 hover:text-indigo-600 font-medium">Blog</a>
+                <a href="contact.html" class="block text-gray-700 hover:text-indigo-600 font-medium">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-indigo-600 to-blue-600 py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Compare CDAC Institutes</h1>
+                <p class="text-blue-100 text-lg mb-8">Make an informed decision by comparing different CDAC institutes side by side based on various parameters.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Institute Selection Section -->
+    <section class="py-8 bg-white border-b">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-xl font-bold text-gray-800 mb-6">Select Institutes to Compare</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <label for="institute1" class="block text-sm font-medium text-gray-700 mb-1">Institute 1</label>
+                        <select id="institute1" class="select-institute w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none">
+                            <option value="cdac-pune">CDAC Pune</option>
+                            <option value="sunbeam-pune">Sunbeam Pune</option>
+                            <option value="acts-pune">ACTS Pune</option>
+                            <option value="cdac-mumbai">CDAC Mumbai</option>
+                            <option value="cdac-bangalore">CDAC Bangalore</option>
+                            <option value="cdac-hyderabad">CDAC Hyderabad</option>
+                            <option value="cdac-noida">CDAC Noida</option>
+                            <option value="cdac-chennai">CDAC Chennai</option>
+                            <option value="cdac-kolkata">CDAC Kolkata</option>
+                            <option value="iacsd-pune">IACSD Pune</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="institute2" class="block text-sm font-medium text-gray-700 mb-1">Institute 2</label>
+                        <select id="institute2" class="select-institute w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none">
+                            <option value="sunbeam-pune">Sunbeam Pune</option>
+                            <option value="cdac-pune">CDAC Pune</option>
+                            <option value="acts-pune">ACTS Pune</option>
+                            <option value="cdac-mumbai">CDAC Mumbai</option>
+                            <option value="cdac-bangalore">CDAC Bangalore</option>
+                            <option value="cdac-hyderabad">CDAC Hyderabad</option>
+                            <option value="cdac-noida">CDAC Noida</option>
+                            <option value="cdac-chennai">CDAC Chennai</option>
+                            <option value="cdac-kolkata">CDAC Kolkata</option>
+                            <option value="iacsd-pune">IACSD Pune</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="institute3" class="block text-sm font-medium text-gray-700 mb-1">Institute 3 (Optional)</label>
+                        <select id="institute3" class="select-institute w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none">
+                            <option value="">Select an Institute</option>
+                            <option value="cdac-pune">CDAC Pune</option>
+                            <option value="sunbeam-pune">Sunbeam Pune</option>
+                            <option value="acts-pune">ACTS Pune</option>
+                            <option value="cdac-mumbai">CDAC Mumbai</option>
+                            <option value="cdac-bangalore">CDAC Bangalore</option>
+                            <option value="cdac-hyderabad">CDAC Hyderabad</option>
+                            <option value="cdac-noida">CDAC Noida</option>
+                            <option value="cdac-chennai">CDAC Chennai</option>
+                            <option value="cdac-kolkata">CDAC Kolkata</option>
+                            <option value="iacsd-pune">IACSD Pune</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mt-6 text-center">
+                    <button id="compare-button" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-6 rounded-md transition duration-300">Compare Institutes</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table Section -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="comparison-table w-full border-collapse">
+                            <thead>
+                                <tr class="bg-gray-50">
+                                    <th class="px-6 py-4 text-left text-sm font-semibold text-gray-700 border-b border-r">Parameters</th>
+                                    <th class="px-6 py-4 text-center text-sm font-semibold text-gray-700 border-b" id="header1">CDAC Pune</th>
+                                    <th class="px-6 py-4 text-center text-sm font-semibold text-gray-700 border-b" id="header2">Sunbeam Pune</th>
+                                    <th class="px-6 py-4 text-center text-sm font-semibold text-gray-700 border-b" id="header3"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Location -->
+                                <tr>
+                                    <td class="px-6 py-4 text-sm text-gray-700 border-b border-r">Location</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="location1">Pune, Maharashtra</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="location2">Hinjewadi, Pune</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="location3"></td>
+                                </tr>
+                                
+                                <!-- Courses Offered -->
+                                <tr class="highlight">
+                                    <td class="px-6 py-4 text-sm text-gray-700 border-b border-r">Courses Offered</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="courses1">All CDAC Courses</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="courses2">PG-DAC, PG-DBDA, PG-DESD, PG-DITISS</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="courses3"></td>
+                                </tr>
+                                
+                                <!-- Batch Size -->
+                                <tr>
+                                    <td class="px-6 py-4 text-sm text-gray-700 border-b border-r">Batch Size</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="batch1">120 students per batch</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="batch2">60 students per batch</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="batch3"></td>
+                                </tr>
+                                
+                                <!-- Faculty -->
+                                <tr class="highlight">
+                                    <td class="px-6 py-4 text-sm text-gray-700 border-b border-r">Faculty</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="faculty1">Highly experienced faculty with industry and research background</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="faculty2">Experienced faculty with strong industry connections</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="faculty3"></td>
+                                </tr>
+                                
+                                <!-- Infrastructure -->
+                                <tr>
+                                    <td class="px-6 py-4 text-sm text-gray-700 border-b border-r">Infrastructure</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="infra1">State-of-the-art labs, library, auditorium, cafeteria</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="infra2">Modern labs, library, cafeteria</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="infra3"></td>
+                                </tr>
+                                
+                                <!-- Placement Rate -->
+                                <tr class="highlight">
+                                    <td class="px-6 py-4 text-sm text-gray-700 border-b border-r">Placement Rate</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="placement1">95%</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="placement2">90%</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="placement3"></td>
+                                </tr>
+                                
+                                <!-- Average Package -->
+                                <tr>
+                                    <td class="px-6 py-4 text-sm text-gray-700 border-b border-r">Average Package</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="package1">6.5 LPA</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="package2">5.8 LPA</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="package3"></td>
+                                </tr>
+                                
+                                <!-- Highest Package -->
+                                <tr class="highlight">
+                                    <td class="px-6 py-4 text-sm text-gray-700 border-b border-r">Highest Package</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="highest1">18 LPA</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="highest2">14 LPA</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="highest3"></td>
+                                </tr>
+                                
+                                <!-- Top Recruiters -->
+                                <tr>
+                                    <td class="px-6 py-4 text-sm text-gray-700 border-b border-r">Top Recruiters</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="recruiters1">TCS, Infosys, Wipro, Cognizant, Accenture, IBM, Tech Mahindra, Capgemini, HCL, Persistent</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="recruiters2">TCS, Infosys, Wipro, Cognizant, Persistent, LTI, Mindtree, Capgemini</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="recruiters3"></td>
+                                </tr>
+                                
+                                <!-- Hostel Facilities -->
+                                <tr class="highlight">
+                                    <td class="px-6 py-4 text-sm text-gray-700 border-b border-r">Hostel Facilities</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="hostel1">Available (Limited seats)</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="hostel2">Not available (Tie-ups with PG accommodations)</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="hostel3"></td>
+                                </tr>
+                                
+                                <!-- Fee Structure -->
+                                <tr>
+                                    <td class="px-6 py-4 text-sm text-gray-700 border-b border-r">Fee Structure</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="fee1">₹1,00,000 + GST</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="fee2">₹95,000 + GST</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="fee3"></td>
+                                </tr>
+                                
+                                <!-- Scholarship Options -->
+                                <tr class="highlight">
+                                    <td class="px-6 py-4 text-sm text-gray-700 border-b border-r">Scholarship Options</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="scholarship1">Available for SC/ST/OBC candidates</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="scholarship2">Available for SC/ST candidates</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="scholarship3"></td>
+                                </tr>
+                                
+                                <!-- Industry Connections -->
+                                <tr>
+                                    <td class="px-6 py-4 text-sm text-gray-700 border-b border-r">Industry Connections</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="industry1">Strong connections with major IT companies</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="industry2">Good connections with IT companies in Pune</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="industry3"></td>
+                                </tr>
+                                
+                                <!-- Extra-curricular Activities -->
+                                <tr class="highlight">
+                                    <td class="px-6 py-4 text-sm text-gray-700 border-b border-r">Extra-curricular Activities</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="extra1">Technical fests, cultural events, sports activities</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="extra2">Technical workshops, guest lectures, cultural events</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="extra3"></td>
+                                </tr>
+                                
+                                <!-- Alumni Network -->
+                                <tr>
+                                    <td class="px-6 py-4 text-sm text-gray-700 border-b border-r">Alumni Network</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="alumni1">Very strong with alumni in top positions across the industry</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="alumni2">Good network with regular alumni meets</td>
+                                    <td class="px-6 py-4 text-sm text-center text-gray-600 border-b" id="alumni3"></td>
+                                </tr>
+                                
+                                <!-- Overall Rating -->
+                                <tr class="highlight">
+                                    <td class="px-6 py-4 text-sm text-gray-700 border-r">Overall Rating</td>
+                                    <td class="px-6 py-4 text-center" id="rating1">
+                                        <div class="flex justify-center">
+                                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                            </svg>
+                                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                            </svg>
+                                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                            </svg>
+                                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                            </svg>
+                                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                            </svg>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-center" id="rating2">
+                                        <div class="flex justify-center">
+                                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                            </svg>
+                                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                            </svg>
+                                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                            </svg>
+                                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                            </svg>
+                                            <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                            </svg>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-center" id="rating3"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommendation Section -->
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Our Recommendation</h2>
+                <div class="bg-white rounded-lg shadow-md p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Based on your comparison</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <p class="text-gray-600">Based on the parameters you've compared, <span class="font-semibold text-indigo-600">CDAC Pune</span> appears to be the better choice overall with higher placement rates, better infrastructure, and a stronger alumni network.</p>
+                        <p class="text-gray-600">However, <span class="font-semibold text-indigo-600">Sunbeam Pune</span> offers a smaller batch size which might mean more personalized attention and slightly lower fees.</p>
+                        <p class="text-gray-600">Your final decision should depend on your priorities:</p>
+                        <ul class="list-disc pl-5 text-gray-600 space-y-2">
+                            <li>If placement opportunities and infrastructure are your top priorities, <span class="font-semibold text-indigo-600">CDAC Pune</span> would be the better choice.</li>
+                            <li>If you prefer smaller batch sizes and more personalized attention, <span class="font-semibold text-indigo-600">Sunbeam Pune</span> might be more suitable.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-indigo-600">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-2xl font-bold text-white mb-4">Still Confused About Which Institute to Choose?</h2>
+                <p class="text-indigo-100 mb-8">Get personalized guidance from our experts who can help you make the right decision based on your career goals and preferences.</p>
+                <div class="flex flex-col md:flex-row justify-center gap-4">
+                    <a href="contact.html" class="bg-white text-indigo-600 hover:bg-indigo-50 font-medium px-6 py-3 rounded-md transition duration-300">Contact Our Experts</a>
+                    <a href="faqs.html" class="border border-white text-white hover:bg-indigo-700 font-medium px-6 py-3 rounded-md transition duration-300">Read FAQs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">PrepWizard</h3>
+                    <p class="mb-4">Your ultimate guide to CDAC courses and institutes. We help you make informed decisions about your career in advanced computing.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="institutes.html" class="hover:text-white transition duration-300">Institutes</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Compare</a></li>
+                        <li><a href="faqs.html" class="hover:text-white transition duration-300">FAQs</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition duration-300">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">CDAC Courses</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition duration-300">PG-DAC</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">PG-DBDA</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">PG-DESD</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">PG-DITISS</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">PG-DMC</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">PG-DSSD</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-indigo-400 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span>123 Tech Park, Hinjewadi, Pune, Maharashtra 411057</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-indigo-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <a href="mailto:contact@prepwizard.com" class="hover:text-white transition duration-300">contact@prepwizard.com</a>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-indigo-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <a href="tel:+919876543210" class="hover:text-white transition duration-300">+91 98765 43210</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-sm text-center">
+                <p>&copy; 2023 PrepWizard. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Institute data
+        const instituteData = {
+            'cdac-pune': {
+                name: 'CDAC Pune',
+                location: 'Pune, Maharashtra',
+                courses: 'All CDAC Courses',
+                batch: '120 students per batch',
+                faculty: 'Highly experienced faculty with industry and research background',
+                infra: 'State-of-the-art labs, library, auditorium, cafeteria',
+                placement: '95%',
+                package: '6.5 LPA',
+                highest: '18 LPA',
+                recruiters: 'TCS, Infosys, Wipro, Cognizant, Accenture, IBM, Tech Mahindra, Capgemini, HCL, Persistent',
+                hostel: 'Available (Limited seats)',
+                fee: '₹1,00,000 + GST',
+                scholarship: 'Available for SC/ST/OBC candidates',
+                industry: 'Strong connections with major IT companies',
+                extra: 'Technical fests, cultural events, sports activities',
+                alumni: 'Very strong with alumni in top positions across the industry',
+                rating: 5
+            },
+            'sunbeam-pune': {
+                name: 'Sunbeam Pune',
+                location: 'Hinjewadi, Pune',
+                courses: 'PG-DAC, PG-DBDA, PG-DESD, PG-DITISS',
+                batch: '60 students per batch',
+                faculty: 'Experienced faculty with strong industry connections',
+                infra: 'Modern labs, library, cafeteria',
+                placement: '90%',
+                package: '5.8 LPA',
+                highest: '14 LPA',
+                recruiters: 'TCS, Infosys, Wipro, Cognizant, Persistent, LTI, Mindtree, Capgemini',
+                hostel: 'Not available (Tie-ups with PG accommodations)',
+                fee: '₹95,000 + GST',
+                scholarship: 'Available for SC/ST candidates',
+                industry: 'Good connections with IT companies in Pune',
+                extra: 'Technical workshops, guest lectures, cultural events',
+                alumni: 'Good network with regular alumni meets',
+                rating: 4
+            },
+            'acts-pune': {
+                name: 'ACTS Pune',
+                location: 'Pashan, Pune',
+                courses: 'PG-DAC, PG-DBDA, PG-DITISS',
+                batch: '90 students per batch',
+                faculty: 'Experienced faculty with academic background',
+                infra: 'Well-equipped labs, library, study areas',
+                placement: '85%',
+                package: '5.5 LPA',
+                highest: '12 LPA',
+                recruiters: 'TCS, Infosys, Wipro, Cognizant, Persistent, Capgemini',
+                hostel: 'Not available',
+                fee: '₹90,000 + GST',
+                scholarship: 'Available for SC/ST candidates',
+                industry: 'Decent industry connections',
+                extra: 'Technical seminars, coding competitions',
+                alumni: 'Active alumni network',
+                rating: 4
+            },
+            'cdac-mumbai': {
+                name: 'CDAC Mumbai',
+                location: 'Kharghar, Navi Mumbai',
+                courses: 'All CDAC Courses',
+                batch: '100 students per batch',
+                faculty: 'Highly qualified faculty with industry experience',
+                infra: 'Modern infrastructure with well-equipped labs',
+                placement: '92%',
+                package: '6.2 LPA',
+                highest: '16 LPA',
+                recruiters: 'TCS, Infosys, Wipro, Cognizant, Accenture, IBM, LTI, Capgemini',
+                hostel: 'Available (Limited seats)',
+                fee: '₹1,00,000 + GST',
+                scholarship: 'Available for SC/ST/OBC candidates',
+                industry: 'Strong connections with Mumbai-based companies',
+                extra: 'Technical events, cultural activities',
+                alumni: 'Strong alumni network in Mumbai region',
+                rating: 5
+            },
+            'cdac-bangalore': {
+                name: 'CDAC Bangalore',
+                location: 'Electronics City, Bangalore',
+                courses: 'PG-DAC, PG-DBDA, PG-DITISS, PG-DSSD',
+                batch: '90 students per batch',
+                faculty: 'Experienced faculty with industry background',
+                infra: 'Modern labs and facilities',
+                placement: '90%',
+                package: '6.8 LPA',
+                highest: '17 LPA',
+                recruiters: 'TCS, Infosys, Wipro, Cognizant, Accenture, IBM, Amazon, Flipkart',
+                hostel: 'Limited availability',
+                fee: '₹1,00,000 + GST',
+                scholarship: 'Available for SC/ST/OBC candidates',
+                industry: 'Excellent connections with Bangalore tech companies',
+                extra: 'Technical workshops, hackathons',
+                alumni: 'Strong alumni network in Bangalore tech ecosystem',
+                rating: 4.5
+            },
+            'cdac-hyderabad': {
+                name: 'CDAC Hyderabad',
+                location: 'HITEC City, Hyderabad',
+                courses: 'PG-DAC, PG-DBDA, PG-DITISS',
+                batch: '80 students per batch',
+                faculty: 'Qualified faculty with industry experience',
+                infra: 'Good infrastructure and lab facilities',
+                placement: '88%',
+                package: '6.0 LPA',
+                highest: '15 LPA',
+                recruiters: 'TCS, Infosys, Wipro, Cognizant, Tech Mahindra, Capgemini',
+                hostel: 'Available',
+                fee: '₹95,000 + GST',
+                scholarship: 'Available for SC/ST candidates',
+                industry: 'Good connections with Hyderabad IT companies',
+                extra: 'Technical seminars, cultural events',
+                alumni: 'Growing alumni network',
+                rating: 4.5
+            },
+            'cdac-noida': {
+                name: 'CDAC Noida',
+                location: 'Sector 62, Noida',
+                courses: 'PG-DAC, PG-DBDA, PG-DITISS, PG-DESD',
+                batch: '100 students per batch',
+                faculty: 'Experienced faculty with industry connections',
+                infra: 'Modern infrastructure with well-equipped labs',
+                placement: '87%',
+                package: '5.8 LPA',
+                highest: '14 LPA',
+                recruiters: 'TCS, Infosys, Wipro, HCL, Tech Mahindra, IBM',
+                hostel: 'Available',
+                fee: '₹95,000 + GST',
+                scholarship: 'Available for SC/ST candidates',
+                industry: 'Good connections with NCR companies',
+                extra: 'Technical workshops, cultural events',
+                alumni: 'Active alumni network in NCR region',
+                rating: 4.5
+            },
+            'cdac-chennai': {
+                name: 'CDAC Chennai',
+                location: 'Taramani, Chennai',
+                courses: 'PG-DAC, PG-DBDA, PG-DITISS',
+                batch: '80 students per batch',
+                faculty: 'Qualified faculty with academic background',
+                infra: 'Decent infrastructure and lab facilities',
+                placement: '85%',
+                package: '5.5 LPA',
+                highest: '13 LPA',
+                recruiters: 'TCS, Infosys, Wipro, Cognizant, HCL',
+                hostel: 'Limited availability',
+                fee: '₹90,000 + GST',
+                scholarship: 'Available for SC/ST candidates',
+                industry: 'Good connections with Chennai IT companies',
+                extra: 'Technical seminars, coding competitions',
+                alumni: 'Growing alumni network in Chennai',
+                rating: 4
+            },
+            'cdac-kolkata': {
+                name: 'CDAC Kolkata',
+                location: 'Salt Lake, Kolkata',
+                courses: 'PG-DAC, PG-DBDA, PG-DITISS',
+                batch: '70 students per batch',
+                faculty: 'Experienced faculty with academic background',
+                infra: 'Decent infrastructure and lab facilities',
+                placement: '83%',
+                package: '5.2 LPA',
+                highest: '12 LPA',
+                recruiters: 'TCS, Infosys, Wipro, Cognizant, Tech Mahindra',
+                hostel: 'Available',
+                fee: '₹90,000 + GST',
+                scholarship: 'Available for SC/ST candidates',
+                industry: 'Connections with Eastern India companies',
+                extra: 'Technical workshops, cultural events',
+                alumni: 'Growing alumni network in Eastern India',
+                rating: 4
+            },
+            'iacsd-pune': {
+                name: 'IACSD Pune',
+                location: 'Akurdi, Pune',
+                courses: 'PG-DAC, PG-DBDA, PG-DESD',
+                batch: '80 students per batch',
+                faculty: 'Experienced faculty with industry background',
+                infra: 'Good infrastructure and lab facilities',
+                placement: '88%',
+                package: '5.7 LPA',
+                highest: '13 LPA',
+                recruiters: 'TCS, Infosys, Wipro, Cognizant, Persistent, LTI',
+                hostel: 'Available',
+                fee: '₹95,000 + GST',
+                scholarship: 'Available for SC/ST candidates',
+                industry: 'Good connections with Pune IT companies',
+                extra: 'Technical workshops, coding competitions',
+                alumni: 'Active alumni network in Pune',
+                rating: 4
+            }
+        };
+        
+        // Function to update comparison table
+        function updateComparisonTable() {
+            const institute1 = document.getElementById('institute1').value;
+            const institute2 = document.getElementById('institute2').value;
+            const institute3 = document.getElementById('institute3').value;
+            
+            // Update headers
+            document.getElementById('header1').textContent = instituteData[institute1].name;
+            document.getElementById('header2').textContent = instituteData[institute2].name;
+            
+            // Update data for institute 1
+            document.getElementById('location1').textContent = instituteData[institute1].location;
+            document.getElementById('courses1').textContent = instituteData[institute1].courses;
+            document.getElementById('batch1').textContent = instituteData[institute1].batch;
+            document.getElementById('faculty1').textContent = instituteData[institute1].faculty;
+            document.getElementById('infra1').textContent = instituteData[institute1].infra;
+            document.getElementById('placement1').textContent = instituteData[institute1].placement;
+            document.getElementById('package1').textContent = instituteData[institute1].package;
+            document.getElementById('highest1').textContent = instituteData[institute1].highest;
+            document.getElementById('recruiters1').textContent = instituteData[institute1].recruiters;
+            document.getElementById('hostel1').textContent = instituteData[institute1].hostel;
+            document.getElementById('fee1').textContent = instituteData[institute1].fee;
+            document.getElementById('scholarship1').textContent = instituteData[institute1].scholarship;
+            document.getElementById('industry1').textContent = instituteData[institute1].industry;
+            document.getElementById('extra1').textContent = instituteData[institute1].extra;
+            document.getElementById('alumni1').textContent = instituteData[institute1].alumni;
+            
+            // Update data for institute 2
+            document.getElementById('location2').textContent = instituteData[institute2].location;
+            document.getElementById('courses2').textContent = instituteData[institute2].courses;
+            document.getElementById('batch2').textContent = instituteData[institute2].batch;
+            document.getElementById('faculty2').textContent = instituteData[institute2].faculty;
+            document.getElementById('infra2').textContent = instituteData[institute2].infra;
+            document.getElementById('placement2').textContent = instituteData[institute2].placement;
+            document.getElementById('package2').textContent = instituteData[institute2].package;
+            document.getElementById('highest2').textContent = instituteData[institute2].highest;
+            document.getElementById('recruiters2').textContent = instituteData[institute2].recruiters;
+            document.getElementById('hostel2').textContent = instituteData[institute2].hostel;
+            document.getElementById('fee2').textContent = instituteData[institute2].fee;
+            document.getElementById('scholarship2').textContent = instituteData[institute2].scholarship;
+            document.getElementById('industry2').textContent = instituteData[institute2].industry;
+            document.getElementById('extra2').textContent = instituteData[institute2].extra;
+            document.getElementById('alumni2').textContent = instituteData[institute2].alumni;
+            
+            // Update rating stars for institute 1
+            updateRatingStars('rating1', instituteData[institute1].rating);
+            
+            // Update rating stars for institute 2
+            updateRatingStars('rating2', instituteData[institute2].rating);
+            
+            // Handle optional third institute
+            if (institute3) {
+                document.getElementById('header3').textContent = instituteData[institute3].name;
+                document.getElementById('location3').textContent = instituteData[institute3].location;
+                document.getElementById('courses3').textContent = instituteData[institute3].courses;
+                document.getElementById('batch3').textContent = instituteData[institute3].batch;
+                document.getElementById('faculty3').textContent = instituteData[institute3].faculty;
+                document.getElementById('infra3').textContent = instituteData[institute3].infra;
+                document.getElementById('placement3').textContent = instituteData[institute3].placement;
+                document.getElementById('package3').textContent = instituteData[institute3].package;
+                document.getElementById('highest3').textContent = instituteData[institute3].highest;
+                document.getElementById('recruiters3').textContent = instituteData[institute3].recruiters;
+                document.getElementById('hostel3').textContent = instituteData[institute3].hostel;
+                document.getElementById('fee3').textContent = instituteData[institute3].fee;
+                document.getElementById('scholarship3').textContent = instituteData[institute3].scholarship;
+                document.getElementById('industry3').textContent = instituteData[institute3].industry;
+                document.getElementById('extra3').textContent = instituteData[institute3].extra;
+                document.getElementById('alumni3').textContent = instituteData[institute3].alumni;
+                
+                // Update rating stars for institute 3
+                updateRatingStars('rating3', instituteData[institute3].rating);
+            } else {
+                document.getElementById('header3').textContent = '';
+                document.getElementById('location3').textContent = '';
+                document.getElementById('courses3').textContent = '';
+                document.getElementById('batch3').textContent = '';
+                document.getElementById('faculty3').textContent = '';
+                document.getElementById('infra3').textContent = '';
+                document.getElementById('placement3').textContent = '';
+                document.getElementById('package3').textContent = '';
+                document.getElementById('highest3').textContent = '';
+                document.getElementById('recruiters3').textContent = '';
+                document.getElementById('hostel3').textContent = '';
+                document.getElementById('fee3').textContent = '';
+                document.getElementById('scholarship3').textContent = '';
+                document.getElementById('industry3').textContent = '';
+                document.getElementById('extra3').textContent = '';
+                document.getElementById('alumni3').textContent = '';
+                document.getElementById('rating3').innerHTML = '';
+            }
+        }
+        
+        // Function to update rating stars
+        function updateRatingStars(elementId, rating) {
+            const element = document.getElementById(elementId);
+            let starsHTML = '<div class="flex justify-center">';
+            
+            // Full stars
+            for (let i = 0; i < Math.floor(rating); i++) {
+                starsHTML += `
+                    <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                `;
+            }
+            
+            // Half star
+            if (rating % 1 !== 0) {
+                starsHTML += `
+                    <svg class="w-5 h-5 text-yellow-400 opacity-50" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                `;
+            }
+            
+            // Empty stars
+            for (let i = Math.ceil(rating); i < 5; i++) {
+                starsHTML += `
+                    <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                `;
+            }
+            
+            starsHTML += '</div>';
+            element.innerHTML = starsHTML;
+        }
+        
+        // Initialize comparison table
+        document.addEventListener('DOMContentLoaded', () => {
+            updateComparisonTable();
+            
+            // Add event listeners
+            document.getElementById('compare-button').addEventListener('click', updateComparisonTable);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96223935e548ff61',t:'MTc1MzAxMjA0NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
