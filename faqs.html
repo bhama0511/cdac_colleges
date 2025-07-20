@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - CDAC Training Institutes in Pune | Comprehensive Guide</title>
+    <meta name="description" content="Frequently asked questions about CDAC entrance exam, courses, admission process, and training institutes in Pune.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .faq-item {
+            transition: all 0.3s ease;
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+        
+        .faq-item.active .faq-icon-plus {
+            display: none;
+        }
+        
+        .faq-item:not(.active) .faq-icon-minus {
+            display: none;
+        }
+        
+        .category-tab {
+            transition: all 0.3s ease;
+        }
+        
+        .category-tab.active {
+            background-color: #2563eb;
+            color: white;
+        }
+        
+        .category-content {
+            display: none;
+        }
+        
+        .category-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <span class="text-blue-600 font-bold text-2xl">CDAC</span>
+                <span class="text-gray-700 font-bold text-2xl">Guide</span>
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                <a href="index.html#institutes" class="text-gray-700 hover:text-blue-600 font-medium">Institutes</a>
+                <a href="index.html#comparison" class="text-gray-700 hover:text-blue-600 font-medium">Compare</a>
+                <a href="#" class="text-blue-600 font-medium">FAQs</a>
+                <a href="blog.html" class="text-gray-700 hover:text-blue-600 font-medium">Blog</a>
+                <a href="contact.html" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+            </nav>
+            <button class="md:hidden text-gray-700 focus:outline-none" id="mobile-menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="md:hidden hidden bg-white w-full absolute shadow-md" id="mobile-menu">
+            <div class="px-4 py-3 space-y-3">
+                <a href="index.html" class="block text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                <a href="index.html#institutes" class="block text-gray-700 hover:text-blue-600 font-medium">Institutes</a>
+                <a href="index.html#comparison" class="block text-gray-700 hover:text-blue-600 font-medium">Compare</a>
+                <a href="#" class="block text-blue-600 font-medium">FAQs</a>
+                <a href="blog.html" class="block text-gray-700 hover:text-blue-600 font-medium">Blog</a>
+                <a href="contact.html" class="block text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h1>
+            <p class="text-xl max-w-3xl mx-auto">Find answers to common questions about CDAC entrance exam, courses, admission process, and training institutes in Pune.</p>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="py-8 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto">
+                <div class="relative">
+                    <input type="text" id="faq-search" placeholder="Search for questions..." class="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <svg class="w-6 h-6 text-gray-400 absolute left-3 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Categories -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <!-- Category Tabs -->
+                <div class="flex flex-wrap justify-center mb-8 gap-2">
+                    <button class="category-tab active px-5 py-2 rounded-full border border-blue-600 text-blue-600 font-medium" data-category="general">
+                        General
+                    </button>
+                    <button class="category-tab px-5 py-2 rounded-full border border-blue-600 text-blue-600 font-medium" data-category="entrance">
+                        Entrance Exam
+                    </button>
+                    <button class="category-tab px-5 py-2 rounded-full border border-blue-600 text-blue-600 font-medium" data-category="admission">
+                        Admission Process
+                    </button>
+                    <button class="category-tab px-5 py-2 rounded-full border border-blue-600 text-blue-600 font-medium" data-category="courses">
+                        Courses & Curriculum
+                    </button>
+                    <button class="category-tab px-5 py-2 rounded-full border border-blue-600 text-blue-600 font-medium" data-category="placements">
+                        Placements
+                    </button>
+                </div>
+
+                <!-- General FAQs -->
+                <div id="general" class="category-content active">
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">General Questions</h2>
+                    
+                    <div class="space-y-4">
+                        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                            <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                                <h3 class="text-lg font-medium text-gray-800">What is CDAC?</h3>
+                                <div class="ml-2">
+                                    <svg class="faq-icon-plus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                    </svg>
+                                    <svg class="faq-icon-minus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-gray-600">CDAC (Centre for Development of Advanced Computing) is a premier R&D organization of the Ministry of Electronics and Information Technology (MeitY), Government of India. It offers various Post Graduate Diploma courses in advanced computing through its authorized training centers across India. These courses are designed to bridge the gap between academia and industry requirements in the IT sector.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                            <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                                <h3 class="text-lg font-medium text-gray-800">Why should I choose CDAC courses?</h3>
+                                <div class="ml-2">
+                                    <svg class="faq-icon-plus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                    </svg>
+                                    <svg class="faq-icon-minus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-gray-600">CDAC courses offer several advantages:</p>
+                                <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-600">
+                                    <li>Industry-relevant curriculum designed by experts</li>
+                                    <li>Hands-on practical training with real-world projects</li>
+                                    <li>Excellent placement opportunities with top companies</li>
+                                    <li>Government-recognized certification</li>
+                                    <li>Affordable fees compared to many private institutions</li>
+                                    <li>Strong alumni network across the IT industry</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                            <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                                <h3 class="text-lg font-medium text-gray-800">Which CDAC institute in Pune is the best?</h3>
+                                <div class="ml-2">
+                                    <svg class="faq-icon-plus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                    </svg>
+                                    <svg class="faq-icon-minus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-gray-600">Each CDAC institute in Pune has its own strengths:</p>
+                                <ul class="list-disc pl-5 mt-2 space-y-2 text-gray-600">
+                                    <li><strong>CDAC ACTS Pune:</strong> Being the flagship institute, it offers the most comprehensive infrastructure, experienced faculty, and excellent placement records. It's ideal for students looking for the complete CDAC experience.</li>
+                                    <li><strong>Sunbeam Pune:</strong> Known for its practical approach to teaching and strong industry connections. It's great for students who want focused training with good placement support.</li>
+                                    <li><strong>IACSD Pune:</strong> Offers a good balance of theory and practical training with affordable fees. It's suitable for students looking for quality education at a slightly lower cost.</li>
+                                    <li><strong>Sunbeam Karad:</strong> Located outside Pune city, it offers quality education at lower fees with lower living expenses. It's ideal for budget-conscious students.</li>
+                                </ul>
+                                <p class="mt-2 text-gray-600">The "best" institute depends on your priorities - location, budget, specific course offerings, and personal preferences. We recommend comparing them based on our detailed profiles and visiting them if possible before making a decision.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                            <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                                <h3 class="text-lg font-medium text-gray-800">What are the eligibility criteria for CDAC courses?</h3>
+                                <div class="ml-2">
+                                    <svg class="faq-icon-plus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                    </svg>
+                                    <svg class="faq-icon-minus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-gray-600">The basic eligibility criteria for most CDAC courses are:</p>
+                                <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-600">
+                                    <li>Bachelor's degree in any discipline with Mathematics as a subject in 10+2 or at graduation level</li>
+                                    <li>For engineering graduates: B.E./B.Tech in any branch</li>
+                                    <li>For non-engineering graduates: BCA, BCS, B.Sc. (Computer Science/IT/Electronics/Mathematics/Statistics/Physics), MCA, M.Sc. (Computer Science/IT/Electronics/Mathematics/Statistics)</li>
+                                    <li>Minimum 50% marks in qualifying degree (45% for reserved categories)</li>
+                                    <li>Final year students can also apply, subject to completion of their degree before admission</li>
+                                </ul>
+                                <p class="mt-2 text-gray-600">Note: Specific courses may have additional eligibility requirements. For example, PG-DESD may prefer candidates with electronics background.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Entrance Exam FAQs -->
+                <div id="entrance" class="category-content">
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">Entrance Exam Questions</h2>
+                    
+                    <div class="space-y-4">
+                        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                            <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                                <h3 class="text-lg font-medium text-gray-800">What is C-CAT and when is it conducted?</h3>
+                                <div class="ml-2">
+                                    <svg class="faq-icon-plus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                    </svg>
+                                    <svg class="faq-icon-minus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-gray-600">C-CAT (CDAC Common Admission Test) is the entrance examination for admission to various PG Diploma courses offered by CDAC. It is conducted three times a year, typically in:</p>
+                                <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-600">
+                                    <li>February/March (for March batch)</li>
+                                    <li>June/July (for September batch)</li>
+                                    <li>November/December (for February batch)</li>
+                                </ul>
+                                <p class="mt-2 text-gray-600">The exact dates are announced on the official CDAC website. The exam is conducted online at designated centers across India.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                            <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                                <h3 class="text-lg font-medium text-gray-800">What is the exam pattern for C-CAT?</h3>
+                                <div class="ml-2">
+                                    <svg class="faq-icon-plus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                    </svg>
+                                    <svg class="faq-icon-minus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-gray-600">The C-CAT exam consists of three sections:</p>
+                                <ul class="list-disc pl-5 mt-2 space-y-2 text-gray-600">
+                                    <li><strong>Section A:</strong> Logical Reasoning, English, Quantitative Aptitude, and Computer Fundamentals (Mandatory for all candidates)</li>
+                                    <li><strong>Section B:</strong> Computer Programming and Computer Science (Mandatory for all candidates)</li>
+                                    <li><strong>Section C:</strong> Advanced Mathematics and Computer Science (Optional, but recommended for specific courses like DBDA)</li>
+                                </ul>
+                                <p class="mt-2 text-gray-600">Key points about the exam:</p>
+                                <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-600">
+                                    <li>Each section is of 90 minutes duration</li>
+                                    <li>Multiple-choice questions with negative marking (0.25 marks deducted for wrong answers)</li>
+                                    <li>Total marks depend on the sections attempted (A+B = 200 marks, A+B+C = 300 marks)</li>
+                                    <li>Online computer-based test</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                            <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                                <h3 class="text-lg font-medium text-gray-800">How should I prepare for the C-CAT exam?</h3>
+                                <div class="ml-2">
+                                    <svg class="faq-icon-plus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                    </svg>
+                                    <svg class="faq-icon-minus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-gray-600">Here's a comprehensive preparation strategy for C-CAT:</p>
+                                <ul class="list-disc pl-5 mt-2 space-y-2 text-gray-600">
+                                    <li><strong>Understand the syllabus:</strong> Thoroughly go through the official syllabus for each section.</li>
+                                    <li><strong>Section A preparation:</strong>
+                                        <ul class="list-disc pl-5 mt-1 space-y-1">
+                                            <li>Logical Reasoning: Practice puzzles, coding-decoding, blood relations, etc.</li>
+                                            <li>English: Focus on grammar, vocabulary, reading comprehension</li>
+                                            <li>Quantitative Aptitude: Cover basic mathematics, percentages, profit-loss, etc.</li>
+                                            <li>Computer Fundamentals: Study basic computer concepts, hardware, software, networking</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Section B preparation:</strong>
+                                        <ul class="list-disc pl-5 mt-1 space-y-1">
+                                            <li>Programming concepts: Variables, loops, conditions, functions, arrays</li>
+                                            <li>Data structures: Arrays, linked lists, stacks, queues, trees</li>
+                                            <li>Algorithms: Sorting, searching, basic complexity analysis</li>
+                                            <li>C/C++/Java fundamentals</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Section C preparation (if attempting):</strong>
+                                        <ul class="list-disc pl-5 mt-1 space-y-1">
+                                            <li>Advanced Mathematics: Probability, statistics, linear algebra, calculus</li>
+                                            <li>Advanced Computer Science: DBMS, OS, computer networks, software engineering</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <p class="mt-3 text-gray-600">Recommended resources:</p>
+                                <ul class="list-disc pl-5 mt-1 space-y-1 text-gray-600">
+                                    <li>Previous years' question papers (available on the CDAC website)</li>
+                                    <li>Standard aptitude books (R.S. Aggarwal, Arun Sharma)</li>
+                                    <li>Programming books (Let Us C, Data Structures by Tanenbaum)</li>
+                                    <li>Online practice platforms (HackerRank, LeetCode, GeeksforGeeks)</li>
+                                    <li>Mock tests (available on <a href="https://prepwizard.in" class="text-blue-600 hover:underline">PrepWizard</a> and other platforms)</li>
+                                </ul>
+                                <p class="mt-3 text-gray-600">Time management is crucial during the exam. Practice solving questions within time constraints to improve your speed and accuracy.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                            <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                                <h3 class="text-lg font-medium text-gray-800">What is a good score in C-CAT?</h3>
+                                <div class="ml-2">
+                                    <svg class="faq-icon-plus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                    </svg>
+                                    <svg class="faq-icon-minus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-gray-600">A "good" score in C-CAT depends on the course you're targeting and the competition level in that particular batch. However, as a general guideline:</p>
+                                <ul class="list-disc pl-5 mt-2 space-y-2 text-gray-600">
+                                    <li><strong>For top institutes (CDAC ACTS, Sunbeam Pune):</strong>
+                                        <ul class="list-disc pl-5 mt-1 space-y-1">
+                                            <li>PG-DAC: 140+ out of 200 (Sections A+B)</li>
+                                            <li>PG-DBDA: 210+ out of 300 (Sections A+B+C)</li>
+                                            <li>PG-DITISS: 130+ out of 200 (Sections A+B)</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>For other institutes (IACSD, Sunbeam Karad):</strong>
+                                        <ul class="list-disc pl-5 mt-1 space-y-1">
+                                            <li>PG-DAC: 120+ out of 200</li>
+                                            <li>PG-DBDA: 180+ out of 300</li>
+                                            <li>PG-DITISS: 110+ out of 200</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <p class="mt-3 text-gray-600">Note: These are approximate scores based on previous trends and may vary. The actual cutoffs depend on the difficulty level of the exam and the number of applicants in a particular batch.</p>
+                                <p class="mt-2 text-gray-600">CDAC uses a percentile-based ranking system, so your relative performance compared to other candidates is more important than the absolute score.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                            <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                                <h3 class="text-lg font-medium text-gray-800">Is there any negative marking in C-CAT?</h3>
+                                <div class="ml-2">
+                                    <svg class="faq-icon-plus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                    </svg>
+                                    <svg class="faq-icon-minus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-gray-600">Yes, there is negative marking in the C-CAT exam:</p>
+                                <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-600">
+                                    <li>For each correct answer: +1 mark</li>
+                                    <li>For each incorrect answer: -0.25 mark (25% negative marking)</li>
+                                    <li>For unattempted questions: No marks deducted</li>
+                                </ul>
+                                <p class="mt-3 text-gray-600">Due to the negative marking, it's advisable to:</p>
+                                <ul class="list-disc pl-5 mt-1 space-y-1 text-gray-600">
+                                    <li>Attempt questions you're confident about</li>
+                                    <li>Skip questions you're completely unsure of</li>
+                                    <li>If you can eliminate 2-3 options in a 4-option MCQ, it might be worth taking a calculated risk</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Admission Process FAQs -->
+                <div id="admission" class="category-content">
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">Admission Process Questions</h2>
+                    
+                    <div class="space-y-4">
+                        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                            <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                                <h3 class="text-lg font-medium text-gray-800">What is the complete admission process for CDAC courses?</h3>
+                                <div class="ml-2">
+                                    <svg class="faq-icon-plus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                    </svg>
+                                    <svg class="faq-icon-minus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-gray-600">The complete admission process for CDAC courses involves the following steps:</p>
+                                <ol class="list-decimal pl-5 mt-2 space-y-2 text-gray-600">
+                                    <li><strong>Registration for C-CAT:</strong> Apply online on the CDAC website during the application period.</li>
+                                    <li><strong>C-CAT Examination:</strong> Appear for the entrance test at your chosen center.</li>
+                                    <li><strong>Result Declaration:</strong> Results are typically announced within 2-3 weeks after the exam.</li>
+                                    <li><strong>Counseling Registration:</strong> Register for the centralized counseling process by paying the required fee.</li>
+                                    <li><strong>Choice Filling:</strong> Submit your preferences for courses and centers in order of priority.</li>
+                                    <li><strong>Seat Allocation:</strong> Seats are allocated based on your rank, preferences, and availability.</li>
+                                    <li><strong>Fee Payment:</strong> Pay the course fee as per the schedule to confirm your admission.</li>
+                                    <li><strong>Document Verification:</strong> Submit and verify your original documents at the allotted center.</li>
+                                    <li><strong>Course Commencement:</strong> Start your course as per the schedule.</li>
+                                </ol>
+                                <p class="mt-3 text-gray-600">Important points to note:</p>
+                                <ul class="list-disc pl-5 mt-1 space-y-1 text-gray-600">
+                                    <li>There might be multiple rounds of counseling to fill vacant seats</li>
+                                    <li>All official communications happen through the CDAC website and registered email</li>
+                                    <li>Missing any deadline can result in cancellation of candidature</li>
+                                    <li>Keep checking the official CDAC website for updates and announcements</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                            <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                                <h3 class="text-lg font-medium text-gray-800">What documents are required for CDAC admission?</h3>
+                                <div class="ml-2">
+                                    <svg class="faq-icon-plus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                    </svg>
+                                    <svg class="faq-icon-minus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-gray-600">The following documents are typically required for CDAC admission:</p>
+                                <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-600">
+                                    <li>C-CAT admit card and score card</li>
+                                    <li>Seat allocation letter</li>
+                                    <li>Fee payment receipt</li>
+                                    <li>10th and 12th mark sheets and certificates</li>
+                                    <li>Graduation mark sheets (all semesters/years)</li>
+                                    <li>Graduation degree certificate or provisional certificate</li>
+                                    <li>Category certificate (SC/ST/OBC/EWS), if applicable</li>
+                                    <li>PWD certificate, if applicable</li>
+                                    <li>Photo identity proof (Aadhar Card/PAN Card/Driving License/Passport)</li>
+                                    <li>Passport-sized photographs (usually 4-6)</li>
+                                    <li>Migration certificate (if required by the institute)</li>
+                                    <li>Character certificate from the last attended institution (if required)</li>
+                                </ul>
+                                <p class="mt-3 text-gray-600">Important notes:</p>
+                                <ul class="list-disc pl-5 mt-1 space-y-1 text-gray-600">
+                                    <li>Carry both original documents and self-attested photocopies</li>
+                                    <li>Some institutes may have additional document requirements</li>
+                                    <li>Final year students who haven't received their degree yet should carry a certificate from their college/university stating that they have completed all requirements for the degree</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                            <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                                <h3 class="text-lg font-medium text-gray-800">Can I change my institute or course after allocation?</h3>
+                                <div class="ml-2">
+                                    <svg class="faq-icon-plus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                    </svg>
+                                    <svg class="faq-icon-minus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-gray-600">Changing your institute or course after allocation is possible but subject to certain conditions:</p>
+                                <ul class="list-disc pl-5 mt-2 space-y-2 text-gray-600">
+                                    <li><strong>During counseling rounds:</strong> If you're allocated a seat in the first round but prefer a different institute/course, you can participate in subsequent rounds for upgradation. However, you must accept the currently allocated seat by paying the required fee to be eligible for upgradation.</li>
+                                    <li><strong>After final allocation:</strong> Once the counseling process is complete, transfers between institutes or courses are generally not allowed. Each institute operates independently, and there's no formal transfer mechanism between CDAC centers.</li>
+                                    <li><strong>Special cases:</strong> In exceptional circumstances (medical reasons, etc.), you may submit a formal request to CDAC headquarters, but approval is at their discretion and rarely granted.</li>
+                                </ul>
+                                <p class="mt-3 text-gray-600">Important advice:</p>
+                                <ul class="list-disc pl-5 mt-1 space-y-1 text-gray-600">
+                                    <li>Be very careful while filling your preferences during counseling</li>
+                                    <li>Research all institutes and courses thoroughly before making choices</li>
+                                    <li>Only include those options in your preference list that you're willing to join</li>
+                                    <li>If you're unsure about joining a particular institute/course, it's better not to include it in your preferences</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                            <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                                <h3 class="text-lg font-medium text-gray-800">Is there any reservation in CDAC admissions?</h3>
+                                <div class="ml-2">
+                                    <svg class="faq-icon-plus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                    </svg>
+                                    <svg class="faq-icon-minus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-gray-600">Yes, CDAC follows the Government of India's reservation policy for admissions. The reservation categories and percentages are:</p>
+                                <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-600">
+                                    <li>Scheduled Caste (SC): 15%</li>
+                                    <li>Scheduled Tribe (ST): 7.5%</li>
+                                    <li>Other Backward Classes (OBC-NCL): 27%</li>
+                                    <li>Economically Weaker Sections (EWS): 10%</li>
+                                    <li>Persons with Disabilities (PWD): 5% horizontal reservation across all categories</li>
+                                </ul>
+                                <p class="mt-3 text-gray-600">Important points regarding reservation:</p>
+                                <ul class="list-disc pl-5 mt-1 space-y-1 text-gray-600">
+                                    <li>Candidates must possess valid category certificates as per Government of India norms</li>
+                                    <li>OBC candidates must have a non-creamy layer (NCL) certificate issued within the last year</li>
+                                    <li>EWS candidates must have a valid EWS certificate for the current financial year</li>
+                                    <li>PWD candidates must have a disability certificate showing at least 40% disability</li>
+                                    <li>Category certificates are verified during the admission process</li>
+                                </ul>
+                                <p class="mt-3 text-gray-600">There might be relaxation in qualifying marks or cutoffs for reserved category candidates as per government norms.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                            <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                                <h3 class="text-lg font-medium text-gray-800">What happens if I miss the counseling or document verification?</h3>
+                                <div class="ml-2">
+                                    <svg class="faq-icon-plus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                    </svg>
+                                    <svg class="faq-icon-minus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-gray-600">Missing any step in the admission process can have serious consequences:</p>
+                                <ul class="list-disc pl-5 mt-2 space-y-2 text-gray-600">
+                                    <li><strong>Missing counseling registration:</strong> If you don't register for counseling within the specified timeline, you won't be considered for seat allocation despite having a valid C-CAT score.</li>
+                                    <li><strong>Missing choice filling:</strong> If you don't submit your preferences during the choice filling period, you won't be allocated any seat.</li>
+                                    <li><strong>Missing fee payment deadline:</strong> If you don't pay the required fee after seat allocation within the given timeframe, your allocation will be canceled, and the seat will be offered to other candidates in subsequent rounds.</li>
+                                    <li><strong>Missing document verification:</strong> If you don't report for document verification at the allotted institute, your admission may be canceled.</li>
+                                </ul>
+                                <p class="mt-3 text-gray-600">In case of genuine emergencies:</p>
+                                <ul class="list-disc pl-5 mt-1 space-y-1 text-gray-600">
+                                    <li>Contact the CDAC admission cell immediately via email or phone</li>
+                                    <li>Explain your situation with supporting evidence (medical certificates, etc.)</li>
+                                    <li>Request for consideration or extension, if possible</li>
+                                </ul>
+                                <p class="mt-3 text-gray-600">However, please note that extensions or special considerations are at the discretion of CDAC authorities and are granted only in exceptional circumstances. It's always advisable to adhere to all deadlines and complete all processes on time.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Courses & Curriculum FAQs -->
+                <div id="courses" class="category-content">
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">Courses & Curriculum Questions</h2>
+                    
+                    <div class="space-y-4">
+                        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                            <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                                <h3 class="text-lg font-medium text-gray-800">What are the different courses offered by CDAC?</h3>
+                                <div class="ml-2">
+                                    <svg class="faq-icon-plus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                    </svg>
+                                    <svg class="faq-icon-minus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-gray-600">CDAC offers several Post Graduate Diploma (PG) courses in various domains of advanced computing. The main courses are:</p>
+                                <ul class="list-disc pl-5 mt-2 space-y-2 text-gray-600">
+                                    <li><strong>PG-DAC (Post Graduate Diploma in Advanced Computing):</strong> Focuses on software development, web technologies, and application development. This is the most popular and widely offered course.</li>
+                                    <li><strong>PG-DBDA (Post Graduate Diploma in Big Data Analytics):</strong> Covers data science, machine learning, big data technologies, and analytics.</li>
+                                    <li><strong>PG-DITISS (Post Graduate Diploma in IT Infrastructure, Systems and Security):</strong> Focuses on network administration, system administration, and cybersecurity.</li>
+                                    <li><strong>PG-DESD (Post Graduate Diploma in Embedded Systems Design):</strong> Covers embedded programming, IoT, and hardware interfacing.</li>
+                                    <li><strong>PG-DVLSI (Post Graduate Diploma in VLSI Design):</strong> Focuses on VLSI design, verification, and testing.</li>
+                                    <li><strong>PG-DASSD (Post Graduate Diploma in Advanced Secure Software Development):</strong> Covers secure coding practices and application security.</li>
+                                    <li><strong>PG-DIOT (Post Graduate Diploma in Internet of Things):</strong> Focuses on IoT technologies, protocols, and applications.</li>
+                                    <li><strong>PG-DAIML (Post Graduate Diploma in Artificial Intelligence and Machine Learning):</strong> Covers AI algorithms, deep learning, and their applications.</li>
+                                </ul>
+                                <p class="mt-3 text-gray-600">Note: Not all courses are offered at all centers. The availability of courses varies across different CDAC institutes. The most commonly available courses at Pune centers are PG-DAC, PG-DBDA, PG-DITISS, and PG-DESD.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                            <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                                <h3 class="text-lg font-medium text-gray-800">Which CDAC course has the best job prospects?</h3>
+                                <div class="ml-2">
+                                    <svg class="faq-icon-plus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                    </svg>
+                                    <svg class="faq-icon-minus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-gray-600">Job prospects vary based on market trends, your background, and your aptitude. Here's an overview of the job prospects for different CDAC courses:</p>
+                                <ul class="list-disc pl-5 mt-2 space-y-2 text-gray-600">
+                                    <li><strong>PG-DAC:</strong> 
+                                        <ul class="list-disc pl-5 mt-1 space-y-1">
+                                            <li>Highest number of job opportunities</li>
+                                            <li>Wide range of roles: Software Developer, Web Developer, Full Stack Developer</li>
+                                            <li>Suitable for freshers and those transitioning to IT</li>
+                                            <li>Average starting salary: ₹4-8 lakhs per annum</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>PG-DBDA:</strong> 
+                                        <ul class="list-disc pl-5 mt-1 space-y-1">
+                                            <li>Growing demand in the analytics sector</li>
+                                            <li>Roles: Data Analyst, Data Engineer, Business Intelligence Developer</li>
+                                            <li>Better suited for those with analytical aptitude</li>
+                                            <li>Average starting salary: ₹5-10 lakhs per annum</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>PG-DITISS:</strong> 
+                                        <ul class="list-disc pl-5 mt-1 space-y-1">
+                                            <li>Steady demand in IT infrastructure and security</li>
+                                            <li>Roles: System Administrator, Network Engineer, Security Analyst</li>
+                                            <li>Good for those interested in infrastructure rather than coding</li>
+                                            <li>Average starting salary: ₹4-7 lakhs per annum</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>PG-DESD:</strong> 
+                                        <ul class="list-disc pl-5 mt-1 space-y-1">
+                                            <li>Specialized field with specific job opportunities</li>
+                                            <li>Roles: Embedded Developer, IoT Engineer, Firmware Developer</li>
+                                            <li>Better suited for electronics/electrical engineering graduates</li>
+                                            <li>Average starting salary: ₹4-8 lakhs per annum</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <p class="mt-3 text-gray-600">Current trends (as of 2023):</p>
+                                <ul class="list-disc pl-5 mt-1 space-y-1 text-gray-600">
+                                    <li>PG-DBDA and PG-DAIML are seeing increased demand due to the boom in data science and AI</li>
+                                    <li>PG-DITISS has stable demand with the growing focus on cybersecurity</li>
+                                    <li>PG-DAC continues to have the highest volume of opportunities</li>
+                                    <li>PG-DESD has more specialized but steady demand</li>
+                                </ul>
+                                <p class="mt-3 text-gray-600">The "best" course depends on your background, interests, and career goals. Rather than just following market trends, choose a course that aligns with your aptitude and interests for long-term career satisfaction.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                            <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                                <h3 class="text-lg font-medium text-gray-800">What is the curriculum and teaching methodology at CDAC?</h3>
+                                <div class="ml-2">
+                                    <svg class="faq-icon-plus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                    </svg>
+                                    <svg class="faq-icon-minus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-gray-600">CDAC follows a comprehensive curriculum with a strong emphasis on practical training. Here's an overview of the curriculum structure and teaching methodology:</p>
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">Curriculum Structure:</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>Foundation modules (common across courses)</li>
+                                    <li>Core modules (specific to each course)</li>
+                                    <li>Elective modules (optional specializations)</li>
+                                    <li>Project work (individual or group projects)</li>
+                                    <li>Soft skills and personality development</li>
+                                </ul>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">Teaching Methodology:</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>Classroom lectures by industry experts and experienced faculty</li>
+                                    <li>Hands-on lab sessions (typically 60-70% of the total hours)</li>
+                                    <li>Assignments and mini-projects</li>
+                                    <li>Case studies and industry problem-solving</li>
+                                    <li>Guest lectures by industry professionals</li>
+                                    <li>Technical seminars and presentations</li>
+                                </ul>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">Assessment Method:</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>Continuous evaluation through assignments and lab work</li>
+                                    <li>Module-end examinations (theory and practical)</li>
+                                    <li>Project evaluation</li>
+                                    <li>Viva-voce and presentations</li>
+                                </ul>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">Sample Curriculum Highlights (PG-DAC):</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>Core Java, Advanced Java, and Frameworks</li>
+                                    <li>Web Technologies (HTML, CSS, JavaScript, React/Angular)</li>
+                                    <li>Database Management Systems</li>
+                                    <li>Data Structures and Algorithms</li>
+                                    <li>Operating Systems and Linux</li>
+                                    <li>Software Development Methodologies</li>
+                                    <li>Project Work</li>
+                                </ul>
+                                
+                                <p class="mt-3 text-gray-600">The curriculum is regularly updated to align with industry requirements and technological advancements. While the core curriculum is standardized across all CDAC centers, there might be slight variations in the delivery and additional modules offered by different institutes.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                            <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                                <h3 class="text-lg font-medium text-gray-800">How difficult are CDAC courses? Can a non-CS graduate cope?</h3>
+                                <div class="ml-2">
+                                    <svg class="faq-icon-plus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                    </svg>
+                                    <svg class="faq-icon-minus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-gray-600">CDAC courses are intensive and fast-paced, but they are designed to be accessible to graduates from various backgrounds, including non-CS graduates. Here's what you should know:</p>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">Difficulty Level:</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>The courses are intensive with 6-8 hours of daily classes</li>
+                                    <li>Rapid progression from basics to advanced concepts</li>
+                                    <li>Requires consistent effort and self-study</li>
+                                    <li>Heavy emphasis on practical implementation and projects</li>
+                                </ul>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">For Non-CS Graduates:</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>The curriculum starts with fundamentals, assuming limited prior knowledge</li>
+                                    <li>Foundation modules help bridge the knowledge gap</li>
+                                    <li>Extra effort may be required initially to grasp programming concepts</li>
+                                    <li>Peer learning and group activities help in catching up</li>
+                                </ul>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">Tips for Non-CS Graduates:</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>Start learning basic programming concepts before the course begins</li>
+                                    <li>Familiarize yourself with computer fundamentals</li>
+                                    <li>Be prepared to put in extra hours, especially in the initial months</li>
+                                    <li>Don't hesitate to ask questions and seek help from faculty</li>
+                                    <li>Form study groups with peers from CS backgrounds</li>
+                                    <li>Focus on understanding concepts rather than memorizing</li>
+                                </ul>
+                                
+                                <p class="mt-3 text-gray-600">Success stories: Many non-CS graduates have successfully completed CDAC courses and built rewarding careers in IT. The key factors for success are dedication, consistent effort, and a willingness to learn. The initial learning curve might be steeper for non-CS graduates, but with persistence, the gap narrows significantly by the end of the course.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                            <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                                <h3 class="text-lg font-medium text-gray-800">What is the project work like in CDAC courses?</h3>
+                                <div class="ml-2">
+                                    <svg class="faq-icon-plus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                    </svg>
+                                    <svg class="faq-icon-minus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-gray-600">Project work is a crucial component of all CDAC courses, typically conducted in the final phase of the program. Here's what you should know about CDAC projects:</p>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">Project Structure:</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>Usually done in groups of 3-4 students</li>
+                                    <li>Duration: 6-8 weeks (last phase of the course)</li>
+                                    <li>Guided by faculty mentors and sometimes industry mentors</li>
+                                    <li>Follows software development lifecycle (requirement analysis to deployment)</li>
+                                </ul>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">Types of Projects:</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>Industry-sponsored projects (solving real-world problems)</li>
+                                    <li>In-house projects (proposed by faculty)</li>
+                                    <li>Student-proposed projects (innovative ideas)</li>
+                                    <li>Research-oriented projects (exploring new technologies)</li>
+                                </ul>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">Project Domains (varies by course):</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>PG-DAC: Web applications, mobile apps, enterprise software</li>
+                                    <li>PG-DBDA: Data analytics, predictive modeling, data visualization</li>
+                                    <li>PG-DITISS: Network security, system administration, cloud infrastructure</li>
+                                    <li>PG-DESD: Embedded systems, IoT applications, hardware interfacing</li>
+                                </ul>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">Evaluation Process:</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>Regular progress reviews and demonstrations</li>
+                                    <li>Final project presentation and demonstration</li>
+                                    <li>Technical documentation and code review</li>
+                                    <li>Viva-voce examination</li>
+                                    <li>Evaluation by internal and sometimes external examiners</li>
+                                </ul>
+                                
+                                <p class="mt-3 text-gray-600">The project work is highly valued by employers and often becomes a significant talking point during job interviews. Many students have secured job offers based on their project work. It provides practical experience in applying the concepts learned throughout the course and working in a team environment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placements FAQs -->
+                <div id="placements" class="category-content">
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">Placement Questions</h2>
+                    
+                    <div class="space-y-4">
+                        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                            <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                                <h3 class="text-lg font-medium text-gray-800">How are the placements at CDAC institutes in Pune?</h3>
+                                <div class="ml-2">
+                                    <svg class="faq-icon-plus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                    </svg>
+                                    <svg class="faq-icon-minus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-gray-600">CDAC institutes in Pune generally have good placement records. Here's an overview of the placement scenario:</p>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">Placement Statistics (Average across Pune centers):</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>Overall placement rate: 85-95%</li>
+                                    <li>Average starting salary: ₹4-8 lakhs per annum</li>
+                                    <li>Highest package: ₹12-18 lakhs per annum (for top performers)</li>
+                                    <li>Number of companies visiting: 50-100+ per batch</li>
+                                </ul>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">Institute-wise Placement Highlights:</h4>
+                                <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                                    <li><strong>CDAC ACTS Pune:</strong> 
+                                        <ul class="list-disc pl-5 mt-1 space-y-1">
+                                            <li>Highest placement rate (95-98%)</li>
+                                            <li>Top-tier companies like Microsoft, Amazon, TCS</li>
+                                            <li>Higher average package (₹6-10 LPA)</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Sunbeam Pune:</strong> 
+                                        <ul class="list-disc pl-5 mt-1 space-y-1">
+                                            <li>Strong placement record (90-95%)</li>
+                                            <li>Good mix of product and service companies</li>
+                                            <li>Average package: ₹5-8 LPA</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>IACSD Pune:</strong> 
+                                        <ul class="list-disc pl-5 mt-1 space-y-1">
+                                            <li>Decent placement rate (85-90%)</li>
+                                            <li>Mostly service-based companies</li>
+                                            <li>Average package: ₹4-7 LPA</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Sunbeam Karad:</strong> 
+                                        <ul class="list-disc pl-5 mt-1 space-y-1">
+                                            <li>Good placement rate (80-85%)</li>
+                                            <li>Mix of service and mid-tier companies</li>
+                                            <li>Average package: ₹3.5-6 LPA</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">Types of Companies Recruiting:</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>IT service giants: TCS, Infosys, Wipro, Cognizant</li>
+                                    <li>Product companies: Microsoft, Amazon, Oracle</li>
+                                    <li>Banking and finance: HSBC, Barclays, JP Morgan</li>
+                                    <li>Startups and mid-sized companies</li>
+                                    <li>Domain-specific companies (based on course)</li>
+                                </ul>
+                                
+                                <p class="mt-3 text-gray-600">Factors affecting placement:</p>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>Academic performance during the course</li>
+                                    <li>Technical skills and project work</li>
+                                    <li>Communication and soft skills</li>
+                                    <li>Previous work experience (if any)</li>
+                                    <li>Performance in aptitude tests and interviews</li>
+                                </ul>
+                                
+                                <p class="mt-3 text-gray-600">Note: Placement statistics can vary from batch to batch and are influenced by market conditions. The figures mentioned are approximate averages based on recent trends.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                            <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                                <h3 class="text-lg font-medium text-gray-800">How does the placement process work at CDAC?</h3>
+                                <div class="ml-2">
+                                    <svg class="faq-icon-plus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                    </svg>
+                                    <svg class="faq-icon-minus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-gray-600">The placement process at CDAC institutes typically follows these steps:</p>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">Pre-Placement Phase:</h4>
+                                <ol class="list-decimal pl-5 space-y-1 text-gray-600">
+                                    <li>Resume preparation workshops</li>
+                                    <li>Aptitude test training</li>
+                                    <li>Mock interviews and group discussions</li>
+                                    <li>Technical interview preparation</li>
+                                    <li>Soft skills and communication training</li>
+                                </ol>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">Placement Process:</h4>
+                                <ol class="list-decimal pl-5 space-y-2 text-gray-600">
+                                    <li><strong>Company Registration:</strong> Companies register with the placement cell and share their requirements.</li>
+                                    <li><strong>Pre-Placement Talk:</strong> Companies conduct presentations about their organization, roles, and expectations.</li>
+                                    <li><strong>Application Process:</strong> Interested students apply for specific companies.</li>
+                                    <li><strong>Shortlisting:</strong> Companies shortlist candidates based on criteria like academic performance, skills, etc.</li>
+                                    <li><strong>Selection Process:</strong> Typically includes:
+                                        <ul class="list-disc pl-5 mt-1 space-y-1">
+                                            <li>Aptitude/technical test</li>
+                                            <li>Coding test (for development roles)</li>
+                                            <li>Group discussion (sometimes)</li>
+                                            <li>Technical interview</li>
+                                            <li>HR interview</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Job Offer:</strong> Selected candidates receive offer letters.</li>
+                                </ol>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">Placement Policies:</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>Most institutes follow a "one student, one job" policy</li>
+                                    <li>Once placed, students may not be allowed to sit for further companies</li>
+                                    <li>Some institutes have salary thresholds for this policy (e.g., if placed below ₹5 LPA, you can appear for higher-paying companies)</li>
+                                    <li>Attendance at pre-placement talks is often mandatory</li>
+                                    <li>Students must maintain professional conduct throughout the process</li>
+                                </ul>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">Timing of Placements:</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>Placements typically begin in the last 1-2 months of the course</li>
+                                    <li>Some companies may visit earlier for pre-placement offers</li>
+                                    <li>Placement activities may continue for 1-2 months after course completion</li>
+                                </ul>
+                                
+                                <p class="mt-3 text-gray-600">Note: The exact placement process may vary slightly across different CDAC institutes. It's advisable to check the specific policies of your institute during orientation.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                            <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                                <h3 class="text-lg font-medium text-gray-800">What skills are most important for getting placed after CDAC?</h3>
+                                <div class="ml-2">
+                                    <svg class="faq-icon-plus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                    </svg>
+                                    <svg class="faq-icon-minus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-gray-600">Getting placed after CDAC requires a combination of technical and soft skills. Here are the most important skills that employers look for:</p>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">Technical Skills (Course-specific):</h4>
+                                <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                                    <li><strong>For PG-DAC:</strong>
+                                        <ul class="list-disc pl-5 mt-1 space-y-1">
+                                            <li>Strong programming fundamentals (Java/C++/Python)</li>
+                                            <li>Data structures and algorithms</li>
+                                            <li>Web development (HTML, CSS, JavaScript, frameworks)</li>
+                                            <li>Database management (SQL, RDBMS concepts)</li>
+                                            <li>Object-oriented programming concepts</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>For PG-DBDA:</strong>
+                                        <ul class="list-disc pl-5 mt-1 space-y-1">
+                                            <li>Data analysis and visualization</li>
+                                            <li>Machine learning algorithms</li>
+                                            <li>Big data technologies (Hadoop, Spark)</li>
+                                            <li>SQL and NoSQL databases</li>
+                                            <li>Python/R programming</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>For PG-DITISS:</strong>
+                                        <ul class="list-disc pl-5 mt-1 space-y-1">
+                                            <li>Networking concepts and protocols</li>
+                                            <li>Linux administration</li>
+                                            <li>Cybersecurity fundamentals</li>
+                                            <li>Cloud technologies (AWS/Azure)</li>
+                                            <li>Scripting (Shell, Python)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">General Technical Skills:</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>Problem-solving ability</li>
+                                    <li>Coding proficiency and clean code practices</li>
+                                    <li>Understanding of software development lifecycle</li>
+                                    <li>Version control systems (Git)</li>
+                                    <li>Basic understanding of design patterns</li>
+                                </ul>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">Soft Skills:</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>Communication skills (verbal and written)</li>
+                                    <li>Teamwork and collaboration</li>
+                                    <li>Adaptability and willingness to learn</li>
+                                    <li>Time management and organization</li>
+                                    <li>Analytical thinking and attention to detail</li>
+                                </ul>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">Interview Preparation:</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>Strong understanding of core concepts</li>
+                                    <li>Ability to solve coding problems efficiently</li>
+                                    <li>Project explanation and demonstration</li>
+                                    <li>Awareness of latest industry trends</li>
+                                    <li>Aptitude and logical reasoning skills</li>
+                                </ul>
+                                
+                                <p class="mt-3 text-gray-600">Additional tips for enhancing employability:</p>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>Work on personal projects beyond course requirements</li>
+                                    <li>Contribute to open-source projects</li>
+                                    <li>Participate in coding competitions and hackathons</li>
+                                    <li>Build an online portfolio/GitHub repository</li>
+                                    <li>Earn relevant certifications</li>
+                                    <li>Network with industry professionals and alumni</li>
+                                </ul>
+                                
+                                <p class="mt-3 text-gray-600">Focus on building a strong foundation in the core concepts rather than just surface-level knowledge of multiple technologies. Companies value candidates who can learn and adapt quickly over those who have superficial knowledge of many technologies.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                            <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                                <h3 class="text-lg font-medium text-gray-800">Do companies consider academic gaps or low graduation marks?</h3>
+                                <div class="ml-2">
+                                    <svg class="faq-icon-plus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                    </svg>
+                                    <svg class="faq-icon-minus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-gray-600">Academic gaps and low graduation marks can impact placement opportunities, but their significance varies depending on the company and other factors. Here's what you should know:</p>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">Academic Gaps:</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>Some companies have strict policies against gaps in education</li>
+                                    <li>Typically, gaps of 1 year or less are more acceptable</li>
+                                    <li>Longer gaps may require proper justification during interviews</li>
+                                    <li>Valid reasons (health issues, preparation for competitive exams, etc.) are generally accepted</li>
+                                    <li>Demonstrating productive use of the gap period can mitigate concerns</li>
+                                </ul>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">Low Graduation Marks:</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>Many companies have minimum percentage criteria (typically 60-65%)</li>
+                                    <li>Some companies maintain this criterion throughout 10th, 12th, and graduation</li>
+                                    <li>Service-based companies tend to be stricter about academic criteria</li>
+                                    <li>Product-based companies may be more flexible if technical skills are strong</li>
+                                    <li>Startups often focus more on skills than academic records</li>
+                                </ul>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">How to Overcome These Challenges:</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>Excel in CDAC coursework and maintain high scores</li>
+                                    <li>Develop exceptional technical skills and project work</li>
+                                    <li>Build a strong portfolio of personal projects</li>
+                                    <li>Prepare a convincing explanation for gaps or low marks</li>
+                                    <li>Focus on companies that are more flexible with academic criteria</li>
+                                    <li>Network with alumni and seek referrals</li>
+                                    <li>Consider internships or freelance work to build experience</li>
+                                </ul>
+                                
+                                <p class="mt-3 text-gray-600">The good news is that many CDAC graduates with academic gaps or average graduation marks have secured good placements by demonstrating strong technical skills and performance during the course. While some opportunities might be limited initially, proving your capabilities through CDAC performance can open many doors.</p>
+                                
+                                <p class="mt-3 text-gray-600">Remember that the IT industry increasingly values skills and aptitude over academic records. Focus on building your technical expertise and soft skills, and be prepared to explain your academic journey positively during interviews.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                            <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                                <h3 class="text-lg font-medium text-gray-800">What if I don't get placed through campus placements?</h3>
+                                <div class="ml-2">
+                                    <svg class="faq-icon-plus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                    </svg>
+                                    <svg class="faq-icon-minus w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div class="faq-answer px-5 pb-5">
+                                <p class="text-gray-600">Not getting placed through campus placements can be disappointing, but it's not the end of your career journey. Here are several effective strategies to pursue:</p>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">Immediate Steps:</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>Don't get discouraged - many successful professionals faced initial setbacks</li>
+                                    <li>Analyze what went wrong in interviews or tests</li>
+                                    <li>Seek feedback from placement officers or faculty</li>
+                                    <li>Identify skill gaps and work on improving them</li>
+                                </ul>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">Alternative Job Search Strategies:</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>CDAC Alumni Network: Connect with alumni for referrals and opportunities</li>
+                                    <li>Job Portals: Register on Naukri, LinkedIn, Indeed, Monster, etc.</li>
+                                    <li>Company Websites: Apply directly on company career pages</li>
+                                    <li>Recruitment Consultancies: Register with IT-focused recruitment agencies</li>
+                                    <li>Job Fairs: Attend IT and technology job fairs in your city</li>
+                                    <li>Networking: Leverage personal and professional connections</li>
+                                </ul>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">Skill Enhancement:</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>Work on personal projects to build your portfolio</li>
+                                    <li>Contribute to open-source projects on GitHub</li>
+                                    <li>Earn relevant certifications in your domain</li>
+                                    <li>Participate in coding challenges (LeetCode, HackerRank)</li>
+                                    <li>Learn additional technologies in demand</li>
+                                </ul>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">Alternative Career Paths:</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>Internships: Consider paid internships to gain experience</li>
+                                    <li>Freelancing: Take up freelance projects on platforms like Upwork or Fiverr</li>
+                                    <li>Startups: Smaller companies often value skills over formal requirements</li>
+                                    <li>Teaching/Training: Consider roles in technical training institutes</li>
+                                    <li>Further Education: Pursue additional certifications or higher education if appropriate</li>
+                                </ul>
+                                
+                                <h4 class="font-medium text-gray-800 mt-3 mb-2">Long-term Support:</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>CDAC often provides placement assistance even after the course ends</li>
+                                    <li>Alumni associations can help with job referrals</li>
+                                    <li>Some institutes have tie-ups with placement agencies</li>
+                                </ul>
+                                
+                                <p class="mt-3 text-gray-600">Remember that the first job is just the beginning of your career. Many CDAC graduates who didn't get placed initially have gone on to build successful careers by persisting and continuously improving their skills. The CDAC certification is well-recognized in the industry, and with the right approach, you can find good opportunities even outside campus placements.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ask a Question Section -->
+    <section class="py-12 bg-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-2xl font-bold mb-6 text-gray-800">Didn't Find Your Answer?</h2>
+                <p class="text-gray-600 mb-8">If you couldn't find the information you were looking for, feel free to ask us directly. Our team will get back to you with the answer.</p>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="mb-4">
+                        <label for="question-name" class="block text-gray-700 text-sm font-medium mb-2">Your Name</label>
+                        <input type="text" id="question-name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div class="mb-4">
+                        <label for="question-email" class="block text-gray-700 text-sm font-medium mb-2">Email Address</label>
+                        <input type="email" id="question-email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div class="mb-6">
+                        <label for="question-text" class="block text-gray-700 text-sm font-medium mb-2">Your Question</label>
+                        <textarea id="question-text" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                    </div>
+                    <button id="submit-question" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">Submit Question</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prep Resources Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center mb-10">
+                <h2 class="text-2xl font-bold mb-4 text-gray-800">Prepare for CDAC Entrance Exam</h2>
+                <p class="text-gray-600">Get access to high-quality preparation resources for C-CAT exam. Boost your chances of getting into your dream CDAC institute.</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto bg-gradient-to-r from-blue-600 to-indigo-700 rounded-xl overflow-hidden shadow-xl">
+                <div class="md:flex">
+                    <div class="md:w-2/3 p-8 text-white">
+                        <h3 class="text-xl font-bold mb-4">PrepWizard - Your C-CAT Preparation Partner</h3>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-yellow-300 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Comprehensive study material for all C-CAT sections</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-yellow-300 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Mock tests with detailed analysis and solutions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-yellow-300 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Previous years' question papers with solutions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-yellow-300 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Expert guidance and doubt-solving support</span>
+                            </li>
+                        </ul>
+                        <a href="https://prepwizard.in" target="_blank" class="inline-block bg-white text-blue-600 font-semibold py-2 px-6 rounded-lg hover:bg-blue-50 transition duration-300">Visit PrepWizard</a>
+                    </div>
+                    <div class="md:w-1/3 bg-blue-800 flex items-center justify-center p-8">
+                        <div class="text-center">
+                            <div class="text-white text-4xl font-bold mb-2">90%+</div>
+                            <div class="text-blue-200 text-sm">of our students get into their preferred CDAC institute</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">CDAC Guide</h3>
+                    <p class="text-gray-400 mb-4">Your comprehensive resource for CDAC training institutes in Pune. Find the perfect institute for your career in advanced computing.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="index.html#institutes" class="text-gray-400 hover:text-white">Institutes</a></li>
+                        <li><a href="index.html#comparison" class="text-gray-400 hover:text-white">Compare</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQs</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Institutes</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#sunbeam-pune" class="text-gray-400 hover:text-white">Sunbeam Pune</a></li>
+                        <li><a href="index.html#cdac-acts" class="text-gray-400 hover:text-white">CDAC ACTS Pune</a></li>
+                        <li><a href="index.html#iacsd-pune" class="text-gray-400 hover:text-white">IACSD Pune</a></li>
+                        <li><a href="index.html#sunbeam-karad" class="text-gray-400 hover:text-white">Sunbeam Karad</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-gray-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <span>info@cdacguide.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-gray-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-gray-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span>Pune, Maharashtra, India</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 CDAC Guide. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Question Submission -->
+    <div id="question-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full">
+            <h3 class="text-xl font-bold mb-4 text-gray-800">Thank You!</h3>
+            <p class="text-gray-600 mb-6">Your question has been submitted successfully. We'll get back to you via email as soon as possible.</p>
+            <button id="close-modal" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        
+        // FAQ accordion functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+        
+        // Category tabs functionality
+        document.querySelectorAll('.category-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                document.querySelectorAll('.category-tab').forEach(t => {
+                    t.classList.remove('active');
+                });
+                
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                
+                // Hide all content sections
+                document.querySelectorAll('.category-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                // Show the corresponding content section
+                const category = tab.getAttribute('data-category');
+                document.getElementById(category).classList.add('active');
+            });
+        });
+        
+        // Search functionality
+        document.getElementById('faq-search').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            
+            document.querySelectorAll('.faq-item').forEach(item => {
+                const questionText = item.querySelector('.faq-question h3').textContent.toLowerCase();
+                const answerText = item.querySelector('.faq-answer').textContent.toLowerCase();
+                
+                if (questionText.includes(searchTerm) || answerText.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+        
+        // Question submission
+        document.getElementById('submit-question').addEventListener('click', function() {
+            const name = document.getElementById('question-name').value;
+            const email = document.getElementById('question-email').value;
+            const question = document.getElementById('question-text').value;
+            
+            if (name && email && question) {
+                // In a real application, you would send this data to a server
+                // For demo purposes, we'll just show a success message
+                document.getElementById('question-modal').classList.remove('hidden');
+                
+                // Clear the form
+                document.getElementById('question-name').value = '';
+                document.getElementById('question-email').value = '';
+                document.getElementById('question-text').value = '';
+            } else {
+                alert('Please fill in all fields');
+            }
+        });
+        
+        // Close modal
+        document.getElementById('close-modal').addEventListener('click', function() {
+            document.getElementById('question-modal').classList.add('hidden');
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'961fadfd21aa424e',t:'MTc1Mjk4NTM2OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
