@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDAC Courses in India - PrepWizard</title>
+    <meta name="description" content="Comprehensive list of all CDAC courses available in India and the institutes that offer them.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .course-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .filter-button.active {
+            background-color: #4f46e5;
+            color: white;
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .accordion-content.active {
+            max-height: 2000px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <span class="text-indigo-600 font-bold text-2xl">Prep</span>
+                <span class="text-gray-700 font-bold text-2xl">Wizard</span>
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-700 hover:text-indigo-600 font-medium">Home</a>
+                <a href="courses.html" class="text-indigo-600 font-medium">Courses</a>
+                <a href="institutes.html" class="text-gray-700 hover:text-indigo-600 font-medium">Institutes</a>
+                <a href="comparison.html" class="text-gray-700 hover:text-indigo-600 font-medium">Compare</a>
+                <a href="faqs.html" class="text-gray-700 hover:text-indigo-600 font-medium">FAQs</a>
+                <a href="blog.html" class="text-gray-700 hover:text-indigo-600 font-medium">Blog</a>
+                <a href="contact.html" class="text-gray-700 hover:text-indigo-600 font-medium">Contact</a>
+            </nav>
+            <button class="md:hidden text-gray-700 focus:outline-none" id="mobile-menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="md:hidden hidden bg-white w-full absolute shadow-md" id="mobile-menu">
+            <div class="px-4 py-3 space-y-3">
+                <a href="index.html" class="block text-gray-700 hover:text-indigo-600 font-medium">Home</a>
+                <a href="courses.html" class="block text-indigo-600 font-medium">Courses</a>
+                <a href="institutes.html" class="block text-gray-700 hover:text-indigo-600 font-medium">Institutes</a>
+                <a href="comparison.html" class="block text-gray-700 hover:text-indigo-600 font-medium">Compare</a>
+                <a href="faqs.html" class="block text-gray-700 hover:text-indigo-600 font-medium">FAQs</a>
+                <a href="blog.html" class="block text-gray-700 hover:text-indigo-600 font-medium">Blog</a>
+                <a href="contact.html" class="block text-gray-700 hover:text-indigo-600 font-medium">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-indigo-600 to-blue-600 py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">CDAC Courses in India</h1>
+                <p class="text-xl text-blue-100 mb-8">Explore all CDAC courses available across different institutes in India</p>
+                <div class="relative max-w-xl mx-auto">
+                    <input type="text" id="search-courses" placeholder="Search for courses, technologies, or institutes..." class="w-full py-3 px-5 rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-300 text-gray-700">
+                    <button class="absolute right-2 top-2 bg-indigo-600 text-white p-2 rounded-full hover:bg-indigo-700 transition duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-8 bg-white shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center justify-center gap-3">
+                <button class="filter-button active px-4 py-2 rounded-full border border-gray-300 text-sm font-medium hover:bg-indigo-600 hover:text-white transition duration-300" data-filter="all">All Courses</button>
+                <button class="filter-button px-4 py-2 rounded-full border border-gray-300 text-sm font-medium hover:bg-indigo-600 hover:text-white transition duration-300" data-filter="software">Software Development</button>
+                <button class="filter-button px-4 py-2 rounded-full border border-gray-300 text-sm font-medium hover:bg-indigo-600 hover:text-white transition duration-300" data-filter="data">Data Science & AI</button>
+                <button class="filter-button px-4 py-2 rounded-full border border-gray-300 text-sm font-medium hover:bg-indigo-600 hover:text-white transition duration-300" data-filter="embedded">Embedded Systems</button>
+                <button class="filter-button px-4 py-2 rounded-full border border-gray-300 text-sm font-medium hover:bg-indigo-600 hover:text-white transition duration-300" data-filter="security">Cyber Security</button>
+                <button class="filter-button px-4 py-2 rounded-full border border-gray-300 text-sm font-medium hover:bg-indigo-600 hover:text-white transition duration-300" data-filter="vlsi">VLSI & IoT</button>
+                <button class="filter-button px-4 py-2 rounded-full border border-gray-300 text-sm font-medium hover:bg-indigo-600 hover:text-white transition duration-300" data-filter="other">Other Courses</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- PG-DAC -->
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden" data-category="software">
+                    <div class="h-3 bg-indigo-600"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold text-gray-800">PG-DAC</h3>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded">6 Months</span>
+                        </div>
+                        <h4 class="text-gray-700 font-medium mb-2">Post Graduate Diploma in Advanced Computing</h4>
+                        <p class="text-gray-600 text-sm mb-4">CDAC's flagship course focused on software development, covering Java, web technologies, frameworks, and more.</p>
+                        
+                        <div class="mb-4">
+                            <h5 class="text-sm font-medium text-gray-700 mb-2">Key Technologies:</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Java</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Spring</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Hibernate</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Angular</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">React</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <button class="accordion-button w-full text-left text-sm font-medium text-indigo-600 hover:text-indigo-800 focus:outline-none flex items-center">
+                                <span>Offering Institutes</span>
+                                <svg class="accordion-icon w-4 h-4 ml-1 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content mt-2">
+                                <ul class="text-sm text-gray-600 space-y-1 pl-5 list-disc">
+                                    <li>CDAC ACTS, Pune</li>
+                                    <li>CDAC Mumbai</li>
+                                    <li>CDAC Bangalore</li>
+                                    <li>CDAC Hyderabad</li>
+                                    <li>CDAC Chennai</li>
+                                    <li>CDAC Delhi</li>
+                                    <li>CDAC Kolkata</li>
+                                    <li>CDAC Mohali</li>
+                                    <li>CDAC Noida</li>
+                                    <li>Sunbeam Pune</li>
+                                    <li>IACSD Pune</li>
+                                    <li>IET Pune</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 font-medium">₹1,00,000 + GST</span>
+                            <a href="course-details.html" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
+                                View Details
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PG-DBDA -->
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden" data-category="data">
+                    <div class="h-3 bg-blue-600"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold text-gray-800">PG-DBDA</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">6 Months</span>
+                        </div>
+                        <h4 class="text-gray-700 font-medium mb-2">Post Graduate Diploma in Big Data Analytics</h4>
+                        <p class="text-gray-600 text-sm mb-4">Specialized course in big data technologies, data analytics, machine learning, and data visualization.</p>
+                        
+                        <div class="mb-4">
+                            <h5 class="text-sm font-medium text-gray-700 mb-2">Key Technologies:</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Hadoop</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Spark</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Python</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">R</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Machine Learning</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <button class="accordion-button w-full text-left text-sm font-medium text-blue-600 hover:text-blue-800 focus:outline-none flex items-center">
+                                <span>Offering Institutes</span>
+                                <svg class="accordion-icon w-4 h-4 ml-1 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content mt-2">
+                                <ul class="text-sm text-gray-600 space-y-1 pl-5 list-disc">
+                                    <li>CDAC ACTS, Pune</li>
+                                    <li>CDAC Mumbai</li>
+                                    <li>CDAC Bangalore</li>
+                                    <li>CDAC Hyderabad</li>
+                                    <li>CDAC Mohali</li>
+                                    <li>Sunbeam Pune</li>
+                                    <li>IACSD Pune</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 font-medium">₹1,00,000 + GST</span>
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                View Details
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PG-DESD -->
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden" data-category="embedded">
+                    <div class="h-3 bg-green-600"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold text-gray-800">PG-DESD</h3>
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">6 Months</span>
+                        </div>
+                        <h4 class="text-gray-700 font-medium mb-2">Post Graduate Diploma in Embedded Systems Design</h4>
+                        <p class="text-gray-600 text-sm mb-4">Focuses on embedded systems, IoT, real-time operating systems, and hardware-software integration.</p>
+                        
+                        <div class="mb-4">
+                            <h5 class="text-sm font-medium text-gray-700 mb-2">Key Technologies:</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Embedded C</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">ARM</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">RTOS</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">IoT</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Linux</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <button class="accordion-button w-full text-left text-sm font-medium text-green-600 hover:text-green-800 focus:outline-none flex items-center">
+                                <span>Offering Institutes</span>
+                                <svg class="accordion-icon w-4 h-4 ml-1 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content mt-2">
+                                <ul class="text-sm text-gray-600 space-y-1 pl-5 list-disc">
+                                    <li>CDAC ACTS, Pune</li>
+                                    <li>CDAC Mumbai</li>
+                                    <li>CDAC Bangalore</li>
+                                    <li>CDAC Hyderabad</li>
+                                    <li>CDAC Chennai</li>
+                                    <li>CDAC Mohali</li>
+                                    <li>CDAC Noida</li>
+                                    <li>Sunbeam Pune</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 font-medium">₹1,00,000 + GST</span>
+                            <a href="#" class="text-green-600 hover:text-green-800 font-medium flex items-center">
+                                View Details
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PG-DITISS -->
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden" data-category="security">
+                    <div class="h-3 bg-red-600"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold text-gray-800">PG-DITISS</h3>
+                            <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">6 Months</span>
+                        </div>
+                        <h4 class="text-gray-700 font-medium mb-2">Post Graduate Diploma in IT Infrastructure, Systems & Security</h4>
+                        <p class="text-gray-600 text-sm mb-4">Focuses on network security, system administration, and IT infrastructure management.</p>
+                        
+                        <div class="mb-4">
+                            <h5 class="text-sm font-medium text-gray-700 mb-2">Key Technologies:</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Network Security</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Linux</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Cloud Security</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Ethical Hacking</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <button class="accordion-button w-full text-left text-sm font-medium text-red-600 hover:text-red-800 focus:outline-none flex items-center">
+                                <span>Offering Institutes</span>
+                                <svg class="accordion-icon w-4 h-4 ml-1 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content mt-2">
+                                <ul class="text-sm text-gray-600 space-y-1 pl-5 list-disc">
+                                    <li>CDAC ACTS, Pune</li>
+                                    <li>CDAC Mumbai</li>
+                                    <li>CDAC Bangalore</li>
+                                    <li>CDAC Hyderabad</li>
+                                    <li>CDAC Mohali</li>
+                                    <li>IACSD Pune</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 font-medium">₹1,00,000 + GST</span>
+                            <a href="#" class="text-red-600 hover:text-red-800 font-medium flex items-center">
+                                View Details
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PG-DVLSI -->
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden" data-category="vlsi">
+                    <div class="h-3 bg-purple-600"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold text-gray-800">PG-DVLSI</h3>
+                            <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded">6 Months</span>
+                        </div>
+                        <h4 class="text-gray-700 font-medium mb-2">Post Graduate Diploma in VLSI Design</h4>
+                        <p class="text-gray-600 text-sm mb-4">Focuses on VLSI design, verification, and testing methodologies for integrated circuits.</p>
+                        
+                        <div class="mb-4">
+                            <h5 class="text-sm font-medium text-gray-700 mb-2">Key Technologies:</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Verilog</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">VHDL</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">SystemVerilog</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">FPGA</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <button class="accordion-button w-full text-left text-sm font-medium text-purple-600 hover:text-purple-800 focus:outline-none flex items-center">
+                                <span>Offering Institutes</span>
+                                <svg class="accordion-icon w-4 h-4 ml-1 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content mt-2">
+                                <ul class="text-sm text-gray-600 space-y-1 pl-5 list-disc">
+                                    <li>CDAC ACTS, Pune</li>
+                                    <li>CDAC Bangalore</li>
+                                    <li>CDAC Hyderabad</li>
+                                    <li>CDAC Chennai</li>
+                                    <li>CDAC Mohali</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 font-medium">₹1,00,000 + GST</span>
+                            <a href="#" class="text-purple-600 hover:text-purple-800 font-medium flex items-center">
+                                View Details
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PG-DMC -->
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden" data-category="software">
+                    <div class="h-3 bg-indigo-600"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold text-gray-800">PG-DMC</h3>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded">6 Months</span>
+                        </div>
+                        <h4 class="text-gray-700 font-medium mb-2">Post Graduate Diploma in Mobile Computing</h4>
+                        <p class="text-gray-600 text-sm mb-4">Specialized course in mobile application development for Android and iOS platforms.</p>
+                        
+                        <div class="mb-4">
+                            <h5 class="text-sm font-medium text-gray-700 mb-2">Key Technologies:</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Android</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">iOS</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">React Native</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Flutter</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <button class="accordion-button w-full text-left text-sm font-medium text-indigo-600 hover:text-indigo-800 focus:outline-none flex items-center">
+                                <span>Offering Institutes</span>
+                                <svg class="accordion-icon w-4 h-4 ml-1 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content mt-2">
+                                <ul class="text-sm text-gray-600 space-y-1 pl-5 list-disc">
+                                    <li>CDAC ACTS, Pune</li>
+                                    <li>CDAC Mumbai</li>
+                                    <li>CDAC Bangalore</li>
+                                    <li>CDAC Hyderabad</li>
+                                    <li>IACSD Pune</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 font-medium">₹1,00,000 + GST</span>
+                            <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
+                                View Details
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PG-DASSD -->
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden" data-category="software">
+                    <div class="h-3 bg-indigo-600"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold text-gray-800">PG-DASSD</h3>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded">6 Months</span>
+                        </div>
+                        <h4 class="text-gray-700 font-medium mb-2">Post Graduate Diploma in Advanced Secure Software Development</h4>
+                        <p class="text-gray-600 text-sm mb-4">Focuses on secure coding practices, application security, and vulnerability assessment.</p>
+                        
+                        <div class="mb-4">
+                            <h5 class="text-sm font-medium text-gray-700 mb-2">Key Technologies:</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Secure Coding</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">OWASP</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Penetration Testing</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">DevSecOps</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <button class="accordion-button w-full text-left text-sm font-medium text-indigo-600 hover:text-indigo-800 focus:outline-none flex items-center">
+                                <span>Offering Institutes</span>
+                                <svg class="accordion-icon w-4 h-4 ml-1 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content mt-2">
+                                <ul class="text-sm text-gray-600 space-y-1 pl-5 list-disc">
+                                    <li>CDAC ACTS, Pune</li>
+                                    <li>CDAC Mumbai</li>
+                                    <li>CDAC Bangalore</li>
+                                    <li>CDAC Hyderabad</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 font-medium">₹1,00,000 + GST</span>
+                            <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
+                                View Details
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PG-DIOT -->
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden" data-category="vlsi">
+                    <div class="h-3 bg-purple-600"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold text-gray-800">PG-DIOT</h3>
+                            <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded">6 Months</span>
+                        </div>
+                        <h4 class="text-gray-700 font-medium mb-2">Post Graduate Diploma in Internet of Things</h4>
+                        <p class="text-gray-600 text-sm mb-4">Specialized course in IoT technologies, sensors, connectivity, and IoT application development.</p>
+                        
+                        <div class="mb-4">
+                            <h5 class="text-sm font-medium text-gray-700 mb-2">Key Technologies:</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">IoT Protocols</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Sensors</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Arduino</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Raspberry Pi</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <button class="accordion-button w-full text-left text-sm font-medium text-purple-600 hover:text-purple-800 focus:outline-none flex items-center">
+                                <span>Offering Institutes</span>
+                                <svg class="accordion-icon w-4 h-4 ml-1 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content mt-2">
+                                <ul class="text-sm text-gray-600 space-y-1 pl-5 list-disc">
+                                    <li>CDAC ACTS, Pune</li>
+                                    <li>CDAC Bangalore</li>
+                                    <li>CDAC Hyderabad</li>
+                                    <li>CDAC Chennai</li>
+                                    <li>CDAC Mohali</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 font-medium">₹1,00,000 + GST</span>
+                            <a href="#" class="text-purple-600 hover:text-purple-800 font-medium flex items-center">
+                                View Details
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PG-DHPCSA -->
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden" data-category="data">
+                    <div class="h-3 bg-blue-600"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold text-gray-800">PG-DHPCSA</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">6 Months</span>
+                        </div>
+                        <h4 class="text-gray-700 font-medium mb-2">Post Graduate Diploma in HPC System Administration</h4>
+                        <p class="text-gray-600 text-sm mb-4">Focuses on high-performance computing systems, parallel processing, and cluster management.</p>
+                        
+                        <div class="mb-4">
+                            <h5 class="text-sm font-medium text-gray-700 mb-2">Key Technologies:</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">HPC</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Parallel Computing</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Cluster Management</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Linux</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <button class="accordion-button w-full text-left text-sm font-medium text-blue-600 hover:text-blue-800 focus:outline-none flex items-center">
+                                <span>Offering Institutes</span>
+                                <svg class="accordion-icon w-4 h-4 ml-1 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content mt-2">
+                                <ul class="text-sm text-gray-600 space-y-1 pl-5 list-disc">
+                                    <li>CDAC ACTS, Pune</li>
+                                    <li>CDAC Bangalore</li>
+                                    <li>CDAC Hyderabad</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 font-medium">₹1,00,000 + GST</span>
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                View Details
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PG-DAIML -->
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden" data-category="data">
+                    <div class="h-3 bg-blue-600"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold text-gray-800">PG-DAIML</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">6 Months</span>
+                        </div>
+                        <h4 class="text-gray-700 font-medium mb-2">Post Graduate Diploma in Artificial Intelligence & Machine Learning</h4>
+                        <p class="text-gray-600 text-sm mb-4">Specialized course in AI, ML algorithms, deep learning, and neural networks.</p>
+                        
+                        <div class="mb-4">
+                            <h5 class="text-sm font-medium text-gray-700 mb-2">Key Technologies:</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Python</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">TensorFlow</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">PyTorch</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Deep Learning</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <button class="accordion-button w-full text-left text-sm font-medium text-blue-600 hover:text-blue-800 focus:outline-none flex items-center">
+                                <span>Offering Institutes</span>
+                                <svg class="accordion-icon w-4 h-4 ml-1 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content mt-2">
+                                <ul class="text-sm text-gray-600 space-y-1 pl-5 list-disc">
+                                    <li>CDAC ACTS, Pune</li>
+                                    <li>CDAC Mumbai</li>
+                                    <li>CDAC Bangalore</li>
+                                    <li>CDAC Hyderabad</li>
+                                    <li>CDAC Chennai</li>
+                                    <li>CDAC Mohali</li>
+                                    <li>Sunbeam Pune</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 font-medium">₹1,00,000 + GST</span>
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                View Details
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PG-DFBD -->
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden" data-category="data">
+                    <div class="h-3 bg-blue-600"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold text-gray-800">PG-DFBD</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">6 Months</span>
+                        </div>
+                        <h4 class="text-gray-700 font-medium mb-2">Post Graduate Diploma in Financial Big Data Analytics</h4>
+                        <p class="text-gray-600 text-sm mb-4">Specialized course in financial data analysis, risk modeling, and algorithmic trading.</p>
+                        
+                        <div class="mb-4">
+                            <h5 class="text-sm font-medium text-gray-700 mb-2">Key Technologies:</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">R</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Python</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Financial Modeling</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Risk Analysis</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <button class="accordion-button w-full text-left text-sm font-medium text-blue-600 hover:text-blue-800 focus:outline-none flex items-center">
+                                <span>Offering Institutes</span>
+                                <svg class="accordion-icon w-4 h-4 ml-1 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content mt-2">
+                                <ul class="text-sm text-gray-600 space-y-1 pl-5 list-disc">
+                                    <li>CDAC ACTS, Pune</li>
+                                    <li>CDAC Mumbai</li>
+                                    <li>CDAC Bangalore</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 font-medium">₹1,00,000 + GST</span>
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                View Details
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PG-DSSD -->
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden" data-category="security">
+                    <div class="h-3 bg-red-600"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold text-gray-800">PG-DSSD</h3>
+                            <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">6 Months</span>
+                        </div>
+                        <h4 class="text-gray-700 font-medium mb-2">Post Graduate Diploma in System Software Development</h4>
+                        <p class="text-gray-600 text-sm mb-4">Focuses on system-level software development, operating systems, and device drivers.</p>
+                        
+                        <div class="mb-4">
+                            <h5 class="text-sm font-medium text-gray-700 mb-2">Key Technologies:</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">C</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Linux Kernel</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Device Drivers</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">System Programming</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <button class="accordion-button w-full text-left text-sm font-medium text-red-600 hover:text-red-800 focus:outline-none flex items-center">
+                                <span>Offering Institutes</span>
+                                <svg class="accordion-icon w-4 h-4 ml-1 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content mt-2">
+                                <ul class="text-sm text-gray-600 space-y-1 pl-5 list-disc">
+                                    <li>CDAC ACTS, Pune</li>
+                                    <li>CDAC Bangalore</li>
+                                    <li>CDAC Hyderabad</li>
+                                    <li>CDAC Chennai</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 font-medium">₹1,00,000 + GST</span>
+                            <a href="#" class="text-red-600 hover:text-red-800 font-medium flex items-center">
+                                View Details
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PG-DCLP -->
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden" data-category="other">
+                    <div class="h-3 bg-yellow-600"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold text-gray-800">PG-DCLP</h3>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded">6 Months</span>
+                        </div>
+                        <h4 class="text-gray-700 font-medium mb-2">Post Graduate Diploma in Communication & Liberal Arts</h4>
+                        <p class="text-gray-600 text-sm mb-4">Focuses on technical communication, documentation, and content development for IT.</p>
+                        
+                        <div class="mb-4">
+                            <h5 class="text-sm font-medium text-gray-700 mb-2">Key Areas:</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Technical Writing</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Documentation</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Content Strategy</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">UX Writing</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <button class="accordion-button w-full text-left text-sm font-medium text-yellow-600 hover:text-yellow-800 focus:outline-none flex items-center">
+                                <span>Offering Institutes</span>
+                                <svg class="accordion-icon w-4 h-4 ml-1 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content mt-2">
+                                <ul class="text-sm text-gray-600 space-y-1 pl-5 list-disc">
+                                    <li>CDAC ACTS, Pune</li>
+                                    <li>CDAC Mumbai</li>
+                                    <li>CDAC Bangalore</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 font-medium">₹80,000 + GST</span>
+                            <a href="#" class="text-yellow-600 hover:text-yellow-800 font-medium flex items-center">
+                                View Details
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PG-DGIA -->
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden" data-category="other">
+                    <div class="h-3 bg-yellow-600"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold text-gray-800">PG-DGIA</h3>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded">6 Months</span>
+                        </div>
+                        <h4 class="text-gray-700 font-medium mb-2">Post Graduate Diploma in Geoinformatics & Applications</h4>
+                        <p class="text-gray-600 text-sm mb-4">Specialized course in GIS, remote sensing, and geospatial applications.</p>
+                        
+                        <div class="mb-4">
+                            <h5 class="text-sm font-medium text-gray-700 mb-2">Key Technologies:</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">GIS</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Remote Sensing</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Spatial Analysis</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">QGIS</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <button class="accordion-button w-full text-left text-sm font-medium text-yellow-600 hover:text-yellow-800 focus:outline-none flex items-center">
+                                <span>Offering Institutes</span>
+                                <svg class="accordion-icon w-4 h-4 ml-1 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content mt-2">
+                                <ul class="text-sm text-gray-600 space-y-1 pl-5 list-disc">
+                                    <li>CDAC Pune</li>
+                                    <li>CDAC Hyderabad</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 font-medium">₹90,000 + GST</span>
+                            <a href="#" class="text-yellow-600 hover:text-yellow-800 font-medium flex items-center">
+                                View Details
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PG-DVLDD -->
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden" data-category="embedded">
+                    <div class="h-3 bg-green-600"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold text-gray-800">PG-DVLDD</h3>
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">6 Months</span>
+                        </div>
+                        <h4 class="text-gray-700 font-medium mb-2">Post Graduate Diploma in VLSI Design & Device Drivers</h4>
+                        <p class="text-gray-600 text-sm mb-4">Combines VLSI design with device driver development for hardware-software integration.</p>
+                        
+                        <div class="mb-4">
+                            <h5 class="text-sm font-medium text-gray-700 mb-2">Key Technologies:</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">VLSI</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Device Drivers</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Embedded Linux</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Verilog</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <button class="accordion-button w-full text-left text-sm font-medium text-green-600 hover:text-green-800 focus:outline-none flex items-center">
+                                <span>Offering Institutes</span>
+                                <svg class="accordion-icon w-4 h-4 ml-1 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content mt-2">
+                                <ul class="text-sm text-gray-600 space-y-1 pl-5 list-disc">
+                                    <li>CDAC ACTS, Pune</li>
+                                    <li>CDAC Bangalore</li>
+                                    <li>CDAC Hyderabad</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 font-medium">₹1,00,000 + GST</span>
+                            <a href="#" class="text-green-600 hover:text-green-800 font-medium flex items-center">
+                                View Details
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PG-DCSF -->
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden" data-category="security">
+                    <div class="h-3 bg-red-600"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold text-gray-800">PG-DCSF</h3>
+                            <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">6 Months</span>
+                        </div>
+                        <h4 class="text-gray-700 font-medium mb-2">Post Graduate Diploma in Cyber Security & Forensics</h4>
+                        <p class="text-gray-600 text-sm mb-4">Specialized course in cyber security, digital forensics, and incident response.</p>
+                        
+                        <div class="mb-4">
+                            <h5 class="text-sm font-medium text-gray-700 mb-2">Key Technologies:</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Cyber Security</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Digital Forensics</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Penetration Testing</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Incident Response</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <button class="accordion-button w-full text-left text-sm font-medium text-red-600 hover:text-red-800 focus:outline-none flex items-center">
+                                <span>Offering Institutes</span>
+                                <svg class="accordion-icon w-4 h-4 ml-1 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="accordion-content mt-2">
+                                <ul class="text-sm text-gray-600 space-y-1 pl-5 list-disc">
+                                    <li>CDAC ACTS, Pune</li>
+                                    <li>CDAC Mumbai</li>
+                                    <li>CDAC Bangalore</li>
+                                    <li>CDAC Hyderabad</li>
+                                    <li>CDAC Mohali</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700 font-medium">₹1,00,000 + GST</span>
+                            <a href="#" class="text-red-600 hover:text-red-800 font-medium flex items-center">
+                                View Details
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- No Results Message -->
+            <div id="no-results" class="hidden text-center py-12">
+                <svg class="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <h3 class="text-xl font-medium text-gray-700 mb-2">No courses found</h3>
+                <p class="text-gray-600">Try adjusting your search or filter criteria</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compare Courses Section -->
+    <section class="py-12 bg-indigo-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Compare CDAC Courses</h2>
+                    <p class="text-gray-600">Not sure which course is right for you? Use our comparison tool to find the perfect match for your career goals.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="course1" class="block text-sm font-medium text-gray-700 mb-2">Select First Course</label>
+                            <select id="course1" class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                                <option value="">Select a course</option>
+                                <option value="pg-dac">PG-DAC</option>
+                                <option value="pg-dbda">PG-DBDA</option>
+                                <option value="pg-desd">PG-DESD</option>
+                                <option value="pg-ditiss">PG-DITISS</option>
+                                <option value="pg-daiml">PG-DAIML</option>
+                                <option value="pg-dvlsi">PG-DVLSI</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="course2" class="block text-sm font-medium text-gray-700 mb-2">Select Second Course</label>
+                            <select id="course2" class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                                <option value="">Select a course</option>
+                                <option value="pg-dac">PG-DAC</option>
+                                <option value="pg-dbda">PG-DBDA</option>
+                                <option value="pg-desd">PG-DESD</option>
+                                <option value="pg-ditiss">PG-DITISS</option>
+                                <option value="pg-daiml">PG-DAIML</option>
+                                <option value="pg-dvlsi">PG-DVLSI</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mt-6 text-center">
+                        <a href="comparison.html" class="inline-flex items-center bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-6 rounded-md transition duration-300">
+                            Compare Courses
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
+                    <p class="text-gray-600">Find answers to common questions about CDAC courses</p>
+                </div>
+                
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
+                            <span class="font-medium text-gray-800">What is the eligibility criteria for CDAC courses?</span>
+                            <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="accordion-content p-4 border-t border-gray-200">
+                            <p class="text-gray-600">Most CDAC courses require a graduate degree (BE/B.Tech/MCA/MSc/BCA/BSc) with minimum 50% marks (45% for reserved categories). Some specialized courses may have specific degree requirements. Final year students can also apply, with admission subject to completion of their graduation.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 2 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
+                            <span class="font-medium text-gray-800">How do I apply for CDAC courses?</span>
+                            <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="accordion-content p-4 border-t border-gray-200">
+                            <p class="text-gray-600">To apply for CDAC courses, you need to register for the C-CAT (CDAC Common Admission Test) on the official CDAC website. After taking the exam, you'll participate in online counseling for course and center selection based on your C-CAT rank. The C-CAT is typically conducted twice a year - in January and July.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 3 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
+                            <span class="font-medium text-gray-800">What is the fee structure for CDAC courses?</span>
+                            <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="accordion-content p-4 border-t border-gray-200">
+                            <p class="text-gray-600">The course fee for most CDAC courses is approximately ₹1,00,000 + GST, though it may vary slightly across different centers and courses. Scholarships are available for SC/ST/OBC candidates through various government schemes. Some centers also offer merit-based scholarships or fee concessions.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 4 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
+                            <span class="font-medium text-gray-800">Which CDAC course has the best placement opportunities?</span>
+                            <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="accordion-content p-4 border-t border-gray-200">
+                            <p class="text-gray-600">PG-DAC traditionally has the highest placement rates due to the broad demand for software developers. However, PG-DBDA and PG-DAIML have seen increasing demand in recent years due to the growth in data science and AI fields. PG-DESD is popular for embedded systems roles. The best course depends on your interests, background, and career goals.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 5 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
+                            <span class="font-medium text-gray-800">Are CDAC courses recognized by the industry?</span>
+                            <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="accordion-content p-4 border-t border-gray-200">
+                            <p class="text-gray-600">Yes, CDAC courses are well-recognized in the IT industry. CDAC is an autonomous scientific society of the Ministry of Electronics and Information Technology, Government of India, which gives its courses credibility. Many companies specifically recruit CDAC graduates due to their practical training and industry-aligned curriculum.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <a href="faqs.html" class="inline-flex items-center text-indigo-600 font-medium hover:text-indigo-800">
+                        View All FAQs
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">PrepWizard</h3>
+                    <p class="text-gray-300 mb-4">Your complete guide to CDAC courses and preparation.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white">Home</a></li>
+                        <li><a href="courses.html" class="text-gray-300 hover:text-white">Courses</a></li>
+                        <li><a href="institutes.html" class="text-gray-300 hover:text-white">Institutes</a></li>
+                        <li><a href="comparison.html" class="text-gray-300 hover:text-white">Compare</a></li>
+                        <li><a href="faqs.html" class="text-gray-300 hover:text-white">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="blog.html" class="text-gray-300 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Study Material</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Mock Tests</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Success Stories</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Placement Stats</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-gray-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <span class="text-gray-300">info@prepwizard.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-gray-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <span class="text-gray-300">+91 9876543210</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-gray-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span class="text-gray-300">Pune, Maharashtra, India</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center">
+                <p class="text-gray-300">&copy; 2023 PrepWizard. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        
+        // Filter Functionality
+        const filterButtons = document.querySelectorAll('.filter-button');
+        const courseCards = document.querySelectorAll('.course-card');
+        const noResults = document.getElementById('no-results');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                const filterValue = button.getAttribute('data-filter');
+                let visibleCount = 0;
+                
+                courseCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                // Show/hide no results message
+                if (visibleCount === 0) {
+                    noResults.classList.remove('hidden');
+                } else {
+                    noResults.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Search Functionality
+        const searchInput = document.getElementById('search-courses');
+        
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+            let visibleCount = 0;
+            
+            courseCards.forEach(card => {
+                const cardText = card.textContent.toLowerCase();
+                if (cardText.includes(searchTerm)) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Show/hide no results message
+            if (visibleCount === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
+            
+            // Reset filter buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            document.querySelector('[data-filter="all"]').classList.add('active');
+        });
+        
+        // Accordion Functionality
+        const accordionButtons = document.querySelectorAll('.accordion-button');
+        
+        accordionButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('.accordion-icon');
+                
+                content.classList.toggle('active');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'962257bba3e70b19',t:'MTc1MzAxMzI5My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
