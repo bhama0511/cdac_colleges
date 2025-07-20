@@ -3,25 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top CDAC Training Institutes in Pune | Comprehensive Guide</title>
-    <meta name="description" content="Explore the best CDAC training institutes in Pune. Compare courses, placements, fees, and facilities at Sunbeam Pune, CDAC ACTS, IACSD, and Sunbeam Karad.">
-    <meta name="keywords" content="CDAC Pune, CDAC institutes, PG-DAC, PG-DBDA, PG-DITISS, Sunbeam Pune, CDAC ACTS, IACSD, Sunbeam Karad">
+    <title>PrepWizard - Your Complete Guide to CDAC Courses & Institutes</title>
+    <meta name="description" content="PrepWizard provides comprehensive information about CDAC courses, institutes, placements, and career guidance to help you make informed decisions.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "EducationalOrganization",
-      "name": "Top CDAC Training Institutes in Pune",
-      "description": "Comprehensive guide to the best CDAC training institutes in Pune, India",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Pune",
-        "addressRegion": "Maharashtra",
-        "addressCountry": "India"
-      }
-    }
-    </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         
@@ -30,83 +15,64 @@
             scroll-behavior: smooth;
         }
         
+        .hero-gradient {
+            background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+        }
+        
         .institute-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
         .institute-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
         
-        .tab-content {
-            display: none;
+        .feature-card {
+            transition: transform 0.3s ease;
         }
         
-        .tab-content.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        .course-tag {
-            transition: all 0.3s ease;
-        }
-        
-        .course-tag:hover {
-            transform: scale(1.05);
+        .feature-card:hover {
+            transform: translateY(-5px);
         }
         
         .testimonial-card {
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease;
         }
         
         .testimonial-card:hover {
-            transform: translateY(-3px);
+            transform: translateY(-5px);
         }
         
-        .gallery-img {
+        .course-card {
             transition: all 0.3s ease;
-            cursor: pointer;
         }
         
-        .gallery-img:hover {
-            transform: scale(1.03);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
         
-        .modal {
+        .faq-item {
+            transition: all 0.3s ease;
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+        
+        .faq-item.active .faq-icon-plus {
             display: none;
-            position: fixed;
-            z-index: 50;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.9);
         }
         
-        .modal-content {
-            margin: auto;
-            display: block;
-            max-width: 80%;
-            max-height: 80%;
-        }
-        
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-            cursor: pointer;
+        .faq-item:not(.active) .faq-icon-minus {
+            display: none;
         }
     </style>
 </head>
@@ -114,17 +80,17 @@
     <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-40">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="#" class="flex items-center">
-                <span class="text-blue-600 font-bold text-2xl">CDAC</span>
-                <span class="text-gray-700 font-bold text-2xl">Guide</span>
+            <a href="index.html" class="flex items-center">
+                <span class="text-indigo-600 font-bold text-2xl">Prep</span>
+                <span class="text-gray-700 font-bold text-2xl">Wizard</span>
             </a>
             <nav class="hidden md:flex space-x-8">
-                <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
-                <a href="#institutes" class="text-gray-700 hover:text-blue-600 font-medium">Institutes</a>
-                <a href="#comparison" class="text-gray-700 hover:text-blue-600 font-medium">Compare</a>
-                <a href="#faqs" class="text-gray-700 hover:text-blue-600 font-medium">FAQs</a>
-                <a href="#blog" class="text-gray-700 hover:text-blue-600 font-medium">Blog</a>
-                <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+                <a href="#home" class="text-indigo-600 font-medium">Home</a>
+                <a href="#institutes" class="text-gray-700 hover:text-indigo-600 font-medium">Institutes</a>
+                <a href="#comparison" class="text-gray-700 hover:text-indigo-600 font-medium">Compare</a>
+                <a href="faqs.html" class="text-gray-700 hover:text-indigo-600 font-medium">FAQs</a>
+                <a href="blog.html" class="text-gray-700 hover:text-indigo-600 font-medium">Blog</a>
+                <a href="contact.html" class="text-gray-700 hover:text-indigo-600 font-medium">Contact</a>
             </nav>
             <button class="md:hidden text-gray-700 focus:outline-none" id="mobile-menu-button">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -134,1149 +100,857 @@
         </div>
         <div class="md:hidden hidden bg-white w-full absolute shadow-md" id="mobile-menu">
             <div class="px-4 py-3 space-y-3">
-                <a href="#home" class="block text-gray-700 hover:text-blue-600 font-medium">Home</a>
-                <a href="#institutes" class="block text-gray-700 hover:text-blue-600 font-medium">Institutes</a>
-                <a href="#comparison" class="block text-gray-700 hover:text-blue-600 font-medium">Compare</a>
-                <a href="#faqs" class="block text-gray-700 hover:text-blue-600 font-medium">FAQs</a>
-                <a href="#blog" class="block text-gray-700 hover:text-blue-600 font-medium">Blog</a>
-                <a href="#contact" class="block text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+                <a href="#home" class="block text-indigo-600 font-medium">Home</a>
+                <a href="#institutes" class="block text-gray-700 hover:text-indigo-600 font-medium">Institutes</a>
+                <a href="#comparison" class="block text-gray-700 hover:text-indigo-600 font-medium">Compare</a>
+                <a href="faqs.html" class="block text-gray-700 hover:text-indigo-600 font-medium">FAQs</a>
+                <a href="blog.html" class="block text-gray-700 hover:text-indigo-600 font-medium">Blog</a>
+                <a href="contact.html" class="block text-gray-700 hover:text-indigo-600 font-medium">Contact</a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
+    <section id="home" class="hero-gradient py-16 md:py-24">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-10 md:mb-0">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Top CDAC Training Institutes in Pune</h1>
-                    <p class="text-xl mb-8">Find the perfect institute for your career in advanced computing. Compare courses, placements, and facilities.</p>
-                    <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
-                        <a href="#institutes" class="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300 text-center">Explore Institutes</a>
-                        <a href="#comparison" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-6 rounded-lg transition duration-300 text-center">Compare Institutes</a>
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">Your Complete Guide to CDAC Courses & Institutes</h1>
+                    <p class="text-blue-100 text-lg mb-8">Make informed decisions about your CDAC journey with comprehensive information about courses, institutes, placements, and more.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#institutes" class="bg-white text-indigo-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition duration-300 text-center">Explore Institutes</a>
+                        <a href="#comparison" class="bg-indigo-800 text-white hover:bg-indigo-900 font-semibold py-3 px-6 rounded-lg transition duration-300 text-center">Compare Courses</a>
                     </div>
                 </div>
-                <div class="md:w-1/2">
-                    <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <h2 class="text-gray-800 text-xl font-semibold mb-4">Find Your Ideal CDAC Institute</h2>
-                        <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-medium mb-2">Search by Course</label>
-                            <select id="course-filter" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700">
-                                <option value="all">All Courses</option>
-                                <option value="pg-dac">PG-DAC</option>
-                                <option value="pg-dbda">PG-DBDA</option>
-                                <option value="pg-ditiss">PG-DITISS</option>
-                                <option value="pg-desd">PG-DESD</option>
-                                <option value="pg-dmac">PG-DMAC</option>
-                            </select>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 bg-indigo-200 bg-opacity-30 rounded-full absolute -top-6 -left-6"></div>
+                        <div class="w-64 h-64 md:w-80 md:h-80 bg-blue-200 bg-opacity-30 rounded-full absolute -bottom-6 -right-6"></div>
+                        <div class="bg-white p-6 rounded-lg shadow-lg relative z-10">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-800">CDAC Courses</h3>
+                                    <p class="text-sm text-gray-600">Find the right course for your career</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-800">Top Institutes</h3>
+                                    <p class="text-sm text-gray-600">Compare facilities and placements</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-800">Admission Guide</h3>
+                                    <p class="text-sm text-gray-600">Step-by-step application process</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-800">Placement Stats</h3>
+                                    <p class="text-sm text-gray-600">Real placement data and insights</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-medium mb-2">Search by Location</label>
-                            <select id="location-filter" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700">
-                                <option value="all">All Locations</option>
-                                <option value="pune-city">Pune City</option>
-                                <option value="hinjewadi">Hinjewadi</option>
-                                <option value="karad">Karad</option>
-                            </select>
-                        </div>
-                        <button id="search-btn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">Search Institutes</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="py-12 bg-white">
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                <div class="p-6 bg-blue-50 rounded-lg">
-                    <div class="text-3xl font-bold text-blue-600 mb-2">4+</div>
-                    <div class="text-gray-700">Top Institutes</div>
-                </div>
-                <div class="p-6 bg-blue-50 rounded-lg">
-                    <div class="text-3xl font-bold text-blue-600 mb-2">10+</div>
-                    <div class="text-gray-700">Specialized Courses</div>
-                </div>
-                <div class="p-6 bg-blue-50 rounded-lg">
-                    <div class="text-3xl font-bold text-blue-600 mb-2">90%+</div>
-                    <div class="text-gray-700">Placement Rate</div>
-                </div>
-                <div class="p-6 bg-blue-50 rounded-lg">
-                    <div class="text-3xl font-bold text-blue-600 mb-2">500+</div>
-                    <div class="text-gray-700">Hiring Companies</div>
-                </div>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Why Choose PrepWizard?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We provide comprehensive and unbiased information to help you make the best decisions for your CDAC journey and future career.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Institutes Section -->
-    <section id="institutes" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-2">Top CDAC Training Institutes</h2>
-            <p class="text-gray-600 text-center mb-12">Explore the best CDAC authorized training centers in Pune region</p>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Sunbeam Pune -->
-                <div class="institute-card bg-white rounded-xl overflow-hidden shadow-md">
-                    <div class="h-48 bg-gradient-to-r from-blue-500 to-blue-600 relative">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <svg class="w-24 h-24 text-white opacity-20" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838l-2.727 1.17 1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
-                            </svg>
-                        </div>
-                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
-                            <h3 class="text-white text-xl font-semibold">Sunbeam Pune</h3>
-                            <div class="flex items-center text-yellow-400 mt-1">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <span class="text-white text-sm ml-2">(4.5/5)</span>
-                            </div>
-                        </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="feature-card bg-gray-50 p-6 rounded-lg">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
                     </div>
-                    <div class="p-5">
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="course-tag bg-blue-100 text-blue-700 text-xs font-medium px-2.5 py-0.5 rounded">PG-DAC</span>
-                            <span class="course-tag bg-blue-100 text-blue-700 text-xs font-medium px-2.5 py-0.5 rounded">PG-DBDA</span>
-                            <span class="course-tag bg-blue-100 text-blue-700 text-xs font-medium px-2.5 py-0.5 rounded">PG-DITISS</span>
-                        </div>
-                        <div class="flex items-center mb-3">
-                            <svg class="w-4 h-4 text-gray-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span class="text-gray-600 text-sm">Hinjewadi, Pune</span>
-                        </div>
-                        <div class="flex items-center mb-4">
-                            <svg class="w-4 h-4 text-gray-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span class="text-gray-600 text-sm">Established 1999</span>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-4">Sunbeam Infotech is one of the oldest and most reputed CDAC training centers in Pune with excellent placement records.</p>
-                        <a href="#sunbeam-pune" class="institute-details-btn block text-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300" data-institute="sunbeam-pune">View Details</a>
-                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Verified Information</h3>
+                    <p class="text-gray-600">All information is thoroughly researched and verified from official sources and alumni feedback.</p>
                 </div>
-
-                <!-- CDAC ACTS Pune -->
-                <div class="institute-card bg-white rounded-xl overflow-hidden shadow-md">
-                    <div class="h-48 bg-gradient-to-r from-purple-500 to-purple-600 relative">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <svg class="w-24 h-24 text-white opacity-20" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838l-2.727 1.17 1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
-                            </svg>
-                        </div>
-                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
-                            <h3 class="text-white text-xl font-semibold">CDAC ACTS Pune</h3>
-                            <div class="flex items-center text-yellow-400 mt-1">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <span class="text-white text-sm ml-2">(4.9/5)</span>
-                            </div>
-                        </div>
+                
+                <div class="feature-card bg-gray-50 p-6 rounded-lg">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path>
+                        </svg>
                     </div>
-                    <div class="p-5">
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="course-tag bg-purple-100 text-purple-700 text-xs font-medium px-2.5 py-0.5 rounded">PG-DAC</span>
-                            <span class="course-tag bg-purple-100 text-purple-700 text-xs font-medium px-2.5 py-0.5 rounded">PG-DBDA</span>
-                            <span class="course-tag bg-purple-100 text-purple-700 text-xs font-medium px-2.5 py-0.5 rounded">PG-DITISS</span>
-                            <span class="course-tag bg-purple-100 text-purple-700 text-xs font-medium px-2.5 py-0.5 rounded">PG-DESD</span>
-                        </div>
-                        <div class="flex items-center mb-3">
-                            <svg class="w-4 h-4 text-gray-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span class="text-gray-600 text-sm">Pashan, Pune</span>
-                        </div>
-                        <div class="flex items-center mb-4">
-                            <svg class="w-4 h-4 text-gray-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span class="text-gray-600 text-sm">Established 1998</span>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-4">CDAC ACTS is the flagship institute of CDAC with state-of-the-art infrastructure and excellent faculty members.</p>
-                        <a href="#cdac-acts" class="institute-details-btn block text-center bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300" data-institute="cdac-acts">View Details</a>
-                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Unbiased Comparisons</h3>
+                    <p class="text-gray-600">Side-by-side comparisons of institutes and courses based on objective parameters and metrics.</p>
                 </div>
-
-                <!-- IACSD Pune -->
-                <div class="institute-card bg-white rounded-xl overflow-hidden shadow-md">
-                    <div class="h-48 bg-gradient-to-r from-green-500 to-green-600 relative">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <svg class="w-24 h-24 text-white opacity-20" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838l-2.727 1.17 1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
-                            </svg>
-                        </div>
-                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
-                            <h3 class="text-white text-xl font-semibold">IACSD Pune</h3>
-                            <div class="flex items-center text-yellow-400 mt-1">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <span class="text-white text-sm ml-2">(4.0/5)</span>
-                            </div>
-                        </div>
+                
+                <div class="feature-card bg-gray-50 p-6 rounded-lg">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
                     </div>
-                    <div class="p-5">
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="course-tag bg-green-100 text-green-700 text-xs font-medium px-2.5 py-0.5 rounded">PG-DAC</span>
-                            <span class="course-tag bg-green-100 text-green-700 text-xs font-medium px-2.5 py-0.5 rounded">PG-DBDA</span>
-                            <span class="course-tag bg-green-100 text-green-700 text-xs font-medium px-2.5 py-0.5 rounded">PG-DESD</span>
-                        </div>
-                        <div class="flex items-center mb-3">
-                            <svg class="w-4 h-4 text-gray-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span class="text-gray-600 text-sm">Akurdi, Pune</span>
-                        </div>
-                        <div class="flex items-center mb-4">
-                            <svg class="w-4 h-4 text-gray-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span class="text-gray-600 text-sm">Established 2001</span>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-4">IACSD offers industry-focused training with strong emphasis on practical skills and project-based learning.</p>
-                        <a href="#iacsd-pune" class="institute-details-btn block text-center bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300" data-institute="iacsd-pune">View Details</a>
-                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Up-to-Date Content</h3>
+                    <p class="text-gray-600">Regular updates on admission dates, fee structures, curriculum changes, and placement statistics.</p>
                 </div>
-
-                <!-- Sunbeam Karad -->
-                <div class="institute-card bg-white rounded-xl overflow-hidden shadow-md">
-                    <div class="h-48 bg-gradient-to-r from-orange-500 to-orange-600 relative">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <svg class="w-24 h-24 text-white opacity-20" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838l-2.727 1.17 1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
-                            </svg>
-                        </div>
-                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
-                            <h3 class="text-white text-xl font-semibold">Sunbeam Karad</h3>
-                            <div class="flex items-center text-yellow-400 mt-1">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <span class="text-white text-sm ml-2">(4.4/5)</span>
-                            </div>
-                        </div>
+                
+                <div class="feature-card bg-gray-50 p-6 rounded-lg">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
                     </div>
-                    <div class="p-5">
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="course-tag bg-orange-100 text-orange-700 text-xs font-medium px-2.5 py-0.5 rounded">PG-DAC</span>
-                            <span class="course-tag bg-orange-100 text-orange-700 text-xs font-medium px-2.5 py-0.5 rounded">PG-DBDA</span>
-                            <span class="course-tag bg-orange-100 text-orange-700 text-xs font-medium px-2.5 py-0.5 rounded">PG-DESD</span>
-                        </div>
-                        <div class="flex items-center mb-3">
-                            <svg class="w-4 h-4 text-gray-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span class="text-gray-600 text-sm">Karad, Maharashtra</span>
-                        </div>
-                        <div class="flex items-center mb-4">
-                            <svg class="w-4 h-4 text-gray-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span class="text-gray-600 text-sm">Established 2003</span>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-4">Sunbeam Karad offers quality CDAC training with affordable fees and good placement opportunities.</p>
-                        <a href="#sunbeam-karad" class="institute-details-btn block text-center bg-orange-600 hover:bg-orange-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300" data-institute="sunbeam-karad">View Details</a>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Comprehensive Resources</h3>
+                    <p class="text-gray-600">Detailed guides, preparation tips, interview experiences, and career advice from experts.</p>
+                </div>
+                
+                <div class="feature-card bg-gray-50 p-6 rounded-lg">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
+                        </svg>
                     </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Alumni Insights</h3>
+                    <p class="text-gray-600">Real experiences and feedback from CDAC alumni to give you authentic perspectives.</p>
+                </div>
+                
+                <div class="feature-card bg-gray-50 p-6 rounded-lg">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Expert Support</h3>
+                    <p class="text-gray-600">Get your queries answered by our team of experts who understand the CDAC ecosystem.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Institute Details Sections -->
-    <div id="institute-details" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 overflow-y-auto">
-        <div class="min-h-screen flex items-center justify-center p-4">
-            <div class="bg-white rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative">
-                <button id="close-details" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+    <!-- Popular Courses Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Popular CDAC Courses</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore the most sought-after CDAC courses and find the one that aligns with your career goals.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- PG-DAC Course -->
+                <div class="course-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="bg-indigo-600 text-white p-4">
+                        <h3 class="font-bold text-xl">PG-DAC</h3>
+                        <p class="text-sm text-indigo-100">Post Graduate Diploma in Advanced Computing</p>
+                    </div>
+                    <div class="p-5">
+                        <div class="mb-4">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">Popularity</span>
+                                <span class="text-sm font-medium text-gray-700">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <ul class="mb-4 space-y-2">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-indigo-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">Java & Advanced Java</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-indigo-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">Web Technologies</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-indigo-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">Frameworks (Spring, Hibernate)</span>
+                            </li>
+                        </ul>
+                        <a href="course-details.html" class="block text-center bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded transition duration-300">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- PG-DBDA Course -->
+                <div class="course-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="bg-blue-600 text-white p-4">
+                        <h3 class="font-bold text-xl">PG-DBDA</h3>
+                        <p class="text-sm text-blue-100">Post Graduate Diploma in Big Data Analytics</p>
+                    </div>
+                    <div class="p-5">
+                        <div class="mb-4">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">Popularity</span>
+                                <span class="text-sm font-medium text-gray-700">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <ul class="mb-4 space-y-2">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">Data Science & Analytics</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">Machine Learning</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">Big Data Technologies</span>
+                            </li>
+                        </ul>
+                        <a href="course-details.html" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition duration-300">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- PG-DITISS Course -->
+                <div class="course-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="bg-purple-600 text-white p-4">
+                        <h3 class="font-bold text-xl">PG-DITISS</h3>
+                        <p class="text-sm text-purple-100">Post Graduate Diploma in IT Infrastructure, Systems & Security</p>
+                    </div>
+                    <div class="p-5">
+                        <div class="mb-4">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">Popularity</span>
+                                <span class="text-sm font-medium text-gray-700">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-purple-600 h-2.5 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <ul class="mb-4 space-y-2">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-purple-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">Network Administration</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-purple-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">Cybersecurity</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-purple-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">Cloud Computing</span>
+                            </li>
+                        </ul>
+                        <a href="course-details.html" class="block text-center bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded transition duration-300">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- PG-DESD Course -->
+                <div class="course-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="bg-green-600 text-white p-4">
+                        <h3 class="font-bold text-xl">PG-DESD</h3>
+                        <p class="text-sm text-green-100">Post Graduate Diploma in Embedded Systems Design</p>
+                    </div>
+                    <div class="p-5">
+                        <div class="mb-4">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-gray-700">Popularity</span>
+                                <span class="text-sm font-medium text-gray-700">70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-green-600 h-2.5 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <ul class="mb-4 space-y-2">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">Embedded C Programming</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">Microcontrollers</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">IoT & RTOS</span>
+                            </li>
+                        </ul>
+                        <a href="course-details.html" class="block text-center bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded transition duration-300">View Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="courses.html" class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium">
+                    View All Courses
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                     </svg>
-                </button>
-                
-                <!-- Sunbeam Pune Details -->
-                <div id="sunbeam-pune-details" class="institute-detail-content hidden">
-                    <div class="bg-gradient-to-r from-blue-500 to-blue-600 p-6 text-white">
-                        <h2 class="text-2xl font-bold">Sunbeam Pune</h2>
-                        <p class="text-blue-100">Hinjewadi, Pune</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Institutes Section -->
+    <section id="institutes" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Top CDAC Institutes</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore the best CDAC authorized training centers across India with detailed information about facilities, faculty, and placements.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Institute 1 -->
+                <div class="institute-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-gray-200 relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                        </div>
                     </div>
-                    
-                    <div class="p-6">
-                        <div class="mb-8">
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Overview</h3>
-                            <p class="text-gray-600">Sunbeam Infotech is one of the oldest and most reputed CDAC training centers in Pune. Established in 1999, it has consistently maintained high standards in training and placement. The institute is known for its experienced faculty, modern infrastructure, and strong industry connections.</p>
-                        </div>
-                        
-                        <div class="mb-8">
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Courses Offered</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-blue-50 p-4 rounded-lg">
-                                    <h4 class="font-medium text-blue-700 mb-2">PG-DAC</h4>
-                                    <p class="text-gray-600 text-sm">Post Graduate Diploma in Advanced Computing focuses on software development, web technologies, and application development.</p>
-                                    <p class="text-blue-600 font-medium mt-2">Duration: 6 months</p>
-                                </div>
-                                <div class="bg-blue-50 p-4 rounded-lg">
-                                    <h4 class="font-medium text-blue-700 mb-2">PG-DBDA</h4>
-                                    <p class="text-gray-600 text-sm">Post Graduate Diploma in Big Data Analytics covers data science, machine learning, and big data technologies.</p>
-                                    <p class="text-blue-600 font-medium mt-2">Duration: 6 months</p>
-                                </div>
-                                <div class="bg-blue-50 p-4 rounded-lg">
-                                    <h4 class="font-medium text-blue-700 mb-2">PG-DITISS</h4>
-                                    <p class="text-gray-600 text-sm">Post Graduate Diploma in IT Infrastructure, Systems and Security focuses on network administration and cybersecurity.</p>
-                                    <p class="text-blue-600 font-medium mt-2">Duration: 6 months</p>
-                                </div>
+                    <div class="p-5">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="font-bold text-xl text-gray-800">CDAC Pune</h3>
+                            <div class="flex">
+                                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
                             </div>
                         </div>
-                        
-                        <div class="mb-8">
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Infrastructure & Facilities</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <ul class="space-y-2">
-                                        <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                            </svg>
-                                            <span class="text-gray-600">Modern computer labs with high-speed internet</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                            </svg>
-                                            <span class="text-gray-600">Digital classrooms with audio-visual equipment</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                            </svg>
-                                            <span class="text-gray-600">Well-stocked library with technical books</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <ul class="space-y-2">
-                                        <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                            </svg>
-                                            <span class="text-gray-600">Dedicated placement cell</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                            </svg>
-                                            <span class="text-gray-600">Cafeteria and recreational areas</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                            </svg>
-                                            <span class="text-gray-600">Hostel facilities for outstation students</span>
-                                        </li>
-                                    </ul>
-                                </div>
+                        <p class="text-gray-600 mb-4">The flagship center of CDAC offering all courses with state-of-the-art infrastructure and excellent placement record.</p>
+                        <div class="mb-4">
+                            <div class="flex items-center mb-2">
+                                <svg class="w-5 h-5 text-indigo-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">Pune, Maharashtra</span>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 text-indigo-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">All CDAC Courses Available</span>
                             </div>
                         </div>
-                        
-                        <div class="mb-8">
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Placement Statistics</h3>
-                            <div class="bg-blue-50 p-4 rounded-lg mb-4">
-                                <div class="flex justify-between items-center mb-2">
-                                    <span class="text-gray-700 font-medium">Placement Rate</span>
-                                    <span class="text-blue-700 font-medium">92%</span>
-                                </div>
-                                <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 92%"></div>
-                                </div>
-                            </div>
-                            
-                            <h4 class="font-medium text-gray-700 mb-3">Top Recruiting Companies</h4>
-                            <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
-                                <div class="bg-white border border-gray-200 rounded p-3 text-center">
-                                    <span class="text-gray-700 text-sm">Infosys</span>
-                                </div>
-                                <div class="bg-white border border-gray-200 rounded p-3 text-center">
-                                    <span class="text-gray-700 text-sm">TCS</span>
-                                </div>
-                                <div class="bg-white border border-gray-200 rounded p-3 text-center">
-                                    <span class="text-gray-700 text-sm">Cognizant</span>
-                                </div>
-                                <div class="bg-white border border-gray-200 rounded p-3 text-center">
-                                    <span class="text-gray-700 text-sm">Wipro</span>
-                                </div>
-                                <div class="bg-white border border-gray-200 rounded p-3 text-center">
-                                    <span class="text-gray-700 text-sm">Accenture</span>
-                                </div>
-                                <div class="bg-white border border-gray-200 rounded p-3 text-center">
-                                    <span class="text-gray-700 text-sm">Persistent</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-8">
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Student Testimonials</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="testimonial-card bg-blue-50 p-4 rounded-lg">
-                                    <div class="flex items-center mb-3">
-                                        <div class="w-10 h-10 rounded-full bg-blue-200 flex items-center justify-center text-blue-600 font-bold mr-3">
-                                            RS
-                                        </div>
-                                        <div>
-                                            <h5 class="font-medium text-gray-800">Rahul Sharma</h5>
-                                            <p class="text-xs text-gray-500">PG-DAC, 2022 Batch</p>
-                                        </div>
-                                    </div>
-                                    <p class="text-gray-600 text-sm">"The training at Sunbeam Pune was excellent. The faculty is knowledgeable and the placement support was outstanding. I got placed at Infosys with a good package."</p>
-                                </div>
-                                <div class="testimonial-card bg-blue-50 p-4 rounded-lg">
-                                    <div class="flex items-center mb-3">
-                                        <div class="w-10 h-10 rounded-full bg-blue-200 flex items-center justify-center text-blue-600 font-bold mr-3">
-                                            AP
-                                        </div>
-                                        <div>
-                                            <h5 class="font-medium text-gray-800">Anjali Patel</h5>
-                                            <p class="text-xs text-gray-500">PG-DBDA, 2021 Batch</p>
-                                        </div>
-                                    </div>
-                                    <p class="text-gray-600 text-sm">"The practical approach to teaching at Sunbeam helped me gain confidence in my technical skills. The mock interviews and placement preparation were very helpful."</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-8">
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Fee Structure</h3>
-                            <div class="overflow-x-auto">
-                                <table class="min-w-full bg-white border border-gray-200">
-                                    <thead>
-                                        <tr>
-                                            <th class="py-3 px-4 bg-blue-50 text-left text-xs font-medium text-gray-700 uppercase tracking-wider border-b">Course</th>
-                                            <th class="py-3 px-4 bg-blue-50 text-left text-xs font-medium text-gray-700 uppercase tracking-wider border-b">Duration</th>
-                                            <th class="py-3 px-4 bg-blue-50 text-left text-xs font-medium text-gray-700 uppercase tracking-wider border-b">Fee (INR)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="divide-y divide-gray-200">
-                                        <tr>
-                                            <td class="py-3 px-4 text-sm text-gray-700">PG-DAC</td>
-                                            <td class="py-3 px-4 text-sm text-gray-700">6 months</td>
-                                            <td class="py-3 px-4 text-sm text-gray-700">₹95,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="py-3 px-4 text-sm text-gray-700">PG-DBDA</td>
-                                            <td class="py-3 px-4 text-sm text-gray-700">6 months</td>
-                                            <td class="py-3 px-4 text-sm text-gray-700">₹95,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="py-3 px-4 text-sm text-gray-700">PG-DITISS</td>
-                                            <td class="py-3 px-4 text-sm text-gray-700">6 months</td>
-                                            <td class="py-3 px-4 text-sm text-gray-700">₹95,000</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <p class="text-sm text-gray-500 mt-2">* Additional GST applicable. Scholarship options available for meritorious students.</p>
-                        </div>
-                        
-                        <div class="mb-8">
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Admission Process</h3>
-                            <div class="space-y-4">
-                                <div class="flex">
-                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold mr-3">
-                                        1
-                                    </div>
-                                    <div>
-                                        <h5 class="font-medium text-gray-800">CDAC C-CAT Exam</h5>
-                                        <p class="text-sm text-gray-600">Clear the CDAC Common Admission Test conducted thrice a year.</p>
-                                    </div>
-                                </div>
-                                <div class="flex">
-                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold mr-3">
-                                        2
-                                    </div>
-                                    <div>
-                                        <h5 class="font-medium text-gray-800">Counseling & Seat Allocation</h5>
-                                        <p class="text-sm text-gray-600">Participate in the centralized counseling process for seat allocation.</p>
-                                    </div>
-                                </div>
-                                <div class="flex">
-                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold mr-3">
-                                        3
-                                    </div>
-                                    <div>
-                                        <h5 class="font-medium text-gray-800">Fee Payment</h5>
-                                        <p class="text-sm text-gray-600">Complete the fee payment process as per the schedule.</p>
-                                    </div>
-                                </div>
-                                <div class="flex">
-                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold mr-3">
-                                        4
-                                    </div>
-                                    <div>
-                                        <h5 class="font-medium text-gray-800">Document Verification</h5>
-                                        <p class="text-sm text-gray-600">Submit required documents for verification at the institute.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-8">
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Photo Gallery</h3>
-                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                                <div class="gallery-img h-32 bg-blue-100 rounded-lg flex items-center justify-center">
-                                    <svg class="w-12 h-12 text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <div class="gallery-img h-32 bg-blue-100 rounded-lg flex items-center justify-center">
-                                    <svg class="w-12 h-12 text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <div class="gallery-img h-32 bg-blue-100 rounded-lg flex items-center justify-center">
-                                    <svg class="w-12 h-12 text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Location</h3>
-                            <div class="bg-blue-50 p-4 rounded-lg">
-                                <div class="h-64 bg-blue-100 rounded-lg mb-3 flex items-center justify-center">
-                                    <svg class="w-16 h-16 text-blue-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <h4 class="font-medium text-gray-800 mb-1">Sunbeam Infotech Pvt. Ltd.</h4>
-                                <p class="text-gray-600 text-sm">Hinjewadi Phase II, Pune, Maharashtra 411057</p>
-                                <p class="text-gray-600 text-sm mt-2">
-                                    <span class="font-medium">Phone:</span> +91-20-22934567
-                                </p>
-                                <p class="text-gray-600 text-sm">
-                                    <span class="font-medium">Email:</span> admissions@sunbeaminfo.com
-                                </p>
-                            </div>
-                        </div>
+                        <a href="institute-details.html" class="block text-center bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded transition duration-300">View Details</a>
                     </div>
                 </div>
                 
-                <!-- CDAC ACTS Pune Details -->
-                <div id="cdac-acts-details" class="institute-detail-content hidden">
-                    <div class="bg-gradient-to-r from-purple-500 to-purple-600 p-6 text-white">
-                        <h2 class="text-2xl font-bold">CDAC ACTS Pune</h2>
-                        <p class="text-purple-100">Pashan, Pune</p>
+                <!-- Institute 2 -->
+                <div class="institute-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-gray-200 relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                        </div>
                     </div>
-                    
-                    <div class="p-6">
-                        <div class="mb-8">
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Overview</h3>
-                            <p class="text-gray-600">CDAC ACTS (Advanced Computing Training School) is the flagship institute of the Centre for Development of Advanced Computing. Established in 1998, it is the pioneer in advanced computing education in India. The institute is known for its cutting-edge curriculum, world-class infrastructure, and exceptional faculty members.</p>
-                        </div>
-                        
-                        <div class="mb-8">
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Courses Offered</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-purple-50 p-4 rounded-lg">
-                                    <h4 class="font-medium text-purple-700 mb-2">PG-DAC</h4>
-                                    <p class="text-gray-600 text-sm">Post Graduate Diploma in Advanced Computing focuses on software development, web technologies, and application development.</p>
-                                    <p class="text-purple-600 font-medium mt-2">Duration: 6 months</p>
-                                </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
-                                    <h4 class="font-medium text-purple-700 mb-2">PG-DBDA</h4>
-                                    <p class="text-gray-600 text-sm">Post Graduate Diploma in Big Data Analytics covers data science, machine learning, and big data technologies.</p>
-                                    <p class="text-purple-600 font-medium mt-2">Duration: 6 months</p>
-                                </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
-                                    <h4 class="font-medium text-purple-700 mb-2">PG-DITISS</h4>
-                                    <p class="text-gray-600 text-sm">Post Graduate Diploma in IT Infrastructure, Systems and Security focuses on network administration and cybersecurity.</p>
-                                    <p class="text-purple-600 font-medium mt-2">Duration: 6 months</p>
-                                </div>
-                                <div class="bg-purple-50 p-4 rounded-lg">
-                                    <h4 class="font-medium text-purple-700 mb-2">PG-DESD</h4>
-                                    <p class="text-gray-600 text-sm">Post Graduate Diploma in Embedded Systems Design covers embedded programming, IoT, and hardware interfacing.</p>
-                                    <p class="text-purple-600 font-medium mt-2">Duration: 6 months</p>
-                                </div>
+                    <div class="p-5">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="font-bold text-xl text-gray-800">Sunbeam Pune</h3>
+                            <div class="flex">
+                                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
                             </div>
                         </div>
-                        
-                        <div class="mb-8">
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Infrastructure & Facilities</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <ul class="space-y-2">
-                                        <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                            </svg>
-                                            <span class="text-gray-600">State-of-the-art computer labs</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                            </svg>
-                                            <span class="text-gray-600">Research facilities and innovation labs</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                            </svg>
-                                            <span class="text-gray-600">Comprehensive digital library</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <ul class="space-y-2">
-                                        <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                            </svg>
-                                            <span class="text-gray-600">Industry collaboration center</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                            </svg>
-                                            <span class="text-gray-600">Auditorium and seminar halls</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                            </svg>
-                                            <span class="text-gray-600">Hostel and accommodation facilities</span>
-                                        </li>
-                                    </ul>
-                                </div>
+                        <p class="text-gray-600 mb-4">A premier CDAC authorized training center known for its industry-focused curriculum and excellent placement record.</p>
+                        <div class="mb-4">
+                            <div class="flex items-center mb-2">
+                                <svg class="w-5 h-5 text-indigo-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">Hinjewadi, Pune</span>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 text-indigo-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">PG-DAC, PG-DBDA, PG-DESD, PG-DITISS</span>
                             </div>
                         </div>
-                        
-                        <div class="mb-8">
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Placement Statistics</h3>
-                            <div class="bg-purple-50 p-4 rounded-lg mb-4">
-                                <div class="flex justify-between items-center mb-2">
-                                    <span class="text-gray-700 font-medium">Placement Rate</span>
-                                    <span class="text-purple-700 font-medium">98%</span>
-                                </div>
-                                <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                    <div class="bg-purple-600 h-2.5 rounded-full" style="width: 98%"></div>
-                                </div>
-                            </div>
-                            
-                            <h4 class="font-medium text-gray-700 mb-3">Top Recruiting Companies</h4>
-                            <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
-                                <div class="bg-white border border-gray-200 rounded p-3 text-center">
-                                    <span class="text-gray-700 text-sm">Microsoft</span>
-                                </div>
-                                <div class="bg-white border border-gray-200 rounded p-3 text-center">
-                                    <span class="text-gray-700 text-sm">Amazon</span>
-                                </div>
-                                <div class="bg-white border border-gray-200 rounded p-3 text-center">
-                                    <span class="text-gray-700 text-sm">TCS</span>
-                                </div>
-                                <div class="bg-white border border-gray-200 rounded p-3 text-center">
-                                    <span class="text-gray-700 text-sm">Infosys</span>
-                                </div>
-                                <div class="bg-white border border-gray-200 rounded p-3 text-center">
-                                    <span class="text-gray-700 text-sm">Wipro</span>
-                                </div>
-                                <div class="bg-white border border-gray-200 rounded p-3 text-center">
-                                    <span class="text-gray-700 text-sm">IBM</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-8">
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Student Testimonials</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="testimonial-card bg-purple-50 p-4 rounded-lg">
-                                    <div class="flex items-center mb-3">
-                                        <div class="w-10 h-10 rounded-full bg-purple-200 flex items-center justify-center text-purple-600 font-bold mr-3">
-                                            VK
-                                        </div>
-                                        <div>
-                                            <h5 class="font-medium text-gray-800">Vikram Kumar</h5>
-                                            <p class="text-xs text-gray-500">PG-DAC, 2022 Batch</p>
-                                        </div>
-                                    </div>
-                                    <p class="text-gray-600 text-sm">"CDAC ACTS provided me with an exceptional learning experience. The curriculum is industry-relevant and the faculty members are experts in their fields. I got placed at Microsoft with a great package."</p>
-                                </div>
-                                <div class="testimonial-card bg-purple-50 p-4 rounded-lg">
-                                    <div class="flex items-center mb-3">
-                                        <div class="w-10 h-10 rounded-full bg-purple-200 flex items-center justify-center text-purple-600 font-bold mr-3">
-                                            SD
-                                        </div>
-                                        <div>
-                                            <h5 class="font-medium text-gray-800">Sneha Desai</h5>
-                                            <p class="text-xs text-gray-500">PG-DBDA, 2021 Batch</p>
-                                        </div>
-                                    </div>
-                                    <p class="text-gray-600 text-sm">"The Big Data Analytics course at CDAC ACTS is comprehensive and well-structured. The hands-on projects and industry exposure helped me secure a job at Amazon as a Data Engineer."</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-8">
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Fee Structure</h3>
-                            <div class="overflow-x-auto">
-                                <table class="min-w-full bg-white border border-gray-200">
-                                    <thead>
-                                        <tr>
-                                            <th class="py-3 px-4 bg-purple-50 text-left text-xs font-medium text-gray-700 uppercase tracking-wider border-b">Course</th>
-                                            <th class="py-3 px-4 bg-purple-50 text-left text-xs font-medium text-gray-700 uppercase tracking-wider border-b">Duration</th>
-                                            <th class="py-3 px-4 bg-purple-50 text-left text-xs font-medium text-gray-700 uppercase tracking-wider border-b">Fee (INR)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="divide-y divide-gray-200">
-                                        <tr>
-                                            <td class="py-3 px-4 text-sm text-gray-700">PG-DAC</td>
-                                            <td class="py-3 px-4 text-sm text-gray-700">6 months</td>
-                                            <td class="py-3 px-4 text-sm text-gray-700">₹1,00,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="py-3 px-4 text-sm text-gray-700">PG-DBDA</td>
-                                            <td class="py-3 px-4 text-sm text-gray-700">6 months</td>
-                                            <td class="py-3 px-4 text-sm text-gray-700">₹1,00,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="py-3 px-4 text-sm text-gray-700">PG-DITISS</td>
-                                            <td class="py-3 px-4 text-sm text-gray-700">6 months</td>
-                                            <td class="py-3 px-4 text-sm text-gray-700">₹1,00,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="py-3 px-4 text-sm text-gray-700">PG-DESD</td>
-                                            <td class="py-3 px-4 text-sm text-gray-700">6 months</td>
-                                            <td class="py-3 px-4 text-sm text-gray-700">₹1,00,000</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <p class="text-sm text-gray-500 mt-2">* Additional GST applicable. Scholarship options available for meritorious students.</p>
-                        </div>
-                        
-                        <div class="mb-8">
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Admission Process</h3>
-                            <div class="space-y-4">
-                                <div class="flex">
-                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-bold mr-3">
-                                        1
-                                    </div>
-                                    <div>
-                                        <h5 class="font-medium text-gray-800">CDAC C-CAT Exam</h5>
-                                        <p class="text-sm text-gray-600">Clear the CDAC Common Admission Test conducted thrice a year.</p>
-                                    </div>
-                                </div>
-                                <div class="flex">
-                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-bold mr-3">
-                                        2
-                                    </div>
-                                    <div>
-                                        <h5 class="font-medium text-gray-800">Counseling & Seat Allocation</h5>
-                                        <p class="text-sm text-gray-600">Participate in the centralized counseling process for seat allocation.</p>
-                                    </div>
-                                </div>
-                                <div class="flex">
-                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-bold mr-3">
-                                        3
-                                    </div>
-                                    <div>
-                                        <h5 class="font-medium text-gray-800">Fee Payment</h5>
-                                        <p class="text-sm text-gray-600">Complete the fee payment process as per the schedule.</p>
-                                    </div>
-                                </div>
-                                <div class="flex">
-                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-bold mr-3">
-                                        4
-                                    </div>
-                                    <div>
-                                        <h5 class="font-medium text-gray-800">Document Verification</h5>
-                                        <p class="text-sm text-gray-600">Submit required documents for verification at the institute.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-8">
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Photo Gallery</h3>
-                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                                <div class="gallery-img h-32 bg-purple-100 rounded-lg flex items-center justify-center">
-                                    <svg class="w-12 h-12 text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <div class="gallery-img h-32 bg-purple-100 rounded-lg flex items-center justify-center">
-                                    <svg class="w-12 h-12 text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <div class="gallery-img h-32 bg-purple-100 rounded-lg flex items-center justify-center">
-                                    <svg class="w-12 h-12 text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Location</h3>
-                            <div class="bg-purple-50 p-4 rounded-lg">
-                                <div class="h-64 bg-purple-100 rounded-lg mb-3 flex items-center justify-center">
-                                    <svg class="w-16 h-16 text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <h4 class="font-medium text-gray-800 mb-1">CDAC ACTS Pune</h4>
-                                <p class="text-gray-600 text-sm">Innovation Park, Panchavati, Pashan, Pune, Maharashtra 411008</p>
-                                <p class="text-gray-600 text-sm mt-2">
-                                    <span class="font-medium">Phone:</span> +91-20-25503100
-                                </p>
-                                <p class="text-gray-600 text-sm">
-                                    <span class="font-medium">Email:</span> acts@cdac.in
-                                </p>
-                            </div>
-                        </div>
+                        <a href="sunbeam-pune.html" class="block text-center bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded transition duration-300">View Details</a>
                     </div>
                 </div>
                 
-                <!-- IACSD Pune Details -->
-                <div id="iacsd-pune-details" class="institute-detail-content hidden">
-                    <div class="bg-gradient-to-r from-green-500 to-green-600 p-6 text-white">
-                        <h2 class="text-2xl font-bold">IACSD Pune</h2>
-                        <p class="text-green-100">Akurdi, Pune</p>
+                <!-- Institute 3 -->
+                <div class="institute-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-gray-200 relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                        </div>
                     </div>
-                    
-                    <div class="p-6">
-                        <div class="mb-8">
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Overview</h3>
-                            <p class="text-gray-600">The Institute for Advanced Computing and Software Development (IACSD) is a premier CDAC training center located in Akurdi, Pune. Established in 2001, IACSD focuses on providing industry-oriented training with a strong emphasis on practical skills and project-based learning.</p>
-                        </div>
-                        
-                        <div class="mb-8">
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Courses Offered</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-green-50 p-4 rounded-lg">
-                                    <h4 class="font-medium text-green-700 mb-2">PG-DAC</h4>
-                                    <p class="text-gray-600 text-sm">Post Graduate Diploma in Advanced Computing focuses on software development, web technologies, and application development.</p>
-                                    <p class="text-green-600 font-medium mt-2">Duration: 6 months</p>
-                                </div>
-                                <div class="bg-green-50 p-4 rounded-lg">
-                                    <h4 class="font-medium text-green-700 mb-2">PG-DBDA</h4>
-                                    <p class="text-gray-600 text-sm">Post Graduate Diploma in Big Data Analytics covers data science, machine learning, and big data technologies.</p>
-                                    <p class="text-green-600 font-medium mt-2">Duration: 6 months</p>
-                                </div>
-                                <div class="bg-green-50 p-4 rounded-lg">
-                                    <h4 class="font-medium text-green-700 mb-2">PG-DESD</h4>
-                                    <p class="text-gray-600 text-sm">Post Graduate Diploma in Embedded Systems Design covers embedded programming, IoT, and hardware interfacing.</p>
-                                    <p class="text-green-600 font-medium mt-2">Duration: 6 months</p>
-                                </div>
+                    <div class="p-5">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="font-bold text-xl text-gray-800">ACTS Pune</h3>
+                            <div class="flex">
+                                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
                             </div>
                         </div>
-                        
-                        <div class="mb-8">
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Infrastructure & Facilities</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <ul class="space-y-2">
-                                        <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-green-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                            </svg>
-                                            <span class="text-gray-600">Well-equipped computer labs</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-green-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                            </svg>
-                                            <span class="text-gray-600">Project development labs</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-green-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                            </svg>
-                                            <span class="text-gray-600">Digital library with e-resources</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <ul class="space-y-2">
-                                        <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-green-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                            </svg>
-                                            <span class="text-gray-600">Placement and training cell</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-green-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                            </svg>
-                                            <span class="text-gray-600">Seminar hall and conference rooms</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-green-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                            </svg>
-                                            <span class="text-gray-600">Hostel facilities nearby</span>
-                                        </li>
-                                    </ul>
-                                </div>
+                        <p class="text-gray-600 mb-4">One of the oldest CDAC training centers with experienced faculty and strong industry connections for placements.</p>
+                        <div class="mb-4">
+                            <div class="flex items-center mb-2">
+                                <svg class="w-5 h-5 text-indigo-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">Pashan, Pune</span>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 text-indigo-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                                </svg>
+                                <span class="text-gray-600 text-sm">PG-DAC, PG-DBDA, PG-DITISS</span>
                             </div>
                         </div>
-                        
-                        <div class="mb-8">
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Placement Statistics</h3>
-                            <div class="bg-green-50 p-4 rounded-lg mb-4">
-                                <div class="flex justify-between items-center mb-2">
-                                    <span class="text-gray-700 font-medium">Placement Rate</span>
-                                    <span class="text-green-700 font-medium">90%</span>
-                                </div>
-                                <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                    <div class="bg-green-600 h-2.5 rounded-full" style="width: 90%"></div>
-                                </div>
-                            </div>
-                            
-                            <h4 class="font-medium text-gray-700 mb-3">Top Recruiting Companies</h4>
-                            <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
-                                <div class="bg-white border border-gray-200 rounded p-3 text-center">
-                                    <span class="text-gray-700 text-sm">TCS</span>
-                                </div>
-                                <div class="bg-white border border-gray-200 rounded p-3 text-center">
-                                    <span class="text-gray-700 text-sm">Infosys</span>
-                                </div>
-                                <div class="bg-white border border-gray-200 rounded p-3 text-center">
-                                    <span class="text-gray-700 text-sm">Cognizant</span>
-                                </div>
-                                <div class="bg-white border border-gray-200 rounded p-3 text-center">
-                                    <span class="text-gray-700 text-sm">Tech Mahindra</span>
-                                </div>
-                                <div class="bg-white border border-gray-200 rounded p-3 text-center">
-                                    <span class="text-gray-700 text-sm">Capgemini</span>
-                                </div>
-                                <div class="bg-white border border-gray-200 rounded p-3 text-center">
-                                    <span class="text-gray-700 text-sm">Mindtree</span>
-                                </div>
-                            </div>
+                        <a href="institute-details.html" class="block text-center bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded transition duration-300">View Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="institutes.html" class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium">
+                    View All Institutes
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section id="comparison" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Compare CDAC Institutes & Courses</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Make informed decisions by comparing different CDAC institutes and courses based on various parameters.</p>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md overflow-hidden mb-10">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">Institute Comparison</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white">
+                            <thead>
+                                <tr>
+                                    <th class="py-3 px-4 border-b border-gray-200 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Parameters</th>
+                                    <th class="py-3 px-4 border-b border-gray-200 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">CDAC Pune</th>
+                                    <th class="py-3 px-4 border-b border-gray-200 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Sunbeam Pune</th>
+                                    <th class="py-3 px-4 border-b border-gray-200 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ACTS Pune</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm font-medium text-gray-700">Infrastructure</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">Excellent</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">Very Good</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">Good</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm font-medium text-gray-700">Faculty</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">Highly Experienced</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">Industry Experts</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">Experienced</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm font-medium text-gray-700">Placement Rate</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">95%</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">90%</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">85%</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm font-medium text-gray-700">Avg. Package</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">₹7.5 LPA</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">₹6.5 LPA</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">₹6.0 LPA</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 text-sm font-medium text-gray-700">Courses Offered</td>
+                                    <td class="py-3 px-4 text-sm text-gray-600">All CDAC Courses</td>
+                                    <td class="py-3 px-4 text-sm text-gray-600">PG-DAC, PG-DBDA, PG-DESD, PG-DITISS</td>
+                                    <td class="py-3 px-4 text-sm text-gray-600">PG-DAC, PG-DBDA, PG-DITISS</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">Course Comparison</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white">
+                            <thead>
+                                <tr>
+                                    <th class="py-3 px-4 border-b border-gray-200 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Parameters</th>
+                                    <th class="py-3 px-4 border-b border-gray-200 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">PG-DAC</th>
+                                    <th class="py-3 px-4 border-b border-gray-200 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">PG-DBDA</th>
+                                    <th class="py-3 px-4 border-b border-gray-200 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">PG-DITISS</th>
+                                    <th class="py-3 px-4 border-b border-gray-200 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">PG-DESD</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm font-medium text-gray-700">Focus Area</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">Software Development</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">Data Science & Analytics</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">IT Infrastructure & Security</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">Embedded Systems</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm font-medium text-gray-700">Ideal For</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">All Engineering Graduates</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">Math/Stats/CS Graduates</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">IT/CS/Electronics Graduates</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">Electronics/Electrical Graduates</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm font-medium text-gray-700">Job Roles</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">Software Developer, Full Stack Developer</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">Data Analyst, Data Scientist</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">System Admin, Security Analyst</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">Embedded Engineer, IoT Developer</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm font-medium text-gray-700">Placement Rate</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">95%</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">90%</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">85%</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-sm text-gray-600">80%</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 text-sm font-medium text-gray-700">Course Fee</td>
+                                    <td class="py-3 px-4 text-sm text-gray-600">₹90,000 + GST</td>
+                                    <td class="py-3 px-4 text-sm text-gray-600">₹95,000 + GST</td>
+                                    <td class="py-3 px-4 text-sm text-gray-600">₹90,000 + GST</td>
+                                    <td class="py-3 px-4 text-sm text-gray-600">₹95,000 + GST</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="comparison.html" class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium">
+                    View Detailed Comparison
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">What Our Users Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Hear from students who used PrepWizard to make informed decisions about their CDAC journey.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                            </svg>
                         </div>
-                        
-                        <div class="mb-8">
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Student Testimonials</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="testimonial-card bg-green-50 p-4 rounded-lg">
-                                    <div class="flex items-center mb-3">
-                                        <div class="w-10 h-10 rounded-full bg-green-200 flex items-center justify-center text-green-600 font-bold mr-3">
-                                            AM
-                                        </div>
-                                        <div>
-                                            <h5 class="font-medium text-gray-800">Amit Mishra</h5>
-                                            <p class="text-xs text-gray-500">PG-DAC, 2022 Batch</p>
-                                        </div>
-                                    </div>
-                                    <p class="text-gray-600 text-sm">"IACSD provided me with practical knowledge and industry exposure. The project-based learning approach helped me develop real-world skills that were valuable during placements."</p>
-                                </div>
-                                <div class="testimonial-card bg-green-50 p-4 rounded-lg">
-                                    <div class="flex items-center mb-3">
-                                        <div class="w-10 h-10 rounded-full bg-green-200 flex items-center justify-center text-green-600 font-bold mr-3">
-                                            PJ
-                                        </div>
-                                        <div>
-                                            <h5 class="font-medium text-gray-800">Priya Joshi</h5>
-                                            <p class="text-xs text-gray-500">PG-DESD, 2021 Batch</p>
-                                        </div>
-                                    </div>
-                                    <p class="text-gray-600 text-sm">"The embedded systems course at IACSD is well-structured with a good balance of theory and practical sessions. The faculty is supportive and the placement assistance was helpful."</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-8">
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Fee Structure</h3>
-                            <div class="overflow-x-auto">
-                                <table class="min-w-full bg-white border border-gray-200">
-                                    <thead>
-                                        <tr>
-                                            <th class="py-3 px-4 bg-green-50 text-left text-xs font-medium text-gray-700 uppercase tracking-wider border-b">Course</th>
-                                            <th class="py-3 px-4 bg-green-50 text-left text-xs font-medium text-gray-700 uppercase tracking-wider border-b">Duration</th>
-                                            <th class="py-3 px-4 bg-green-50 text-left text-xs font-medium text-gray-700 uppercase tracking-wider border-b">Fee (INR)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="divide-y divide-gray-200">
-                                        <tr>
-                                            <td class="py-3 px-4 text-sm text-gray-700">PG-DAC</td>
-                                            <td class="py-3 px-4 text-sm text-gray-700">6 months</td>
-                                            <td class="py-3 px-4 text-sm text-gray-700">₹90,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="py-3 px-4 text-sm text-gray-700">PG-DBDA</td>
-                                            <td class="py-3 px-4 text-sm text-gray-700">6 months</td>
-                                            <td class="py-3 px-4 text-sm text-gray-700">₹90,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="py-3 px-4 text-sm text-gray-700">PG-DESD</td>
-                                            <td class="py-3 px-4 text-sm text-gray-700">6 months</td>
-                                            <td class="py-3 px-4 text-sm text-gray-700">₹90,000</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <p class="text-sm text-gray-500 mt-2">* Additional GST applicable. Scholarship options available for meritorious students.</p>
-                        </div>
-                        
-                        <div class="mb-8">
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Admission Process</h3>
-                            <div class="space-y-4">
-                                <div class="flex">
-                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold mr-3">
-                                        1
-                                    </div>
-                                    <div>
-                                        <h5 class="font-medium text-gray-800">CDAC C-CAT Exam</h5>
-                                        <p class="text-sm text-gray-600">Clear the CDAC Common Admission Test conducted thrice a year.</p>
-                                    </div>
-                                </div>
-                                <div class="flex">
-                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold mr-3">
-                                        2
-                                    </div>
-                                    <div>
-                                        <h5 class="font-medium text-gray-800">Counseling & Seat Allocation</h5>
-                                        <p class="text-sm text-gray-600">Participate in the centralized counseling process for seat allocation.</p>
-                                    </div>
-                                </div>
-                                <div class="flex">
-                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold mr-3">
-                                        3
-                                    </div>
-                                    <div>
-                                        <h5 class="font-medium text-gray-800">Fee Payment</h5>
-                                        <p class="text-sm text-gray-600">Complete the fee payment process as per the schedule.</p>
-                                    </div>
-                                </div>
-                                <div class="flex">
-                                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold mr-3">
-                                        4
-                                    </div>
-                                    <div>
-                                        <h5 class="font-medium text-gray-800">Document Verification</h5>
-                                        <p class="text-sm text-gray-600">Submit required documents for verification at the institute.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-8">
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Photo Gallery</h3>
-                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                                <div class="gallery-img h-32 bg-green-100 rounded-lg flex items-center justify-center">
-                                    <svg class="w-12 h-12 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <div class="gallery-img h-32 bg-green-100 rounded-lg flex items-center justify-center">
-                                    <svg class="w-12 h-12 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <div class="gallery-img h-32 bg-green-100 rounded-lg flex items-center justify-center">
-                                    <svg class="w-12 h-12 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                        
                         <div>
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Location</h3>
-                            <div class="bg-green-50 p-4 rounded-lg">
-                                <div class="h-64 bg-green-100 rounded-lg mb-3 flex items-center justify-center">
-                                    <svg class="w-16 h-16 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-                                    </svg>
-                                </div>
-                                <h4 class="font-medium text-gray-800 mb-1">IACSD Pune</h4>
-                                <p class="text-gray-600 text-sm">Plot No. 5, Sector 15, CBD Belapur, Akurdi, Pune, Maharashtra 411044</p>
-                                <p class="text-gray-600 text-sm mt-2">
-                                    <span class="font-medium">Phone:</span> +91-20-27659509
-                                </p>
-                                <p class="text-gray-600 text-sm">
-                                    <span class="font-medium">Email:</span> info@iacsd.com
-                                </p>
-                            </div>
+                            <h3 class="font-bold text-gray-800">Rahul Sharma</h3>
+                            <p class="text-sm text-gray-600">PG-DAC Student, CDAC Pune</p>
                         </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex text-yellow-400">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"PrepWizard was a lifesaver during my CDAC journey. The detailed comparison of institutes helped me choose the right center for my career goals. The blog articles about interview preparation were incredibly helpful too!"</p>
+                    <p class="text-sm text-gray-500">March 15, 2023</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Priya Patel</h3>
+                            <p class="text-sm text-gray-600">PG-DBDA Student, Sunbeam Pune</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex text-yellow-400">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Coming from a non-IT background, I was confused about which CDAC course to choose. The course comparison on PrepWizard helped me understand that PG-DBDA was the perfect fit for my math background and career aspirations."</p>
+                    <p class="text-sm text-gray-500">April 2, 2023</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Amit Kumar</h3>
+                            <p class="text-sm text-gray-600">PG-DITISS Graduate, ACTS Pune</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex text-yellow-400">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The placement statistics and alumni reviews on PrepWizard gave me realistic expectations about job prospects after CDAC. I'm now working as a Security Analyst at a top company, exactly as the career path suggested on the website."</p>
+                    <p class="text-sm text-gray-500">February 20, 2023</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Find answers to common questions about CDAC courses, admission process, and career opportunities.</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden mb-4">
+                    <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                        <span class="font-medium text-gray-800">What is CDAC and what courses does it offer?</span>
+                        <svg class="faq-icon-plus w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                        </svg>
+                        <svg class="faq-icon-minus w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-5 pb-5">
+                        <p class="text-gray-600">CDAC (Centre for Development of Advanced Computing) is a premier R&D organization under the Ministry of Electronics and Information Technology, Government of India. It offers various Post Graduate Diploma courses in advanced computing fields such as PG-DAC (Advanced Computing), PG-DBDA (Big Data Analytics), PG-DITISS (IT Infrastructure, Systems & Security), PG-DESD (Embedded Systems Design), and more. These are 6-month full-time courses designed to create industry-ready IT professionals.</p>
                     </div>
                 </div>
                 
-                <!-- Sunbeam Karad Details -->
-                <div id="sunbeam-karad-details" class="institute-detail-content hidden">
-                    <div class="bg-gradient-to-r from-orange-500 to-orange-600 p-6 text-white">
-                        <h2 class="text-2xl font-bold">Sunbeam Karad</h2>
-                        <p class="text-orange-100">Karad, Maharashtra</p>
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden mb-4">
+                    <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                        <span class="font-medium text-gray-800">How do I apply for CDAC courses?</span>
+                        <svg class="faq-icon-plus w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                        </svg>
+                        <svg class="faq-icon-minus w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-5 pb-5">
+                        <p class="text-gray-600">To apply for CDAC courses, you need to appear for the C-CAT (CDAC Common Admission Test) which is conducted three times a year (usually in March, September, and December). After the exam, you need to register for centralized counseling on the CDAC website, fill your institute and course preferences, and wait for seat allocation based on your C-CAT rank. Once allocated a seat, you need to pay the course fee and report to the institute with original documents for verification.</p>
                     </div>
-                    
-                    <div class="p-6">
-                        <div class="mb-8">
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Overview</h3>
-                            <p class="text-gray-600">Sunbeam Karad is a well-established CDAC training center located in Karad, Maharashtra. Established in 2003, it offers quality training at affordable fees compared to Pune centers. The institute is known for its dedicated faculty, personalized attention, and good placement record.</p>
-                        </div>
-                        
-                        <div class="mb-8">
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Courses Offered</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="bg-orange-50 p-4 rounded-lg">
-                                    <h4 class="font-medium text-orange-700 mb-2">PG-DAC</h4>
-                                    <p class="text-gray-600 text-sm">Post Graduate Diploma in Advanced Computing focuses on software development, web technologies, and application development.</p>
-                                    <p class="text-orange-600 font-medium mt-2">Duration: 6 months</p>
-                                </div>
-                                <div class="bg-orange-50 p-4 rounded-lg">
-                                    <h4 class="font-medium text-orange-700 mb-2">PG-DBDA</h4>
-                                    <p class="text-gray-600 text-sm">Post Graduate Diploma in Big Data Analytics covers data science, machine learning, and big data technologies.</p>
-                                    <p class="text-orange-600 font-medium mt-2">Duration: 6 months</p>
-                                </div>
-                                <div class="bg-orange-50 p-4 rounded-lg">
-                                    <h4 class="font-medium text-orange-700 mb-2">PG-DESD</h4>
-                                    <p class="text-gray-600 text-sm">Post Graduate Diploma in Embedded Systems Design covers embedded programming, IoT, and hardware interfacing.</p>
-                                    <p class="text-orange-600 font-medium mt-2">Duration: 6 months</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-8">
-                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Infrastructure & Facilities</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <ul class="space-y-2">
-                                        <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-orange-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                            </svg>
-                                            <span class="text-gray-600">Modern computer labs</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-orange-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                            </svg>
-                                            <span class="text-gray-600">Digital classrooms</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-orange-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                            </svg>
-                                            <span class="text-gray-600">Library with technical resources</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <ul class="space-y-2">
-                                        <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-orange-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                            </svg>
-                                            <span class="text-gray-600">Placement cell</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-orange-600 mr-2 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'961fa02e23ba2247',t:'MTc1Mjk4NDgwMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden mb-4">
+                    <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                        <span class="font-medium text-gray-800">What is the eligibility criteria for CDAC courses?</span>
+                        <svg class="faq-icon-plus w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                        </svg>
+                        <svg class="faq-icon-minus w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-5 pb-5">
+                        <p class="text-gray-600">The general eligibility criteria for CDAC courses is graduation in any discipline with minimum 50% marks (45% for reserved categories). For some specific courses like PG-DESD, a background in Electronics/Electrical Engineering is preferred. Mathematics as a subject in 10+2 or graduation level is required for most courses. Candidates in their final year of graduation can also apply, but they must complete their degree before the course commencement.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden mb-4">
+                    <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                        <span class="font-medium text-gray-800">What are the job prospects after completing a CDAC course?</span>
+                        <svg class="faq-icon-plus w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                        </svg>
+                        <svg class="faq-icon-minus w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-5 pb-5">
+                        <p class="text-gray-600">CDAC courses have excellent job prospects with most institutes reporting 85-95% placement rates. PG-DAC graduates typically get roles as Software Developers, Full Stack Developers, or Java Developers. PG-DBDA graduates work as Data Analysts, Data Scientists, or Big Data Engineers. PG-DITISS graduates find jobs as System Administrators, Network Engineers, or Security Analysts. PG-DESD graduates work as Embedded Engineers or IoT Developers. The average starting salary ranges from ₹4-8 LPA depending on the course, institute, and individual performance.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-question w-full flex justify-between items-center p-5 text-left">
+                        <span class="font-medium text-gray-800">Which CDAC course is best for someone from a non-IT background?</span>
+                        <svg class="faq-icon-plus w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                        </svg>
+                        <svg class="faq-icon-minus w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-5 pb-5">
+                        <p class="text-gray-600">For non-IT background students, PG-DAC is generally considered the most suitable course as it starts with programming fundamentals and gradually builds up to advanced concepts. It has a comprehensive curriculum that covers all aspects of software development. For those with a mathematics or statistics background, PG-DBDA can be a good option. Electronics or electrical engineering graduates can consider PG-DESD. It's important to assess your aptitude, interests, and career goals before choosing a course. PrepWizard's course comparison tool can help you make an informed decision based on your specific background and goals.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="faqs.html" class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium">
+                    View All FAQs
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-indigo-600 to-blue-600">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Ready to Start Your CDAC Journey?</h2>
+            <p class="text-blue-100 max-w-2xl mx-auto mb-8">Get comprehensive information about CDAC courses, institutes, and career opportunities to make informed decisions.</p>
+            <div class="flex flex-col sm:flex-row<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'962041d9d70647f1',t:'MTc1Mjk5MTQyNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
