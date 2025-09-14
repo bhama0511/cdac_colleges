@@ -107,12 +107,12 @@
         </div>
         <div class="md:hidden hidden bg-white w-full absolute shadow-md" id="mobile-menu">
             <div class="px-4 py-3 space-y-3">
-                <a href="index.html" class="block text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                <a href="/index.html" class="block text-gray-700 hover:text-blue-600 font-medium">Home</a>
                 <a href="index.html#institutes" class="block text-blue-600 font-medium">Institutes</a>
-                <a href="comparison.html" class="block text-gray-700 hover:text-blue-600 font-medium">Compare</a>
-                <a href="faqs.html" class="block text-gray-700 hover:text-blue-600 font-medium">FAQs</a>
-                <a href="blog.html" class="block text-gray-700 hover:text-blue-600 font-medium">Blog</a>
-                <a href="contact.html" class="block text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+                <a href="/comparison.html" class="block text-gray-700 hover:text-blue-600 font-medium">Compare</a>
+                <a href="/faqs.html" class="block text-gray-700 hover:text-blue-600 font-medium">FAQs</a>
+                <a href="/blog.html" class="block text-gray-700 hover:text-blue-600 font-medium">Blog</a>
+                <a href="/contact.html" class="block text-gray-700 hover:text-blue-600 font-medium">Contact</a>
             </div>
         </div>
     </header>
@@ -1483,6 +1483,14 @@ C-DAC's Advanced Computing Training School (ACTS), excellent placement records a
         activeTab.classList.add('active');
       }
     });
+  });
+</script>
+<script>
+  const btn = document.getElementById('mobile-menu-button');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
   });
 </script>
 
