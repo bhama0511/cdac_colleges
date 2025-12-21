@@ -1,61 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PG-DAC Course Details - PrepWizard</title>
-    <meta name="description" content="Detailed information about the Post Graduate Diploma in Advanced Computing (PG-DAC) course offered by CDAC.">
+    <meta name="description"
+        content="Detailed information about the Post Graduate Diploma in Advanced Computing (PG-DAC) course offered by CDAC.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        
+
         body {
             font-family: 'Poppins', sans-serif;
             scroll-behavior: smooth;
         }
-        
+
         .tab-content {
             display: none;
         }
-        
+
         .tab-content.active {
             display: block;
         }
-        
+
         .course-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .course-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
-        
+
         .progress-bar {
             height: 8px;
             border-radius: 4px;
             background-color: #e5e7eb;
             overflow: hidden;
         }
-        
+
         .progress-bar-fill {
             height: 100%;
             border-radius: 4px;
             background-color: #4f46e5;
         }
-        
+
         .accordion-content {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease;
         }
-        
+
         .accordion-content.active {
             max-height: 1000px;
         }
     </style>
 </head>
+
 <body class="bg-gray-50">
     <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-40">
@@ -73,8 +76,10 @@
                 <a href="contact.html" class="text-gray-700 hover:text-indigo-600 font-medium">Contact</a>
             </nav>
             <button class="md:hidden text-gray-700 focus:outline-none" id="mobile-menu-button">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
                 </svg>
             </button>
         </div>
@@ -97,30 +102,43 @@
                 <div class="flex flex-col md:flex-row items-center">
                     <div class="md:w-1/4 mb-6 md:mb-0 flex justify-center">
                         <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-lg">
-                            <svg class="w-16 h-16 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            <svg class="w-16 h-16 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
                             </svg>
                         </div>
                     </div>
                     <div class="md:w-3/4 text-center md:text-left md:pl-8">
-                        <h1 class="text-3xl md:text-4xl font-bold text-white mb-2">Post Graduate Diploma in Advanced Computing (PG-DAC)</h1>
-                        <p class="text-blue-100 text-lg mb-4">CDAC's flagship course for software development professionals</p>
+                        <h1 class="text-3xl md:text-4xl font-bold text-white mb-2">Post Graduate Diploma in Advanced
+                            Computing (PG-DAC)</h1>
+                        <p class="text-blue-100 text-lg mb-4">CDAC's flagship course for software development
+                            professionals</p>
                         <div class="flex flex-wrap justify-center md:justify-start gap-4 mt-6">
                             <div class="bg-white bg-opacity-20 rounded-full px-4 py-2 text-white flex items-center">
-                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
                                 <span>6 Months</span>
                             </div>
                             <div class="bg-white bg-opacity-20 rounded-full px-4 py-2 text-white flex items-center">
-                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                    </path>
                                 </svg>
                                 <span>Advanced Level</span>
                             </div>
                             <div class="bg-white bg-opacity-20 rounded-full px-4 py-2 text-white flex items-center">
-                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2z"></path>
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2z">
+                                    </path>
                                 </svg>
                                 <span>Full-time</span>
                             </div>
@@ -137,33 +155,45 @@
             <div class="max-w-4xl mx-auto">
                 <div class="bg-white rounded-lg shadow-md p-8 mb-8">
                     <h2 class="text-2xl font-bold text-gray-800 mb-4">Course Overview</h2>
-                    <p class="text-gray-600 mb-6">The Post Graduate Diploma in Advanced Computing (PG-DAC) is CDAC's flagship course designed to bridge the gap between the academic curriculum and the industry requirements. This course aims to groom the students to make them industry-ready by providing in-depth knowledge of various technologies and frameworks used in software development.</p>
-                    
+                    <p class="text-gray-600 mb-6">The Post Graduate Diploma in Advanced Computing (PG-DAC) is CDAC's
+                        flagship course designed to bridge the gap between the academic curriculum and the industry
+                        requirements. This course aims to groom the students to make them industry-ready by providing
+                        in-depth knowledge of various technologies and frameworks used in software development.</p>
+
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                         <div class="border border-gray-200 rounded-lg p-4">
                             <h3 class="text-lg font-semibold text-gray-800 mb-2">Key Highlights</h3>
                             <ul class="space-y-2">
                                 <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    <span class="text-gray-600">Comprehensive curriculum covering both front-end and back-end technologies</span>
+                                    <span class="text-gray-600">Comprehensive curriculum covering both front-end and
+                                        back-end technologies</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
                                     </svg>
                                     <span class="text-gray-600">Hands-on training with real-world projects</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
                                     </svg>
                                     <span class="text-gray-600">Industry-aligned curriculum updated regularly</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
                                     </svg>
                                     <span class="text-gray-600">Soft skills and personality development sessions</span>
                                 </li>
@@ -173,33 +203,43 @@
                             <h3 class="text-lg font-semibold text-gray-800 mb-2">Course Outcomes</h3>
                             <ul class="space-y-2">
                                 <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    <span class="text-gray-600">Proficiency in core and advanced Java technologies</span>
+                                    <span class="text-gray-600">Proficiency in core and advanced Java
+                                        technologies</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    <span class="text-gray-600">Expertise in web development using modern frameworks</span>
+                                    <span class="text-gray-600">Expertise in web development using modern
+                                        frameworks</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
                                     </svg>
                                     <span class="text-gray-600">Understanding of database management and design</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
                                     </svg>
                                     <span class="text-gray-600">Ability to develop end-to-end applications</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    
+
                     <div class="flex flex-col md:flex-row gap-6">
                         <div class="md:w-1/2">
                             <h3 class="text-lg font-semibold text-gray-800 mb-2">Course Fee</h3>
@@ -208,311 +248,442 @@
                         </div>
                         <div class="md:w-1/2">
                             <h3 class="text-lg font-semibold text-gray-800 mb-2">Placement Assistance</h3>
-                            <p class="text-gray-600">Comprehensive placement support with campus interviews from leading IT companies</p>
+                            <p class="text-gray-600">Comprehensive placement support with campus interviews from leading
+                                IT companies</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Course Tabs -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
                     <div class="border-b">
                         <div class="flex overflow-x-auto">
-                            <button class="tab-button px-6 py-4 text-gray-700 hover:text-indigo-600 font-medium border-b-2 border-indigo-600 whitespace-nowrap" data-tab="curriculum">Curriculum</button>
-                            <button class="tab-button px-6 py-4 text-gray-700 hover:text-indigo-600 font-medium border-b-2 border-transparent whitespace-nowrap" data-tab="eligibility">Eligibility & Admission</button>
-                            <button class="tab-button px-6 py-4 text-gray-700 hover:text-indigo-600 font-medium border-b-2 border-transparent whitespace-nowrap" data-tab="career">Career Prospects</button>
-                            <button class="tab-button px-6 py-4 text-gray-700 hover:text-indigo-600 font-medium border-b-2 border-transparent whitespace-nowrap" data-tab="institutes">Offering Institutes</button>
-                            <button class="tab-button px-6 py-4 text-gray-700 hover:text-indigo-600 font-medium border-b-2 border-transparent whitespace-nowrap" data-tab="faqs">FAQs</button>
+                            <button
+                                class="tab-button px-6 py-4 text-gray-700 hover:text-indigo-600 font-medium border-b-2 border-indigo-600 whitespace-nowrap"
+                                data-tab="curriculum">Curriculum</button>
+                            <button
+                                class="tab-button px-6 py-4 text-gray-700 hover:text-indigo-600 font-medium border-b-2 border-transparent whitespace-nowrap"
+                                data-tab="eligibility">Eligibility & Admission</button>
+                            <button
+                                class="tab-button px-6 py-4 text-gray-700 hover:text-indigo-600 font-medium border-b-2 border-transparent whitespace-nowrap"
+                                data-tab="career">Career Prospects</button>
+                            <button
+                                class="tab-button px-6 py-4 text-gray-700 hover:text-indigo-600 font-medium border-b-2 border-transparent whitespace-nowrap"
+                                data-tab="institutes">Offering Institutes</button>
+                            <button
+                                class="tab-button px-6 py-4 text-gray-700 hover:text-indigo-600 font-medium border-b-2 border-transparent whitespace-nowrap"
+                                data-tab="faqs">FAQs</button>
                         </div>
                     </div>
-                    
+
                     <!-- Curriculum Tab Content -->
                     <div id="curriculum" class="tab-content active p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-4">Course Curriculum</h3>
-                        <p class="text-gray-600 mb-6">The PG-DAC curriculum is designed to provide a strong foundation in programming concepts and advanced technologies used in the software industry. The course is divided into modules covering various aspects of software development.</p>
-                        
+                        <p class="text-gray-600 mb-6">The PG-DAC curriculum is designed to provide a strong foundation
+                            in programming concepts and advanced technologies used in the software industry. The course
+                            is divided into modules covering various aspects of software development.</p>
+
                         <!-- Module Accordion -->
                         <div class="space-y-4">
                             <!-- Module 1 -->
                             <div class="border border-gray-200 rounded-lg overflow-hidden">
-                                <button class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
+                                <button
+                                    class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
                                     <span class="font-medium text-gray-800">Module 1: Fundamentals of Programming</span>
-                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </button>
                                 <div class="accordion-content p-4 border-t border-gray-200">
                                     <ul class="space-y-2">
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
                                                 <span class="font-medium text-gray-700">Logic Building with C</span>
-                                                <p class="text-sm text-gray-600">Problem-solving techniques, algorithms, data structures, pointers, memory management</p>
+                                                <p class="text-sm text-gray-600">Problem-solving techniques, algorithms,
+                                                    data structures, pointers, memory management</p>
                                             </div>
                                         </li>
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
-                                                <span class="font-medium text-gray-700">Object-Oriented Programming with C++</span>
-                                                <p class="text-sm text-gray-600">Classes, objects, inheritance, polymorphism, encapsulation, abstraction</p>
+                                                <span class="font-medium text-gray-700">Object-Oriented Programming with
+                                                    C++</span>
+                                                <p class="text-sm text-gray-600">Classes, objects, inheritance,
+                                                    polymorphism, encapsulation, abstraction</p>
                                             </div>
                                         </li>
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
-                                                <span class="font-medium text-gray-700">Data Structures and Algorithms</span>
-                                                <p class="text-sm text-gray-600">Arrays, linked lists, stacks, queues, trees, graphs, searching and sorting algorithms</p>
+                                                <span class="font-medium text-gray-700">Data Structures and
+                                                    Algorithms</span>
+                                                <p class="text-sm text-gray-600">Arrays, linked lists, stacks, queues,
+                                                    trees, graphs, searching and sorting algorithms</p>
                                             </div>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            
+
                             <!-- Module 2 -->
                             <div class="border border-gray-200 rounded-lg overflow-hidden">
-                                <button class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
+                                <button
+                                    class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
                                     <span class="font-medium text-gray-800">Module 2: Core Java Programming</span>
-                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </button>
                                 <div class="accordion-content p-4 border-t border-gray-200">
                                     <ul class="space-y-2">
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
                                                 <span class="font-medium text-gray-700">Java Fundamentals</span>
-                                                <p class="text-sm text-gray-600">Java syntax, data types, control structures, methods, packages</p>
+                                                <p class="text-sm text-gray-600">Java syntax, data types, control
+                                                    structures, methods, packages</p>
                                             </div>
                                         </li>
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
-                                                <span class="font-medium text-gray-700">Object-Oriented Programming in Java</span>
-                                                <p class="text-sm text-gray-600">Classes, objects, inheritance, interfaces, abstract classes, polymorphism</p>
+                                                <span class="font-medium text-gray-700">Object-Oriented Programming in
+                                                    Java</span>
+                                                <p class="text-sm text-gray-600">Classes, objects, inheritance,
+                                                    interfaces, abstract classes, polymorphism</p>
                                             </div>
                                         </li>
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
                                                 <span class="font-medium text-gray-700">Exception Handling</span>
-                                                <p class="text-sm text-gray-600">Try-catch blocks, custom exceptions, exception propagation</p>
+                                                <p class="text-sm text-gray-600">Try-catch blocks, custom exceptions,
+                                                    exception propagation</p>
                                             </div>
                                         </li>
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
                                                 <span class="font-medium text-gray-700">Collections Framework</span>
-                                                <p class="text-sm text-gray-600">Lists, sets, maps, generics, iterators</p>
+                                                <p class="text-sm text-gray-600">Lists, sets, maps, generics, iterators
+                                                </p>
                                             </div>
                                         </li>
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
                                                 <span class="font-medium text-gray-700">Multithreading</span>
-                                                <p class="text-sm text-gray-600">Thread creation, synchronization, inter-thread communication</p>
+                                                <p class="text-sm text-gray-600">Thread creation, synchronization,
+                                                    inter-thread communication</p>
                                             </div>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            
+
                             <!-- Module 3 -->
                             <div class="border border-gray-200 rounded-lg overflow-hidden">
-                                <button class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
+                                <button
+                                    class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
                                     <span class="font-medium text-gray-800">Module 3: Database Technologies</span>
-                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </button>
                                 <div class="accordion-content p-4 border-t border-gray-200">
                                     <ul class="space-y-2">
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
                                                 <span class="font-medium text-gray-700">Database Concepts</span>
-                                                <p class="text-sm text-gray-600">RDBMS concepts, ER diagrams, normalization</p>
+                                                <p class="text-sm text-gray-600">RDBMS concepts, ER diagrams,
+                                                    normalization</p>
                                             </div>
                                         </li>
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
                                                 <span class="font-medium text-gray-700">SQL</span>
-                                                <p class="text-sm text-gray-600">DDL, DML, DCL, TCL, joins, subqueries, views, stored procedures</p>
+                                                <p class="text-sm text-gray-600">DDL, DML, DCL, TCL, joins, subqueries,
+                                                    views, stored procedures</p>
                                             </div>
                                         </li>
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
                                                 <span class="font-medium text-gray-700">MySQL/Oracle</span>
-                                                <p class="text-sm text-gray-600">Database creation, management, optimization</p>
+                                                <p class="text-sm text-gray-600">Database creation, management,
+                                                    optimization</p>
                                             </div>
                                         </li>
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
                                                 <span class="font-medium text-gray-700">JDBC</span>
-                                                <p class="text-sm text-gray-600">Database connectivity, CRUD operations, transaction management</p>
+                                                <p class="text-sm text-gray-600">Database connectivity, CRUD operations,
+                                                    transaction management</p>
                                             </div>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            
+
                             <!-- Module 4 -->
                             <div class="border border-gray-200 rounded-lg overflow-hidden">
-                                <button class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
+                                <button
+                                    class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
                                     <span class="font-medium text-gray-800">Module 4: Web Technologies</span>
-                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </button>
                                 <div class="accordion-content p-4 border-t border-gray-200">
                                     <ul class="space-y-2">
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
                                                 <span class="font-medium text-gray-700">HTML5 & CSS3</span>
-                                                <p class="text-sm text-gray-600">Semantic elements, responsive design, CSS frameworks</p>
+                                                <p class="text-sm text-gray-600">Semantic elements, responsive design,
+                                                    CSS frameworks</p>
                                             </div>
                                         </li>
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
                                                 <span class="font-medium text-gray-700">JavaScript</span>
-                                                <p class="text-sm text-gray-600">DOM manipulation, events, AJAX, JSON, ES6 features</p>
+                                                <p class="text-sm text-gray-600">DOM manipulation, events, AJAX, JSON,
+                                                    ES6 features</p>
                                             </div>
                                         </li>
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
                                                 <span class="font-medium text-gray-700">jQuery</span>
-                                                <p class="text-sm text-gray-600">Selectors, events, effects, AJAX with jQuery</p>
+                                                <p class="text-sm text-gray-600">Selectors, events, effects, AJAX with
+                                                    jQuery</p>
                                             </div>
                                         </li>
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
                                                 <span class="font-medium text-gray-700">Servlets & JSP</span>
-                                                <p class="text-sm text-gray-600">Request handling, session management, filters, JSP tags</p>
+                                                <p class="text-sm text-gray-600">Request handling, session management,
+                                                    filters, JSP tags</p>
                                             </div>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            
+
                             <!-- Module 5 -->
                             <div class="border border-gray-200 rounded-lg overflow-hidden">
-                                <button class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
+                                <button
+                                    class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
                                     <span class="font-medium text-gray-800">Module 5: Advanced Java Frameworks</span>
-                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </button>
                                 <div class="accordion-content p-4 border-t border-gray-200">
                                     <ul class="space-y-2">
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
                                                 <span class="font-medium text-gray-700">Hibernate</span>
-                                                <p class="text-sm text-gray-600">ORM concepts, entity mapping, HQL, criteria queries</p>
+                                                <p class="text-sm text-gray-600">ORM concepts, entity mapping, HQL,
+                                                    criteria queries</p>
                                             </div>
                                         </li>
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
                                                 <span class="font-medium text-gray-700">Spring Framework</span>
-                                                <p class="text-sm text-gray-600">IoC, dependency injection, AOP, Spring MVC</p>
+                                                <p class="text-sm text-gray-600">IoC, dependency injection, AOP, Spring
+                                                    MVC</p>
                                             </div>
                                         </li>
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
                                                 <span class="font-medium text-gray-700">Spring Boot</span>
-                                                <p class="text-sm text-gray-600">Auto-configuration, embedded servers, Spring Boot starters</p>
+                                                <p class="text-sm text-gray-600">Auto-configuration, embedded servers,
+                                                    Spring Boot starters</p>
                                             </div>
                                         </li>
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
                                                 <span class="font-medium text-gray-700">RESTful Web Services</span>
-                                                <p class="text-sm text-gray-600">REST principles, API design, JSON processing, Spring REST</p>
+                                                <p class="text-sm text-gray-600">REST principles, API design, JSON
+                                                    processing, Spring REST</p>
                                             </div>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            
+
                             <!-- Module 6 -->
                             <div class="border border-gray-200 rounded-lg overflow-hidden">
-                                <button class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
+                                <button
+                                    class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
                                     <span class="font-medium text-gray-800">Module 6: Frontend Frameworks</span>
-                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </button>
                                 <div class="accordion-content p-4 border-t border-gray-200">
                                     <ul class="space-y-2">
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
                                                 <span class="font-medium text-gray-700">Angular</span>
-                                                <p class="text-sm text-gray-600">Components, services, directives, routing, forms</p>
+                                                <p class="text-sm text-gray-600">Components, services, directives,
+                                                    routing, forms</p>
                                             </div>
                                         </li>
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
                                                 <span class="font-medium text-gray-700">React.js</span>
-                                                <p class="text-sm text-gray-600">Components, props, state, hooks, Redux</p>
+                                                <p class="text-sm text-gray-600">Components, props, state, hooks, Redux
+                                                </p>
                                             </div>
                                         </li>
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
                                                 <span class="font-medium text-gray-700">TypeScript</span>
@@ -522,29 +693,42 @@
                                     </ul>
                                 </div>
                             </div>
-                            
+
                             <!-- Module 7 -->
                             <div class="border border-gray-200 rounded-lg overflow-hidden">
-                                <button class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
-                                    <span class="font-medium text-gray-800">Module 7: DevOps & Software Engineering</span>
-                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                <button
+                                    class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
+                                    <span class="font-medium text-gray-800">Module 7: DevOps & Software
+                                        Engineering</span>
+                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </button>
                                 <div class="accordion-content p-4 border-t border-gray-200">
                                     <ul class="space-y-2">
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
-                                                <span class="font-medium text-gray-700">Software Development Life Cycle</span>
-                                                <p class="text-sm text-gray-600">Agile methodology, Scrum, project management</p>
+                                                <span class="font-medium text-gray-700">Software Development Life
+                                                    Cycle</span>
+                                                <p class="text-sm text-gray-600">Agile methodology, Scrum, project
+                                                    management</p>
                                             </div>
                                         </li>
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
                                                 <span class="font-medium text-gray-700">Version Control</span>
@@ -552,8 +736,11 @@
                                             </div>
                                         </li>
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
                                                 <span class="font-medium text-gray-700">CI/CD</span>
@@ -561,41 +748,59 @@
                                             </div>
                                         </li>
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
                                                 <span class="font-medium text-gray-700">Testing</span>
-                                                <p class="text-sm text-gray-600">JUnit, Mockito, test-driven development</p>
+                                                <p class="text-sm text-gray-600">JUnit, Mockito, test-driven development
+                                                </p>
                                             </div>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            
+
                             <!-- Module 8 -->
                             <div class="border border-gray-200 rounded-lg overflow-hidden">
-                                <button class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
+                                <button
+                                    class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
                                     <span class="font-medium text-gray-800">Module 8: Project Work</span>
-                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </button>
                                 <div class="accordion-content p-4 border-t border-gray-200">
-                                    <p class="text-gray-600 mb-4">The course culminates in a comprehensive project that allows students to apply all the concepts learned throughout the course. Students work in teams to develop end-to-end applications using the technologies covered in the course.</p>
+                                    <p class="text-gray-600 mb-4">The course culminates in a comprehensive project that
+                                        allows students to apply all the concepts learned throughout the course.
+                                        Students work in teams to develop end-to-end applications using the technologies
+                                        covered in the course.</p>
                                     <ul class="space-y-2">
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
                                                 <span class="font-medium text-gray-700">Project Planning</span>
-                                                <p class="text-sm text-gray-600">Requirement analysis, system design, architecture planning</p>
+                                                <p class="text-sm text-gray-600">Requirement analysis, system design,
+                                                    architecture planning</p>
                                             </div>
                                         </li>
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
                                                 <span class="font-medium text-gray-700">Implementation</span>
@@ -603,12 +808,16 @@
                                             </div>
                                         </li>
                                         <li class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                             <div>
                                                 <span class="font-medium text-gray-700">Presentation</span>
-                                                <p class="text-sm text-gray-600">Project demonstration, documentation, viva</p>
+                                                <p class="text-sm text-gray-600">Project demonstration, documentation,
+                                                    viva</p>
                                             </div>
                                         </li>
                                     </ul>
@@ -616,235 +825,331 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Eligibility Tab Content -->
                     <div id="eligibility" class="tab-content p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-4">Eligibility & Admission Process</h3>
-                        
+
                         <div class="space-y-6">
                             <div>
                                 <h4 class="text-lg font-medium text-gray-800 mb-2">Eligibility Criteria</h4>
-                                <p class="text-gray-600 mb-4">To be eligible for the PG-DAC course, candidates must meet the following criteria:</p>
+                                <p class="text-gray-600 mb-4">To be eligible for the PG-DAC course, candidates must meet
+                                    the following criteria:</p>
                                 <ul class="space-y-2">
                                     <li class="flex items-start">
-                                        <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7"></path>
                                         </svg>
-                                        <span class="text-gray-600">Graduate in any discipline (BE/B.Tech/MCA/MSc/BCA/BSc) with minimum 50% marks (45% for reserved categories)</span>
+                                        <span class="text-gray-600">Graduate in any discipline
+                                            (BE/B.Tech/MCA/MSc/BCA/BSc) with minimum 50% marks (45% for reserved
+                                            categories)</span>
                                     </li>
                                     <li class="flex items-start">
-                                        <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7"></path>
                                         </svg>
-                                        <span class="text-gray-600">Knowledge of basic mathematics and computer concepts</span>
+                                        <span class="text-gray-600">Knowledge of basic mathematics and computer
+                                            concepts</span>
                                     </li>
                                     <li class="flex items-start">
-                                        <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7"></path>
                                         </svg>
-                                        <span class="text-gray-600">Final year students can also apply (admission subject to completion of graduation)</span>
+                                        <span class="text-gray-600">Final year students can also apply (admission
+                                            subject to completion of graduation)</span>
                                     </li>
                                 </ul>
                             </div>
-                            
+
                             <div>
                                 <h4 class="text-lg font-medium text-gray-800 mb-2">Admission Process</h4>
-                                <p class="text-gray-600 mb-4">Admission to PG-DAC is through the C-CAT (CDAC Common Admission Test) conducted by CDAC. The process involves:</p>
+                                <p class="text-gray-600 mb-4">Admission to PG-DAC is through the C-CAT (CDAC Common
+                                    Admission Test) conducted by CDAC. The process involves:</p>
                                 <ol class="space-y-4">
                                     <li class="flex">
-                                        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-medium mr-3">1</span>
+                                        <span
+                                            class="flex-shrink-0 w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-medium mr-3">1</span>
                                         <div>
                                             <h5 class="font-medium text-gray-700">C-CAT Registration</h5>
-                                            <p class="text-gray-600">Register for C-CAT on the official CDAC website during the registration period (usually held twice a year - February and August)</p>
+                                            <p class="text-gray-600">Register for C-CAT on the official CDAC website
+                                                during the registration period (usually held twice a year - February and
+                                                August)</p>
                                         </div>
                                     </li>
                                     <li class="flex">
-                                        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-medium mr-3">2</span>
+                                        <span
+                                            class="flex-shrink-0 w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-medium mr-3">2</span>
                                         <div>
                                             <h5 class="font-medium text-gray-700">C-CAT Examination</h5>
-                                            <p class="text-gray-600">Appear for the online C-CAT exam which tests aptitude, logical reasoning, and computer fundamentals</p>
+                                            <p class="text-gray-600">Appear for the online C-CAT exam which tests
+                                                aptitude, logical reasoning, and computer fundamentals</p>
                                         </div>
                                     </li>
                                     <li class="flex">
-                                        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-medium mr-3">3</span>
+                                        <span
+                                            class="flex-shrink-0 w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-medium mr-3">3</span>
                                         <div>
                                             <h5 class="font-medium text-gray-700">Result Declaration</h5>
                                             <p class="text-gray-600">C-CAT results are declared on the CDAC website</p>
                                         </div>
                                     </li>
                                     <li class="flex">
-                                        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-medium mr-3">4</span>
+                                        <span
+                                            class="flex-shrink-0 w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-medium mr-3">4</span>
                                         <div>
                                             <h5 class="font-medium text-gray-700">Counseling & Seat Allocation</h5>
-                                            <p class="text-gray-600">Participate in online counseling for course and center selection based on C-CAT rank</p>
+                                            <p class="text-gray-600">Participate in online counseling for course and
+                                                center selection based on C-CAT rank</p>
                                         </div>
                                     </li>
                                     <li class="flex">
-                                        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-medium mr-3">5</span>
+                                        <span
+                                            class="flex-shrink-0 w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-medium mr-3">5</span>
                                         <div>
-                                            <h5 class="font-medium text-gray-700">Fee Payment & Admission Confirmation</h5>
-                                            <p class="text-gray-600">Pay the course fee and complete the admission formalities at the allocated center</p>
+                                            <h5 class="font-medium text-gray-700">Fee Payment & Admission Confirmation
+                                            </h5>
+                                            <p class="text-gray-600">Pay the course fee and complete the admission
+                                                formalities at the allocated center</p>
                                         </div>
                                     </li>
                                 </ol>
                             </div>
-                            
+
                             <div>
                                 <h4 class="text-lg font-medium text-gray-800 mb-2">Important Dates (Tentative)</h4>
                                 <div class="overflow-x-auto">
                                     <table class="min-w-full border border-gray-200 rounded-lg">
                                         <thead>
                                             <tr class="bg-gray-50">
-                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b">Event</th>
-                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b">February Batch</th>
-                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b">August Batch</th>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b">
+                                                    Event</th>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b">
+                                                    February Batch</th>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b">
+                                                    August Batch</th>
                                             </tr>
                                         </thead>
                                         <tbody class="bg-white divide-y divide-gray-200">
                                             <tr>
-                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">C-CAT Registration</td>
-                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">November - December</td>
-                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">May - June</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">C-CAT
+                                                    Registration</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">November -
+                                                    December</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">May - June
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">C-CAT Examination</td>
-                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">January</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">C-CAT
+                                                    Examination</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">January
+                                                </td>
                                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">July</td>
                                             </tr>
                                             <tr>
-                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">Result Declaration</td>
-                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">January</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">Result
+                                                    Declaration</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">January
+                                                </td>
                                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">July</td>
                                             </tr>
                                             <tr>
-                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">Counseling & Seat Allocation</td>
-                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">January - February</td>
-                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">July - August</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">Counseling
+                                                    & Seat Allocation</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">January -
+                                                    February</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">July -
+                                                    August</td>
                                             </tr>
                                             <tr>
-                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">Course Commencement</td>
-                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">February - March</td>
-                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">August - September</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">Course
+                                                    Commencement</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">February -
+                                                    March</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">August -
+                                                    September</td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
-                                <p class="text-sm text-gray-500 mt-2">*Dates are tentative and subject to change. Please refer to the official CDAC website for exact dates.</p>
+                                <p class="text-sm text-gray-500 mt-2">*Dates are tentative and subject to change. Please
+                                    refer to the official CDAC website for exact dates.</p>
                             </div>
-                            
+
                             <div>
                                 <h4 class="text-lg font-medium text-gray-800 mb-2">C-CAT Exam Pattern</h4>
                                 <p class="text-gray-600 mb-4">The C-CAT exam consists of three sections:</p>
                                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                                     <div class="border border-gray-200 rounded-lg p-4">
                                         <h5 class="font-medium text-gray-700 mb-2">Section A</h5>
-                                        <p class="text-gray-600 mb-2">Computer Awareness, Logical Reasoning, Quantitative Aptitude, English</p>
+                                        <p class="text-gray-600 mb-2">Computer Awareness, Logical Reasoning,
+                                            Quantitative Aptitude, English</p>
                                         <p class="text-sm text-gray-500">Mandatory for all candidates</p>
                                     </div>
                                     <div class="border border-gray-200 rounded-lg p-4">
                                         <h5 class="font-medium text-gray-700 mb-2">Section B</h5>
-                                        <p class="text-gray-600 mb-2">Computer Programming, Data Structures, Algorithms</p>
-                                        <p class="text-sm text-gray-500">For graduates with Computer Science background</p>
+                                        <p class="text-gray-600 mb-2">Computer Programming, Data Structures, Algorithms
+                                        </p>
+                                        <p class="text-sm text-gray-500">For graduates with Computer Science background
+                                        </p>
                                     </div>
                                     <div class="border border-gray-200 rounded-lg p-4">
                                         <h5 class="font-medium text-gray-700 mb-2">Section C</h5>
-                                        <p class="text-gray-600 mb-2">Computer Architecture, Digital Electronics, Microprocessors</p>
+                                        <p class="text-gray-600 mb-2">Computer Architecture, Digital Electronics,
+                                            Microprocessors</p>
                                         <p class="text-sm text-gray-500">For graduates with Electronics background</p>
                                     </div>
                                 </div>
-                                <p class="text-sm text-gray-500 mt-4">Note: Candidates can attempt any or all sections based on their background and preference.</p>
+                                <p class="text-sm text-gray-500 mt-4">Note: Candidates can attempt any or all sections
+                                    based on their background and preference.</p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Career Prospects Tab Content -->
                     <div id="career" class="tab-content p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-4">Career Prospects</h3>
-                        
+
                         <div class="space-y-6">
-                            <p class="text-gray-600">The PG-DAC course opens up numerous career opportunities in the IT industry. Graduates are equipped with the skills and knowledge required for various roles in software development and related fields.</p>
-                            
+                            <p class="text-gray-600">The PG-DAC course opens up numerous career opportunities in the IT
+                                industry. Graduates are equipped with the skills and knowledge required for various
+                                roles in software development and related fields.</p>
+
                             <div>
                                 <h4 class="text-lg font-medium text-gray-800 mb-3">Job Roles</h4>
                                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                                    <div class="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition duration-300">
+                                    <div
+                                        class="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition duration-300">
                                         <div class="flex items-center mb-3">
-                                            <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
-                                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                            <div
+                                                class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4">
+                                                    </path>
                                                 </svg>
                                             </div>
                                             <h5 class="font-medium text-gray-800">Software Developer</h5>
                                         </div>
-                                        <p class="text-gray-600 text-sm">Design, develop, and maintain software applications using Java, Spring, and related technologies.</p>
+                                        <p class="text-gray-600 text-sm">Design, develop, and maintain software
+                                            applications using Java, Spring, and related technologies.</p>
                                     </div>
-                                    
-                                    <div class="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition duration-300">
+
+                                    <div
+                                        class="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition duration-300">
                                         <div class="flex items-center mb-3">
-                                            <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
-                                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                                            <div
+                                                class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9">
+                                                    </path>
                                                 </svg>
                                             </div>
                                             <h5 class="font-medium text-gray-800">Web Developer</h5>
                                         </div>
-                                        <p class="text-gray-600 text-sm">Create responsive and dynamic web applications using modern frontend and backend technologies.</p>
+                                        <p class="text-gray-600 text-sm">Create responsive and dynamic web applications
+                                            using modern frontend and backend technologies.</p>
                                     </div>
-                                    
-                                    <div class="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition duration-300">
+
+                                    <div
+                                        class="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition duration-300">
                                         <div class="flex items-center mb-3">
-                                            <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
-                                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+                                            <div
+                                                class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4">
+                                                    </path>
                                                 </svg>
                                             </div>
                                             <h5 class="font-medium text-gray-800">Database Developer</h5>
                                         </div>
-                                        <p class="text-gray-600 text-sm">Design, implement, and optimize database systems for various applications.</p>
+                                        <p class="text-gray-600 text-sm">Design, implement, and optimize database
+                                            systems for various applications.</p>
                                     </div>
-                                    
-                                    <div class="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition duration-300">
+
+                                    <div
+                                        class="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition duration-300">
                                         <div class="flex items-center mb-3">
-                                            <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
-                                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                                            <div
+                                                class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2">
+                                                    </path>
                                                 </svg>
                                             </div>
                                             <h5 class="font-medium text-gray-800">Full Stack Developer</h5>
                                         </div>
-                                        <p class="text-gray-600 text-sm">Work on both frontend and backend aspects of web applications, handling the entire development stack.</p>
+                                        <p class="text-gray-600 text-sm">Work on both frontend and backend aspects of
+                                            web applications, handling the entire development stack.</p>
                                     </div>
-                                    
-                                    <div class="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition duration-300">
+
+                                    <div
+                                        class="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition duration-300">
                                         <div class="flex items-center mb-3">
-                                            <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
-                                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                            <div
+                                                class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                                    </path>
                                                 </svg>
                                             </div>
                                             <h5 class="font-medium text-gray-800">Software Tester</h5>
                                         </div>
-                                        <p class="text-gray-600 text-sm">Test software applications to ensure quality, functionality, and performance.</p>
+                                        <p class="text-gray-600 text-sm">Test software applications to ensure quality,
+                                            functionality, and performance.</p>
                                     </div>
-                                    
-                                    <div class="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition duration-300">
+
+                                    <div
+                                        class="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition duration-300">
                                         <div class="flex items-center mb-3">
-                                            <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
-                                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                            <div
+                                                class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                                    </path>
                                                 </svg>
                                             </div>
                                             <h5 class="font-medium text-gray-800">DevOps Engineer</h5>
                                         </div>
-                                        <p class="text-gray-600 text-sm">Implement CI/CD pipelines and manage deployment infrastructure for software applications.</p>
+                                        <p class="text-gray-600 text-sm">Implement CI/CD pipelines and manage deployment
+                                            infrastructure for software applications.</p>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div>
                                 <h4 class="text-lg font-medium text-gray-800 mb-3">Salary Trends</h4>
-                                <p class="text-gray-600 mb-4">PG-DAC graduates typically receive competitive salary packages in the IT industry. The salary range varies based on the company, location, and individual performance.</p>
-                                
+                                <p class="text-gray-600 mb-4">PG-DAC graduates typically receive competitive salary
+                                    packages in the IT industry. The salary range varies based on the company, location,
+                                    and individual performance.</p>
+
                                 <div class="bg-white border border-gray-200 rounded-lg p-6">
                                     <h5 class="font-medium text-gray-800 mb-4">Average Salary Range for Freshers</h5>
                                     <div class="space-y-4">
@@ -876,10 +1181,11 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <p class="text-sm text-gray-500 mt-4">*LPA = Lakhs Per Annum. Salary figures are approximate and may vary.</p>
+                                    <p class="text-sm text-gray-500 mt-4">*LPA = Lakhs Per Annum. Salary figures are
+                                        approximate and may vary.</p>
                                 </div>
                             </div>
-                            
+
                             <div>
                                 <h4 class="text-lg font-medium text-gray-800 mb-3">Top Recruiting Companies</h4>
                                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -921,40 +1227,62 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div>
                                 <h4 class="text-lg font-medium text-gray-800 mb-3">Career Growth</h4>
-                                <p class="text-gray-600 mb-4">PG-DAC graduates can expect good career growth opportunities in the IT industry. With experience and continuous learning, they can progress to senior roles and specialized positions.</p>
-                                
+                                <p class="text-gray-600 mb-4">PG-DAC graduates can expect good career growth
+                                    opportunities in the IT industry. With experience and continuous learning, they can
+                                    progress to senior roles and specialized positions.</p>
+
                                 <div class="bg-white border border-gray-200 rounded-lg p-6">
                                     <h5 class="font-medium text-gray-800 mb-4">Typical Career Progression</h5>
                                     <div class="relative">
                                         <div class="absolute left-4 top-0 h-full w-0.5 bg-indigo-100"></div>
                                         <div class="space-y-8">
                                             <div class="relative pl-12">
-                                                <div class="absolute left-0 top-1 w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center text-white font-medium">1</div>
-                                                <h6 class="font-medium text-gray-800 mb-1">Junior Developer (0-2 years)</h6>
-                                                <p class="text-sm text-gray-600">Entry-level position focusing on coding and basic development tasks</p>
+                                                <div
+                                                    class="absolute left-0 top-1 w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center text-white font-medium">
+                                                    1</div>
+                                                <h6 class="font-medium text-gray-800 mb-1">Junior Developer (0-2 years)
+                                                </h6>
+                                                <p class="text-sm text-gray-600">Entry-level position focusing on coding
+                                                    and basic development tasks</p>
                                             </div>
                                             <div class="relative pl-12">
-                                                <div class="absolute left-0 top-1 w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center text-white font-medium">2</div>
-                                                <h6 class="font-medium text-gray-800 mb-1">Software Developer (2-4 years)</h6>
-                                                <p class="text-sm text-gray-600">Handling more complex development tasks and small modules independently</p>
+                                                <div
+                                                    class="absolute left-0 top-1 w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center text-white font-medium">
+                                                    2</div>
+                                                <h6 class="font-medium text-gray-800 mb-1">Software Developer (2-4
+                                                    years)</h6>
+                                                <p class="text-sm text-gray-600">Handling more complex development tasks
+                                                    and small modules independently</p>
                                             </div>
                                             <div class="relative pl-12">
-                                                <div class="absolute left-0 top-1 w-8 h-8 bg-indigo-400 rounded-full flex items-center justify-center text-white font-medium">3</div>
-                                                <h6 class="font-medium text-gray-800 mb-1">Senior Developer (4-6 years)</h6>
-                                                <p class="text-sm text-gray-600">Leading development efforts for specific modules or features</p>
+                                                <div
+                                                    class="absolute left-0 top-1 w-8 h-8 bg-indigo-400 rounded-full flex items-center justify-center text-white font-medium">
+                                                    3</div>
+                                                <h6 class="font-medium text-gray-800 mb-1">Senior Developer (4-6 years)
+                                                </h6>
+                                                <p class="text-sm text-gray-600">Leading development efforts for
+                                                    specific modules or features</p>
                                             </div>
                                             <div class="relative pl-12">
-                                                <div class="absolute left-0 top-1 w-8 h-8 bg-indigo-300 rounded-full flex items-center justify-center text-white font-medium">4</div>
-                                                <h6 class="font-medium text-gray-800 mb-1">Team Lead / Technical Lead (6-8 years)</h6>
-                                                <p class="text-sm text-gray-600">Managing a team of developers and overseeing technical aspects of projects</p>
+                                                <div
+                                                    class="absolute left-0 top-1 w-8 h-8 bg-indigo-300 rounded-full flex items-center justify-center text-white font-medium">
+                                                    4</div>
+                                                <h6 class="font-medium text-gray-800 mb-1">Team Lead / Technical Lead
+                                                    (6-8 years)</h6>
+                                                <p class="text-sm text-gray-600">Managing a team of developers and
+                                                    overseeing technical aspects of projects</p>
                                             </div>
                                             <div class="relative pl-12">
-                                                <div class="absolute left-0 top-1 w-8 h-8 bg-indigo-200 rounded-full flex items-center justify-center text-indigo-600 font-medium">5</div>
-                                                <h6 class="font-medium text-gray-800 mb-1">Project Manager / Architect (8+ years)</h6>
-                                                <p class="text-sm text-gray-600">Handling entire projects or designing system architecture</p>
+                                                <div
+                                                    class="absolute left-0 top-1 w-8 h-8 bg-indigo-200 rounded-full flex items-center justify-center text-indigo-600 font-medium">
+                                                    5</div>
+                                                <h6 class="font-medium text-gray-800 mb-1">Project Manager / Architect
+                                                    (8+ years)</h6>
+                                                <p class="text-sm text-gray-600">Handling entire projects or designing
+                                                    system architecture</p>
                                             </div>
                                         </div>
                                     </div>
@@ -962,302 +1290,477 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Offering Institutes Tab Content -->
                     <div id="institutes" class="tab-content p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-4">Institutes Offering PG-DAC</h3>
-                        <p class="text-gray-600 mb-6">PG-DAC is offered at various CDAC centers and authorized training centers across India. Here are some of the prominent institutes where you can pursue this course:</p>
-                        
+                        <p class="text-gray-600 mb-6">PG-DAC is offered at various CDAC centers and authorized training
+                            centers across India. Here are some of the prominent institutes where you can pursue this
+                            course:</p>
+
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <!-- Institute 1 -->
-                            <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+                            <div
+                                class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
                                 <div class="p-6">
                                     <h4 class="text-lg font-semibold text-gray-800 mb-2">CDAC Pune (ACTS)</h4>
-                                    <p class="text-gray-600 mb-4">The flagship center of CDAC, known for its excellent faculty and placement record.</p>
+                                    <p class="text-gray-600 mb-4">The flagship center of CDAC, known for its excellent
+                                        faculty and placement record.</p>
                                     <div class="space-y-2">
                                         <div class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                                </path>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                                             </svg>
                                             <span class="text-gray-600">Pune, Maharashtra</span>
                                         </div>
                                         <div class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                                                </path>
                                             </svg>
                                             <span class="text-gray-600">Batch Size: 120 students</span>
                                         </div>
                                         <div class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                             </svg>
                                             <span class="text-gray-600">Placement Rate: 95%</span>
                                         </div>
                                     </div>
                                     <div class="mt-4">
-                                        <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
+                                        <a href="#"
+                                            class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
                                             View Institute Details
-                                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Institute 2 -->
-                            <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+                            <div
+                                class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
                                 <div class="p-6">
                                     <h4 class="text-lg font-semibold text-gray-800 mb-2">Sunbeam Pune</h4>
-                                    <p class="text-gray-600 mb-4">Known for its industry-oriented training and smaller batch sizes for personalized attention.</p>
+                                    <p class="text-gray-600 mb-4">Known for its industry-oriented training and smaller
+                                        batch sizes for personalized attention.</p>
                                     <div class="space-y-2">
                                         <div class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                                </path>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                                             </svg>
                                             <span class="text-gray-600">Hinjewadi, Pune</span>
                                         </div>
                                         <div class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                                                </path>
                                             </svg>
                                             <span class="text-gray-600">Batch Size: 60 students</span>
                                         </div>
                                         <div class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                             </svg>
                                             <span class="text-gray-600">Placement Rate: 90%</span>
                                         </div>
                                     </div>
                                     <div class="mt-4">
-                                        <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
+                                        <a href="#"
+                                            class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
                                             View Institute Details
-                                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Institute 3 -->
-                            <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+                            <div
+                                class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
                                 <div class="p-6">
                                     <h4 class="text-lg font-semibold text-gray-800 mb-2">CDAC Mumbai</h4>
-                                    <p class="text-gray-600 mb-4">Located in the financial capital with good industry connections and placement opportunities.</p>
+                                    <p class="text-gray-600 mb-4">Located in the financial capital with good industry
+                                        connections and placement opportunities.</p>
                                     <div class="space-y-2">
                                         <div class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                                </path>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                                             </svg>
                                             <span class="text-gray-600">Kharghar, Navi Mumbai</span>
                                         </div>
                                         <div class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                                                </path>
                                             </svg>
                                             <span class="text-gray-600">Batch Size: 100 students</span>
                                         </div>
                                         <div class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                             </svg>
                                             <span class="text-gray-600">Placement Rate: 92%</span>
                                         </div>
                                     </div>
                                     <div class="mt-4">
-                                        <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
+                                        <a href="#"
+                                            class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
                                             View Institute Details
-                                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Institute 4 -->
-                            <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
+                            <div
+                                class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition duration-300">
                                 <div class="p-6">
                                     <h4 class="text-lg font-semibold text-gray-800 mb-2">CDAC Bangalore</h4>
-                                    <p class="text-gray-600 mb-4">Located in India's Silicon Valley with excellent placement opportunities in tech companies.</p>
+                                    <p class="text-gray-600 mb-4">Located in India's Silicon Valley with excellent
+                                        placement opportunities in tech companies.</p>
                                     <div class="space-y-2">
                                         <div class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                                </path>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                                             </svg>
                                             <span class="text-gray-600">Electronics City, Bangalore</span>
                                         </div>
                                         <div class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                                                </path>
                                             </svg>
                                             <span class="text-gray-600">Batch Size: 90 students</span>
                                         </div>
                                         <div class="flex items-start">
-                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                            <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                             </svg>
                                             <span class="text-gray-600">Placement Rate: 90%</span>
                                         </div>
                                     </div>
                                     <div class="mt-4">
-                                        <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
+                                        <a href="#"
+                                            class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
                                             View Institute Details
-                                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
                                             </svg>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="mt-8">
-                            <a href="institutes.html" class="inline-flex items-center text-indigo-600 font-medium hover:text-indigo-800">
+                            <a href="institutes.html"
+                                class="inline-flex items-center text-indigo-600 font-medium hover:text-indigo-800">
                                 View All Institutes
-                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
                                 </svg>
                             </a>
                         </div>
-                        
+
                         <div class="mt-8 bg-indigo-50 border border-indigo-100 rounded-lg p-6">
                             <h4 class="text-lg font-medium text-gray-800 mb-3">Compare Institutes</h4>
-                            <p class="text-gray-600 mb-4">Not sure which institute to choose? Use our comparison tool to compare different institutes offering PG-DAC based on various parameters like placement record, infrastructure, faculty, and more.</p>
-                            <a href="comparison.html" class="inline-flex items-center bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-md transition duration-300">
+                            <p class="text-gray-600 mb-4">Not sure which institute to choose? Use our comparison tool to
+                                compare different institutes offering PG-DAC based on various parameters like placement
+                                record, infrastructure, faculty, and more.</p>
+                            <a href="comparison.html"
+                                class="inline-flex items-center bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-md transition duration-300">
                                 Compare Institutes
-                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
                                 </svg>
                             </a>
                         </div>
                     </div>
-                    
+
                     <!-- FAQs Tab Content -->
                     <div id="faqs" class="tab-content p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-4">Frequently Asked Questions</h3>
-                        <p class="text-gray-600 mb-6">Here are some common questions about the PG-DAC course that might help you make an informed decision.</p>
-                        
+                        <p class="text-gray-600 mb-6">Here are some common questions about the PG-DAC course that might
+                            help you make an informed decision.</p>
+
                         <div class="space-y-4">
                             <!-- FAQ 1 -->
                             <div class="border border-gray-200 rounded-lg overflow-hidden">
-                                <button class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
-                                    <span class="font-medium text-gray-800">Is prior programming knowledge required for PG-DAC?</span>
-                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                <button
+                                    class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
+                                    <span class="font-medium text-gray-800">Is prior programming knowledge required for
+                                        PG-DAC?</span>
+                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </button>
                                 <div class="accordion-content p-4 border-t border-gray-200">
-                                    <p class="text-gray-600">While prior programming knowledge is not mandatory, having basic understanding of programming concepts would be beneficial. The course starts with fundamentals and gradually progresses to advanced topics. Students without programming background might need to put in extra effort initially.</p>
+                                    <p class="text-gray-600">While prior programming knowledge is not mandatory, having
+                                        basic understanding of programming concepts would be beneficial. The course
+                                        starts with fundamentals and gradually progresses to advanced topics. Students
+                                        without programming background might need to put in extra effort initially.</p>
                                 </div>
                             </div>
-                            
+
                             <!-- FAQ 2 -->
                             <div class="border border-gray-200 rounded-lg overflow-hidden">
-                                <button class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
-                                    <span class="font-medium text-gray-800">How is PG-DAC different from other CDAC courses?</span>
-                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                <button
+                                    class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
+                                    <span class="font-medium text-gray-800">How is PG-DAC different from other CDAC
+                                        courses?</span>
+                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </button>
                                 <div class="accordion-content p-4 border-t border-gray-200">
-                                    <p class="text-gray-600">PG-DAC is CDAC's flagship course focused on software development and advanced computing. It covers a wide range of technologies including Java, web development, databases, and frameworks. Other CDAC courses like PG-DBDA focuses on big data analytics, PG-DESD on embedded systems, and PG-DITISS on information security. PG-DAC has the broadest scope and highest demand in the IT industry.</p>
+                                    <p class="text-gray-600">PG-DAC is CDAC's flagship course focused on software
+                                        development and advanced computing. It covers a wide range of technologies
+                                        including Java, web development, databases, and frameworks. Other CDAC courses
+                                        like PG-DBDA focuses on big data analytics, PG-DESD on embedded systems, and
+                                        PG-DITISS on information security. PG-DAC has the broadest scope and highest
+                                        demand in the IT industry.</p>
                                 </div>
                             </div>
-                            
+
                             <!-- FAQ 3 -->
                             <div class="border border-gray-200 rounded-lg overflow-hidden">
-                                <button class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
-                                    <span class="font-medium text-gray-800">What is the difficulty level of the C-CAT exam?</span>
-                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                <button
+                                    class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
+                                    <span class="font-medium text-gray-800">What is the difficulty level of the C-CAT
+                                        exam?</span>
+                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </button>
                                 <div class="accordion-content p-4 border-t border-gray-200">
-                                    <p class="text-gray-600">The C-CAT exam is of moderate difficulty. Section A (mandatory for all) tests aptitude, logical reasoning, and English, which is similar to other competitive exams. Sections B and C are optional and test computer science and electronics concepts respectively. With proper preparation, the exam is quite manageable. Focus on aptitude, logical reasoning, and basic computer concepts for good results.</p>
+                                    <p class="text-gray-600">The C-CAT exam is of moderate difficulty. Section A
+                                        (mandatory for all) tests aptitude, logical reasoning, and English, which is
+                                        similar to other competitive exams. Sections B and C are optional and test
+                                        computer science and electronics concepts respectively. With proper preparation,
+                                        the exam is quite manageable. Focus on aptitude, logical reasoning, and basic
+                                        computer concepts for good results.</p>
                                 </div>
                             </div>
-                            
+
                             <!-- FAQ 4 -->
                             <div class="border border-gray-200 rounded-lg overflow-hidden">
-                                <button class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
-                                    <span class="font-medium text-gray-800">How is the placement scenario for PG-DAC graduates?</span>
-                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                <button
+                                    class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
+                                    <span class="font-medium text-gray-800">How is the placement scenario for PG-DAC
+                                        graduates?</span>
+                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </button>
                                 <div class="accordion-content p-4 border-t border-gray-200">
-                                    <p class="text-gray-600">The placement scenario for PG-DAC graduates is generally very good. Most CDAC centers report placement rates of 85-95%. Top performers often receive multiple job offers. Companies like TCS, Infosys, Wipro, Cognizant, and many others regularly recruit PG-DAC graduates. The average salary package ranges from 4-7 LPA, with top performers getting higher packages. Placement success depends on individual performance, technical skills, and communication abilities.</p>
+                                    <p class="text-gray-600">The placement scenario for PG-DAC graduates is generally
+                                        very good. Most CDAC centers report placement rates of 85-95%. Top performers
+                                        often receive multiple job offers. Companies like TCS, Infosys, Wipro,
+                                        Cognizant, and many others regularly recruit PG-DAC graduates. The average
+                                        salary package ranges from 4-7 LPA, with top performers getting higher packages.
+                                        Placement success depends on individual performance, technical skills, and
+                                        communication abilities.</p>
                                 </div>
                             </div>
-                            
+
                             <!-- FAQ 5 -->
                             <div class="border border-gray-200 rounded-lg overflow-hidden">
-                                <button class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
-                                    <span class="font-medium text-gray-800">Is PG-DAC suitable for working professionals?</span>
-                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                <button
+                                    class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
+                                    <span class="font-medium text-gray-800">Is PG-DAC suitable for working
+                                        professionals?</span>
+                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </button>
                                 <div class="accordion-content p-4 border-t border-gray-200">
-                                    <p class="text-gray-600">PG-DAC is a full-time course with classes typically running from 9 AM to 5 PM, Monday to Friday. It requires dedicated time and effort, making it challenging for working professionals to manage alongside a job. Some centers may offer weekend batches, but these are limited. Working professionals should consider taking a sabbatical or exploring part-time options if available.</p>
+                                    <p class="text-gray-600">PG-DAC is a full-time course with classes typically running
+                                        from 9 AM to 5 PM, Monday to Friday. It requires dedicated time and effort,
+                                        making it challenging for working professionals to manage alongside a job. Some
+                                        centers may offer weekend batches, but these are limited. Working professionals
+                                        should consider taking a sabbatical or exploring part-time options if available.
+                                    </p>
                                 </div>
                             </div>
-                            
+
                             <!-- FAQ 6 -->
                             <div class="border border-gray-200 rounded-lg overflow-hidden">
-                                <button class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
-                                    <span class="font-medium text-gray-800">What is the course fee structure and are scholarships available?</span>
-                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                <button
+                                    class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
+                                    <span class="font-medium text-gray-800">What is the course fee structure and are
+                                        scholarships available?</span>
+                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </button>
                                 <div class="accordion-content p-4 border-t border-gray-200">
-                                    <p class="text-gray-600">The course fee for PG-DAC is approximately ₹1,00,000 + GST, though it may vary slightly across different centers. Scholarships are available for SC/ST/OBC candidates through various government schemes. Some centers also offer merit-based scholarships or fee concessions. Education loans are also an option, with many banks offering special rates for CDAC courses.</p>
+                                    <p class="text-gray-600">The course fee for PG-DAC is approximately ₹1,00,000 + GST,
+                                        though it may vary slightly across different centers. Scholarships are available
+                                        for SC/ST/OBC candidates through various government schemes. Some centers also
+                                        offer merit-based scholarships or fee concessions. Education loans are also an
+                                        option, with many banks offering special rates for CDAC courses.</p>
                                 </div>
                             </div>
-                            
+
                             <!-- FAQ 7 -->
                             <div class="border border-gray-200 rounded-lg overflow-hidden">
-                                <button class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
-                                    <span class="font-medium text-gray-800">How should I prepare for the C-CAT exam?</span>
-                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                <button
+                                    class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
+                                    <span class="font-medium text-gray-800">How should I prepare for the C-CAT
+                                        exam?</span>
+                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </button>
                                 <div class="accordion-content p-4 border-t border-gray-200">
-                                    <p class="text-gray-600 mb-3">To prepare for the C-CAT exam, focus on the following areas:</p>
+                                    <p class="text-gray-600 mb-3">To prepare for the C-CAT exam, focus on the following
+                                        areas:</p>
                                     <ul class="list-disc pl-5 space-y-1 text-gray-600">
-                                        <li>Aptitude: Practice quantitative aptitude, logical reasoning, and verbal ability questions</li>
-                                        <li>Computer Fundamentals: Study basic computer concepts, data structures, and algorithms</li>
-                                        <li>Programming: Brush up on programming concepts if you're from a CS background</li>
+                                        <li>Aptitude: Practice quantitative aptitude, logical reasoning, and verbal
+                                            ability questions</li>
+                                        <li>Computer Fundamentals: Study basic computer concepts, data structures, and
+                                            algorithms</li>
+                                        <li>Programming: Brush up on programming concepts if you're from a CS background
+                                        </li>
                                         <li>Previous Papers: Solve previous years' C-CAT question papers</li>
-                                        <li>Online Resources: Use online platforms for mock tests and practice questions</li>
+                                        <li>Online Resources: Use online platforms for mock tests and practice questions
+                                        </li>
                                     </ul>
-                                    <p class="text-gray-600 mt-3">Start preparation at least 2-3 months before the exam for best results.</p>
+                                    <p class="text-gray-600 mt-3">Start preparation at least 2-3 months before the exam
+                                        for best results.</p>
                                 </div>
                             </div>
-                            
+
                             <!-- FAQ 8 -->
                             <div class="border border-gray-200 rounded-lg overflow-hidden">
-                                <button class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
+                                <button
+                                    class="accordion-button w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition duration-300">
                                     <span class="font-medium text-gray-800">Which CDAC center is best for PG-DAC?</span>
-                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-300"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </button>
                                 <div class="accordion-content p-4 border-t border-gray-200">
-                                    <p class="text-gray-600 mb-3">All CDAC centers follow a standardized curriculum, but some centers have certain advantages:</p>
+                                    <p class="text-gray-600 mb-3">All CDAC centers follow a standardized curriculum, but
+                                        some centers have certain advantages:</p>
                                     <ul class="list-disc pl-5 space-y-1 text-gray-600">
-                                        <li>CDAC Pune (ACTS): The flagship center with excellent faculty and highest placement records</li>
+                                        <li>CDAC Pune (ACTS): The flagship center with excellent faculty and highest
+                                            placement records</li>
                                         <li>CDAC Mumbai: Good for those targeting jobs in Mumbai's financial sector</li>
                                         <li>CDAC Bangalore: Excellent for placements in tech startups and MNCs</li>
                                         <li>Sunbeam Pune: Known for smaller batch sizes and personalized attention</li>
                                     </ul>
-                                    <p class="text-gray-600 mt-3">The "best"<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96224b0715833e3f',t:'MTc1MzAxMjc3My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+                                    <p class="text-gray-600 mt-3">The "best"
+                                    ß    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'96224b0715833e3f',t:'MTc1MzAxMjc3My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener("contextmenu", e => e.preventDefault());
+        document.onkeydown = e => {
+            if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
+                e.preventDefault();
+            }
+        };
+    </script>
+</body>
+
+</html>
