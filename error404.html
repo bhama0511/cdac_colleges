@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coming Soon</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @keyframes bounce-gentle {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .bounce-animation {
+      animation: bounce-gentle 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-glow {
+      0%,100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    .pulse-animation {
+      animation: pulse-glow 2s ease-in-out infinite;
+    }
+  </style>
+</head>
+
+<body class="h-full w-full bg-gray-50 flex items-center justify-center p-8">
+
+  <div class="max-w-2xl w-full text-center bg-white p-8 rounded-xl shadow-lg">
+
+    <!-- ICON -->
+    <div class="mb-8 flex justify-center bounce-animation">
+      <!-- (SVG unchanged – safe) -->
+      <!-- keep your SVG here exactly as it is -->
+    </div>
+
+    <!-- CONTENT -->
+    <h1 class="text-4xl font-bold text-gray-800 mb-4">
+      Course Details Coming Soon
+    </h1>
+
+    <h2 class="text-xl text-gray-600 mb-6">
+      We’re building the complete Full-Stack program information
+    </h2>
+
+    <p class="text-gray-500 mb-8">
+      This college’s full-stack development program details are currently
+      being compiled. Check back soon for curriculum, eligibility,
+      and admission process.
+    </p>
+
+    <!-- PROGRESS -->
+    <div class="mb-8 max-w-md mx-auto">
+      <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
+        <div class="h-full bg-gradient-to-r from-orange-400 to-orange-600 w-[45%] animate-pulse"></div>
+      </div>
+      <p class="text-sm mt-2 text-gray-500">
+        Compiling course data...
+      </p>
+    </div>
+
+    <!-- BUTTON -->
+    <button
+      onclick="window.location.href='institutes.html'"
+      class="px-8 py-3 rounded-lg font-semibold text-white bg-sky-400
+             hover:scale-105 transition-all shadow-md">
+      Browse Other Colleges
+    </button>
+
+  </div>
+
+</body>
+</html>
