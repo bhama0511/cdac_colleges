@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://collegeinfo.prepwizard.in/sitemap.xml
